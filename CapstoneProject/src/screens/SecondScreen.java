@@ -7,6 +7,7 @@ import java.util.List;
 
 import core.DrawingSurface;
 
+//Screen with mannequin
 public class SecondScreen extends Screen {
 	
 	private DrawingSurface surface;
