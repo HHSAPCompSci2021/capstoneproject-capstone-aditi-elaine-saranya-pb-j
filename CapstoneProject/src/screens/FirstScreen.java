@@ -5,6 +5,7 @@ import java.awt.Rectangle;
 
 import core.DrawingSurface;
 
+//Main menu to choose initial settings
 public class FirstScreen extends Screen{
 	private DrawingSurface surface;
 	
@@ -13,7 +14,7 @@ public class FirstScreen extends Screen{
 		super(0,0);
 	}
 
-
+	
 	public void draw() {
 
 		
