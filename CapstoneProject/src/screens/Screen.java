@@ -12,23 +12,13 @@ public abstract class Screen {
 		
 	}
 	
+	/**
+	 * Draws the Screen to the given DrawingSurface
+	 * @pre The Screen will be drawn with attributes previously set on the given PApplet.
+	 */
 	public void draw() {
 		
 	}
 	
-	public void mousePressed() {
-		
-	}
 	
-	public void mouseMoved() {
-		
-	}
-	
-	public void mouseDragged() {
-		
-	}
-	
-	public void mouseReleased() {
-		
-	}
 }
