@@ -21,10 +21,11 @@ public class Person {
 	private double totalCost; //lets just keep this in the clothing class
 	
 	
+	
 	/**
 	 * draws the person with all of their clothing
 	 * @param marker The Processing PApplet on which one draws on
-	 * @pre properties affecting the face are set on the marker
+	 * @pre properties affecting the face are set on the marker 
 	 */
 	public void draw(PApplet marker) {
 		
