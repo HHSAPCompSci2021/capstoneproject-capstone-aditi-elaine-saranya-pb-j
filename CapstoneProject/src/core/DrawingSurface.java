@@ -33,7 +33,7 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 		
 	}
 	
-	public void draw() {
+	public void draw(PApplet marker) {
 	}
 	
 	
