@@ -31,60 +31,52 @@ public class Person {
 	}
 	
 	/**
-<<<<<<< Updated upstream
 	 * Changes the top
-=======
-	 * Changes the top to a different one
->>>>>>> Stashed changes
 	 */
 	public void changeTop() {
 		
 	}
 	
 	/**
-<<<<<<< Updated upstream
+
 	 * Changes the bottom
 =======
 	 * Changes the bottom to a different one 
->>>>>>> Stashed changes
+
 	 */
 	public void changeBottom() {
 	
 	}
 	
 	/**
-<<<<<<< Updated upstream
 	 * Changes the shoes
-=======
-	 * Changes to shoes to a different shoe
->>>>>>> Stashed changes
 	 */
 	public void changeShoes() {
 		
 	}
 	
 	/**
-<<<<<<< Updated upstream
+
 	 * Changes the Accessory
 =======
 	 * Changes the accessory to something different 
->>>>>>> Stashed changes
+
 	 */
 	public void changeAccessory() {
 		
 	}
 	
 	/**
-<<<<<<< Updated upstream
+
 	 * Changes the face
-=======
+
 	 * Changes the face to a different one
->>>>>>> Stashed changes
+
 	 */
 	public void changeFace() {
 		
 	}
-<<<<<<< Updated upstream
+
 	/**
 	 * Calculates the total cost of the outfit
 	 * @return total cost of the outfit
@@ -93,7 +85,7 @@ public class Person {
 	/**
 	 * Calculates the cost of the entire outfit 
 	 * @return totalCost value of entire outfit
->>>>>>> Stashed changes
+
 	 */
 	public double calculateTotalCost() {
 		return totalCost;
