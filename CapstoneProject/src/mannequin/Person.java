@@ -7,7 +7,7 @@ import mannequin.clothes.Top;
 import processing.core.PApplet;
 /**
  * Represents a person who has different types of clothing
- * @author 
+ * @author Aditi
  * @version 5/6/22
  *
  */
@@ -31,39 +31,43 @@ public class Person {
 	}
 	
 	/**
-	 * 
+	 * Changes the top
 	 */
 	public void changeTop() {
 		
 	}
 	
 	/**
-	 * 
+	 * Changes the bottom
 	 */
 	public void changeBottom() {
 	
 	}
 	
 	/**
-	 * 
+	 * Changes the shoes
 	 */
 	public void changeShoes() {
 		
 	}
 	
 	/**
-	 * 
+	 * Changes the Accessory
 	 */
 	public void changeAccessory() {
 		
 	}
 	
 	/**
-	 * 
+	 * Changes the face
 	 */
 	public void changeFace() {
 		
 	}
+	/**
+	 * Calculates the total cost of the outfit
+	 * @return total cost of the outfit
+	 */
 	public double calculateTotalCost() {
 		return totalCost;
 	}

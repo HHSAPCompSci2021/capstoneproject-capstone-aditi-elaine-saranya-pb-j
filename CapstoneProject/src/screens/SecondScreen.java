@@ -5,8 +5,9 @@ import java.awt.Rectangle;
 import core.DrawingSurface;
 
 /**
- * The Second Screen class is the program screen 
- * @author 
+ * The Second Screen class represents the program screen where the mannequin and outfit are displayed
+ * @author Elaine
+ * @version 5/6/2022
  *
  */
 public class SecondScreen extends Screen {

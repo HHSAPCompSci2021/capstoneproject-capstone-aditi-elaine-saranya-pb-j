@@ -10,7 +10,7 @@ import processing.core.PImage;
  * The Clothes class represents Clothes that can be displayed using the
  * Processing library.
  * 
- * @author
+ * @author Saranya
  * @version 5/6/2022
  */
 public abstract class Clothes extends PApplet {
@@ -43,7 +43,7 @@ public abstract class Clothes extends PApplet {
 	 * using mouse clicks in the window.
 	 * 
 	 * @pre Properties affecting clothes are set on marker
-	 * @param marker The PApplet used for displaying the image and drawing
+	 * @param drawer The PApplet used for displaying the image and drawing
 	 */
 	public abstract void draw(PApplet drawer);
 

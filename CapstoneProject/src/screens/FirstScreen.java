@@ -5,7 +5,12 @@ import java.awt.Rectangle;
 
 import core.DrawingSurface;
 
-//Main menu to choose initial settings
+/**
+ * The First Screen class represents the menu screen where the user sets the settings of the outfit
+ * @author Elaine
+ * @version 5/6/2022
+ *
+ */
 public class FirstScreen extends Screen{
 	private DrawingSurface surface;
 	

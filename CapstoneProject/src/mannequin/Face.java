@@ -7,7 +7,7 @@ import processing.core.PImage;
 
 /**
  * The Face class represents an image of a face
- * @author 
+ * @author Aditi 
  * @version 5/6/22
  *
  */
@@ -26,6 +26,9 @@ public class Face {
 		faces.add(facePic);
 	}
 	
+	/**
+	 * Randomly selects one of the available faces
+	 */
 	public void pickFace() {
 		curFace=faces.get((int)Math.random()*faces.size());
 		
@@ -37,7 +40,6 @@ public class Face {
 	 * @param marker The Processing PApplet on which one draws on
 	 * @pre properties affecting the face are set on the marker
 	 */
-	
 	public void draw(PApplet marker) {
 		
 	}
