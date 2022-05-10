@@ -61,8 +61,12 @@ public abstract class Clothes extends PApplet {
 	 * 
 	 * @return The image of the article of clothing picked
 	 */
-	public PImage pickRandom() {
-		return null;
+	public PImage pickRandom(ArrayList<PImage> wardrobe) {
+		int index = (int)(Math.random() * wardrobe.size());
+		if (wardrobe.get(index) == null) {
+			index = (int)(Math.random() * wardrobe.size());
+		}
+		return wardrobe.get(index);
 	}
 
 	/**
