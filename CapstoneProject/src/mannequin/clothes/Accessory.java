@@ -35,6 +35,8 @@ public class Accessory extends Clothes {
 	
 
 
+<<<<<<< HEAD
+=======
 	/**
 	 * Gets the price of the accessory
 	 * 
@@ -51,4 +53,8 @@ public class Accessory extends Clothes {
 		
 	}
 
+<<<<<<< Updated upstream
+=======
+>>>>>>> 213b035f1559dd871dc9742cab9218be989236f8
+>>>>>>> Stashed changes
 }
