@@ -32,5 +32,7 @@ public class Accessory extends Clothes {
 	public void draw(PApplet marker) {
 
 	}
+	
+
 
 }
