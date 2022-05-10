@@ -146,7 +146,9 @@ public abstract class Clothes extends PApplet {
 	 * 
 	 * @return price The price of the article of clothing
 	 */
-	public abstract double getPrice();
+	public double getPrice() {
+		return price;
+	}
 	
 	public abstract void setPrice(double p);
 	

@@ -32,6 +32,8 @@ public class Accessory extends Clothes {
 	public void draw(PApplet marker) {
 
 	}
+	
+
 
 	/**
 	 * Gets the price of the accessory
