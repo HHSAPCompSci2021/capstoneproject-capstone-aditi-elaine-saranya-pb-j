@@ -148,6 +148,8 @@ public abstract class Clothes extends PApplet {
 	 */
 	public abstract double getPrice();
 	
+	public abstract void setPrice(double p);
+	
 	/**
 	 * Calculates the price of the entire outfit
 	 * @return cost The total outfits cost

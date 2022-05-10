@@ -43,4 +43,12 @@ public class Shoes extends Clothes {
 		return 0;
 	}
 
+	@Override
+	public void setPrice(double p) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+
 }
