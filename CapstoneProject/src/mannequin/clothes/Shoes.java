@@ -33,4 +33,14 @@ public class Shoes extends Clothes {
 
 	}
 
+	/**
+	 * Gets the price of the shoes
+	 * 
+	 * @return price The price of the shoes
+	 */
+	public double getPrice() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
