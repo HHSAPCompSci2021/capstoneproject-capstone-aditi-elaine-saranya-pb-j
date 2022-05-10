@@ -17,15 +17,24 @@ public abstract class Clothes extends PApplet {
 
 	private ArrayList<PImage> clothes;
 	private Color color;
-	private String weather;
-	private String formality;
+	//private String weather;
+	private boolean temp; //false cold true hot
+	//private String formality;
+	//private int gender; //1 feminine 2 masculine 3 non-binary 
 	private double price;
-	private String website;
+	//private String website;
 
 	/**
 	 * Sets all filters to their default value
 	 */
 	public Clothes() {
+		clothes=new ArrayList<PImage>();
+		color=new Color(100,100,100);
+		temp=false;
+		//formality="casual";
+		price= 0.0;
+		//gender=1;
+		
 
 	}
 
@@ -82,50 +91,69 @@ public abstract class Clothes extends PApplet {
 	public void setColor(Color c) {
 		color = c;
 	}
-
+	
 	/**
 	 * Gets the weather
 	 * 
 	 * @return weather The weather
 	 */
+	/*
 	public String getWeather() {
 		return weather;
-	}
+	}*/
 
 	/**
 	 * Sets the weather
 	 * 
 	 * @param w The weather
 	 */
+	/*
 	public void setWeather(String w) {
 		weather = w;
-	}
+	}*/
 
 	/**
 	 * Gets the formality of the article of clothing
 	 * 
 	 * @return formality The formality of the article of clothing
 	 */
+	/*
 	public String getFormality() {
 		return formality;
-	}
+	}*/
 
 	/**
 	 * Sets the formality for the clothes
 	 * 
 	 * @param f The formality for the article of clothing
 	 */
+	/*
 	public void setFormality(String f) {
 		formality = f;
+	}*/
+	
+	//these two methods are only for temporary use with hot and cold nothing else
+	public boolean getTemp() {
+		return temp;
 	}
-
+	
+	public void setTemp(boolean temperature) {
+		temp=temperature;
+	}
+	
 	/**
 	 * Gets the price of the article of clothing
 	 * 
 	 * @return price The price of the article of clothing
 	 */
-	public double getPrice() {
-		return price;
+	public abstract double getPrice();
+	
+	/**
+	 * Calculates the price of the entire outfit
+	 * @return cost The total outfits cost
+	 */
+	public double calcTotalPrice() {
+		return 0.0;
 	}
 
 }
