@@ -35,4 +35,14 @@ public class Accessory extends Clothes {
 	
 
 
+	/**
+	 * Gets the price of the accessory
+	 * 
+	 * @return price The price of the accessory
+	 */
+	public double getPrice() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
