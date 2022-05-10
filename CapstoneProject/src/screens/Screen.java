@@ -26,8 +26,12 @@ public abstract class Screen {
 		this.DRAWING_WIDTH = width;
 		this.DRAWING_HEIGHT = height;
 	}
-	
-
+	/**
+	 * Sets up the DrawingSurface before anything is drawn
+	 */
+	public void setup() {
+		
+	}
 	/**
 	 * Draws the Screen to the given DrawingSurface
 	 * @pre The Screen will be drawn with attributes previously set on the given PApplet.

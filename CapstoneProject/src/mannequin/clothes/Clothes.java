@@ -30,7 +30,7 @@ public abstract class Clothes extends PApplet {
 	 */
 	public Clothes() {
 		clothes=new ArrayList<PImage>();
-		color=new Color(100,100,100);
+		color=null;
 		temp=false;
 		//formality="casual";
 		price= 0.0;

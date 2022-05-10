@@ -23,9 +23,12 @@ public class SecondScreen extends Screen {
 	 */
 	public SecondScreen(DrawingSurface surface) {
 		super(0,0);
+		this.surface = surface;
 	}
 
 
+	public void setup() {
+	}
 	/**
 	 * Draws the Screen to the given DrawingSurface
 	 * @pre The Screen will be drawn with attributes previously set on the given PApplet.
