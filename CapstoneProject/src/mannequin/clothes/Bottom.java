@@ -14,8 +14,7 @@ import processing.core.PImage;
  */
 public class Bottom extends Clothes {
 
-	private ArrayList<PImage> bottom;
-	
+
 	
 	/**
 	 * Constructs an bottom with specified image
@@ -23,7 +22,7 @@ public class Bottom extends Clothes {
 	 * @param image The image of the bottom
 	 */
 	public Bottom(PImage image) {
-		bottom=new ArrayList<PImage>();
+		
 	}
 
 	/**

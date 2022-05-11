@@ -15,7 +15,7 @@ import processing.core.PImage;
  */
 public abstract class Clothes extends PApplet {
 
-	private ArrayList<PImage> clothes;
+	private ArrayList<ArrayList<PImage>> clothes;
 	private Color color;
 	//private String weather;
 	private boolean temp; //false cold true hot
@@ -29,7 +29,7 @@ public abstract class Clothes extends PApplet {
 	 * Sets all filters to their default value
 	 */
 	public Clothes() {
-		clothes=new ArrayList<PImage>();
+		clothes=new ArrayList<ArrayList<PImage>>();
 		color=null;
 		temp=false;
 		//formality="casual";

@@ -14,7 +14,7 @@ import processing.core.PImage;
  */
 public class Shoes extends Clothes {
 
-	private ArrayList<PImage> shoes;
+	
 	
 	
 	/**
@@ -23,7 +23,7 @@ public class Shoes extends Clothes {
 	 * @param image The image of the shoe
 	 */
 	public Shoes(PImage image) {
-		shoes=new ArrayList<PImage>();
+		
 	}
 
 	/**

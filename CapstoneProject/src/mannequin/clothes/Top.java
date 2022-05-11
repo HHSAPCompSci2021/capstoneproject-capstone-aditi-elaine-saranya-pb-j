@@ -13,8 +13,6 @@ import processing.core.PImage;
  * @version 5/6/2022
  */
 public class Top extends Clothes {
-
-	private ArrayList<PImage> top;
 	
 	
 	/**
@@ -23,7 +21,7 @@ public class Top extends Clothes {
 	 * @param image The image of the top
 	 */
 	public Top(PImage image) {
-		top=new ArrayList<PImage>();
+		
 	}
 
 	/**
