@@ -15,21 +15,21 @@ import processing.core.PImage;
  */
 public abstract class Clothes extends PApplet {
 
-	private ArrayList<PImage> clothes;
+	private ArrayList<ArrayList<PImage>> clothes;
 	private Color color;
 	//private String weather;
 	private boolean temp; //false cold true hot
 	//private String formality;
 	//private int gender; //1 feminine 2 masculine 3 non-binary 
 	private double price;
-	private int typeOfClothing; //1 top 2 bottom 3 shoes 4 accessory 
+
 	//private String website;
 
 	/**
 	 * Sets all filters to their default value
 	 */
 	public Clothes() {
-		clothes=new ArrayList<PImage>();
+		clothes=new ArrayList<ArrayList<PImage>>();
 		color=null;
 		temp=false;
 		//formality="casual";
@@ -44,7 +44,7 @@ public abstract class Clothes extends PApplet {
 	 * @param image The image of the article of clothing to be added
 	 * @param type the type of clothing article it is 
 	 */
-	public void add(PImage image, int type) {
+	public void add(PImage image) {
 		
 	}
 

@@ -1,5 +1,7 @@
 package mannequin.clothes;
 
+import java.util.ArrayList;
+
 import processing.core.PApplet;
 import processing.core.PImage;
 
@@ -12,13 +14,15 @@ import processing.core.PImage;
  */
 public class Accessory extends Clothes {
 
+	
+
 	/**
 	 * Constructs an accessory with specified image
 	 * 
 	 * @param image The image of the accessory
 	 */
 	public Accessory(PImage image) {
-
+		
 	}
 
 	/**
