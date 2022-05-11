@@ -52,4 +52,5 @@ public class Accessory extends Clothes {
 		
 	}
 
+
 }
