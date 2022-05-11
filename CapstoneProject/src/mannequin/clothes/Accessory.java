@@ -17,7 +17,7 @@ public class Accessory extends Clothes {
 	 * 
 	 * @param image The image of the accessory
 	 */
-	public Accessory(PImage image) {
+	public Accessory() {
 
 	}
 

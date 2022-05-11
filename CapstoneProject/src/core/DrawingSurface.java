@@ -2,6 +2,10 @@ package core;
 import java.awt.Point;
 import java.util.ArrayList;
 
+import g4p_controls.GButton;
+import g4p_controls.GDropList;
+import g4p_controls.GEvent;
+import mannequin.Person;
 import processing.core.PApplet;
 import screens.FirstScreen;
 import screens.Screen;
@@ -14,6 +18,7 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 	private Screen activeScreen;
 	private ArrayList<Screen> screens;
 	public float ratioX, ratioY;
+	private Person person;
 
 	
 	public DrawingSurface() {
@@ -28,6 +33,8 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 		screens.add(screen2);
 		
 		activeScreen = screens.get(0);
+		
+		person = new Person();
 	}
 	
 	public void setup() {
@@ -45,7 +52,6 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 		
 		scale(ratioX, ratioY);
 		activeScreen.draw();
-		
 		pop();
 	}
 	
@@ -54,6 +60,29 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 	}
 	
 	public void switchScreen(int i) {
-		activeScreen = screens.get(i);
+		if (i == 0) {
+			activeScreen = screens.get(0);
+			FirstScreen firstScreen = (FirstScreen)activeScreen;
+			firstScreen.setVisibility(true);
+		}
+		else {
+			FirstScreen firstScreen = (FirstScreen)activeScreen;
+			firstScreen.setVisibility(false);
+			activeScreen = screens.get(i);
+		}
 	}
+	
+	public void handleDropListEvents(GDropList list, GEvent event) {
+		person.getClothes().setWeather(list.getSelectedText());
+	}
+	
+
+	public void handleButtonEvents(GButton button, GEvent event) {
+		// Create the control window?
+		if (event == GEvent.CLICKED) {
+			switchScreen(1);
+		}
+		
+	}
+
 }

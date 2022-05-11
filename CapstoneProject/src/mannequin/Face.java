@@ -21,9 +21,8 @@ public class Face {
 	 * Takes in user input to add a face 
 	 * @param facePic Image of face to add to possible face list
 	 */
-	public Face(PImage facePic) {
+	public Face() {
 		faces=new ArrayList<PImage>();
-		faces.add(facePic);
 	}
 	
 	/**

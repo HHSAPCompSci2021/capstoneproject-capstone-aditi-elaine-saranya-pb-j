@@ -13,17 +13,16 @@ import processing.core.PImage;
  * @author Saranya
  * @version 5/6/2022
  */
-public abstract class Clothes extends PApplet {
+public class Clothes extends PApplet {
 
 	private ArrayList<PImage> clothes;
 	private Color color;
-	//private String weather;
-	private boolean temp; //false cold true hot
-	//private String formality;
+	private String weather; //{"Hot", "Cold"}
+//	private String formality;
 	//private int gender; //1 feminine 2 masculine 3 non-binary 
 	private double price;
-	private int typeOfClothing; //1 top 2 bottom 3 shoes 4 accessory 
 	//private String website;
+	
 
 	/**
 	 * Sets all filters to their default value
@@ -31,7 +30,7 @@ public abstract class Clothes extends PApplet {
 	public Clothes() {
 		clothes=new ArrayList<PImage>();
 		color=null;
-		temp=false;
+		weather="Hot";
 		//formality="casual";
 		price= 0.0;
 		//gender=1;
@@ -56,7 +55,9 @@ public abstract class Clothes extends PApplet {
 	 * @pre Properties affecting clothes are set on marker
 	 * @param drawer The PApplet used for displaying the image and drawing
 	 */
-	public abstract void draw(PApplet drawer);
+	public void draw(PApplet drawer) {
+		
+	}
 
 	/**
 	 * Picks a random article of clothing based on the selected filters
@@ -103,20 +104,19 @@ public abstract class Clothes extends PApplet {
 	 * 
 	 * @return weather The weather
 	 */
-	/*
 	public String getWeather() {
 		return weather;
-	}*/
+	}
 
 	/**
 	 * Sets the weather
 	 * 
 	 * @param w The weather
 	 */
-	/*
 	public void setWeather(String w) {
 		weather = w;
-	}*/
+		System.out.println(weather);
+	}
 
 	/**
 	 * Gets the formality of the article of clothing
@@ -133,19 +133,12 @@ public abstract class Clothes extends PApplet {
 	 * 
 	 * @param f The formality for the article of clothing
 	 */
-	/*
-	public void setFormality(String f) {
-		formality = f;
-	}*/
 	
-	//these two methods are only for temporary use with hot and cold nothing else
-	public boolean getTemp() {
-		return temp;
-	}
+//	public void setFormality(String f) {
+//		formality = f;
+//	}
 	
-	public void setTemp(boolean temperature) {
-		temp=temperature;
-	}
+
 	
 	/**
 	 * Gets the price of the article of clothing
@@ -156,7 +149,9 @@ public abstract class Clothes extends PApplet {
 		return price;
 	}
 	
-	public abstract void setPrice(double p);
+	public void setPrice(double p) {
+		price = p;
+	}
 	
 	/**
 	 * Calculates the price of the entire outfit

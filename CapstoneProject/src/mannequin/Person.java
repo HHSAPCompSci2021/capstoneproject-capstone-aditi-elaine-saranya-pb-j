@@ -2,6 +2,7 @@ package mannequin;
 
 import mannequin.clothes.Accessory;
 import mannequin.clothes.Bottom;
+import mannequin.clothes.Clothes;
 import mannequin.clothes.Shoes;
 import mannequin.clothes.Top;
 import processing.core.PApplet;
@@ -19,9 +20,17 @@ public class Person {
 	private Accessory accessory;
 	private Face face;
 	private double totalCost; //lets just keep this in the clothing class
+	private Clothes clothes;
 	
 	
-	
+	public Person() {
+		top = new Top();
+		bottom = new Bottom();
+		shoes = new Shoes();
+		accessory = new Accessory();
+		face = new Face();
+		clothes = new Clothes();
+	}
 	/**
 	 * draws the person with all of their clothing
 	 * @param marker The Processing PApplet on which one draws on
@@ -90,5 +99,9 @@ public class Person {
 	 */
 	public double calculateTotalCost() {
 		return totalCost;
+	}
+	
+	public Clothes getClothes() {
+		return clothes;
 	}
 }

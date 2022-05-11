@@ -17,7 +17,7 @@ public class Shoes extends Clothes {
 	 * 
 	 * @param image The image of the shoe
 	 */
-	public Shoes(PImage image) {
+	public Shoes() {
 
 	}
 

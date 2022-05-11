@@ -34,7 +34,8 @@ public class SecondScreen extends Screen {
 	 * @pre The Screen will be drawn with attributes previously set on the given PApplet.
 	 */
 	public void draw() {
-		
+		surface.background (255);
+
 	}
 }
 	

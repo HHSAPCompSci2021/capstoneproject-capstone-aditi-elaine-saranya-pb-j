@@ -17,7 +17,7 @@ public class Bottom extends Clothes {
 	 * 
 	 * @param image The image of the bottom
 	 */
-	public Bottom(PImage image) {
+	public Bottom() {
 
 	}
 
