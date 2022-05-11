@@ -3,6 +3,7 @@ package screens;
 import java.awt.Rectangle;
 
 import core.DrawingSurface;
+import mannequin.Person;
 
 /**
  * The Second Screen class represents the program screen where the mannequin and outfit are displayed
@@ -14,8 +15,7 @@ public class SecondScreen extends Screen {
 	
 	private DrawingSurface surface;
 	
-	private Rectangle screenRect;
-
+	private Person person; 
 
 	/**
 	 * Constructs the SecondScreen (the program screen)
@@ -28,14 +28,17 @@ public class SecondScreen extends Screen {
 
 
 	public void setup() {
+		surface.background(255);
 	}
 	/**
 	 * Draws the Screen to the given DrawingSurface
 	 * @pre The Screen will be drawn with attributes previously set on the given PApplet.
 	 */
 	public void draw() {
-		surface.background (255);
-
+		surface.fill(0);
+		surface.textSize(20);
+		surface.text("Settings:", 100, 100);
+		
 	}
 }
 	

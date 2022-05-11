@@ -70,6 +70,7 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 			firstScreen.setVisibility(false);
 			activeScreen = screens.get(i);
 		}
+		activeScreen.setup();
 	}
 	
 	public void handleDropListEvents(GDropList list, GEvent event) {
