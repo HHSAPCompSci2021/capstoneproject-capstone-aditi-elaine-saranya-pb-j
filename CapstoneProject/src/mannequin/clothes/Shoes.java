@@ -1,5 +1,7 @@
 package mannequin.clothes;
 
+import java.util.ArrayList;
+
 import processing.core.PApplet;
 import processing.core.PImage;
 
@@ -12,13 +14,16 @@ import processing.core.PImage;
  */
 public class Shoes extends Clothes {
 
+	private ArrayList<PImage> shoes;
+	
+	
 	/**
 	 * Constructs an shoe with specified image
 	 * 
 	 * @param image The image of the shoe
 	 */
 	public Shoes(PImage image) {
-
+		shoes=new ArrayList<PImage>();
 	}
 
 	/**

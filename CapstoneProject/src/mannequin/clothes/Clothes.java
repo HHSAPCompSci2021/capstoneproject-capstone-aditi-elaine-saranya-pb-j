@@ -22,7 +22,7 @@ public abstract class Clothes extends PApplet {
 	//private String formality;
 	//private int gender; //1 feminine 2 masculine 3 non-binary 
 	private double price;
-	private int typeOfClothing; //1 top 2 bottom 3 shoes 4 accessory 
+
 	//private String website;
 
 	/**
@@ -44,7 +44,7 @@ public abstract class Clothes extends PApplet {
 	 * @param image The image of the article of clothing to be added
 	 * @param type the type of clothing article it is 
 	 */
-	public void add(PImage image, int type) {
+	public void add(PImage image) {
 		
 	}
 
