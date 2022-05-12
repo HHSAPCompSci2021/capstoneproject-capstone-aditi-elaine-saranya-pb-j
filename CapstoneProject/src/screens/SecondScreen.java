@@ -22,8 +22,9 @@ public class SecondScreen extends Screen {
 	 * @param surface The DrawingSurface to draw the second screen on
 	 */
 	public SecondScreen(DrawingSurface surface) {
-		super(0,0);
+		super(600, 800);
 		this.surface = surface;
+		person = new Person();
 	}
 
 
@@ -35,10 +36,13 @@ public class SecondScreen extends Screen {
 	 * @pre The Screen will be drawn with attributes previously set on the given PApplet.
 	 */
 	public void draw() {
-		surface.fill(0);
-		surface.textSize(20);
-		surface.text("Settings:", 100, 100);
-		
+		surface.fill(112, 110, 250);
+		surface.noStroke();
+		surface.rect(25, 75, 150, 80);		
+		surface.fill(255);
+		surface.textSize(15);
+		surface.text("Settings:", 50, 100);
+		surface.text("Weather: " + person.getClothes().getWeather(), 50, 130);
 	}
 }
 	
