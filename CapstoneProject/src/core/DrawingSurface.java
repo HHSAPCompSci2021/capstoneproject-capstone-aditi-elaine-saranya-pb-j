@@ -16,30 +16,28 @@ import screens.SecondScreen;
 public class DrawingSurface extends PApplet implements ScreenSwitcher {
 
 	private Screen activeScreen;
-	private ArrayList<Screen> screens;
+	private FirstScreen screen1;
+	private SecondScreen screen2;
 	public float ratioX, ratioY;
-	private Person person;
 
 	
 	public DrawingSurface() {
 		
-		screens = new ArrayList<Screen>();
-		person = new Person();
+		
+		screen1 = new FirstScreen(this);
 
 		
-		FirstScreen screen1 = new FirstScreen(this);
-		screens.add(screen1);
+		screen2 = new SecondScreen(this);
+
 		
-		SecondScreen screen2 = new SecondScreen(this, person);
-		screens.add(screen2);
-		
-		activeScreen = screens.get(0);
+		activeScreen = screen1;
 		
 	}
 	
 	public void setup() {
-		for (Screen s : screens)
-			s.setup();
+		super.setup();
+		screen1.setup();
+		screen2.setup();
 
 	}
 	
@@ -61,20 +59,20 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 	
 	public void switchScreen(int i) {
 		if (i == 0) {
-			activeScreen = screens.get(0);
+			activeScreen = screen1;
 			FirstScreen firstScreen = (FirstScreen)activeScreen;
 			firstScreen.setVisibility(true);
 		}
 		else {
 			FirstScreen firstScreen = (FirstScreen)activeScreen;
 			firstScreen.setVisibility(false);
-			activeScreen = screens.get(i);
+			activeScreen = screen2;
 		}
 		activeScreen.setup();
 	}
 	
 	public void handleDropListEvents(GDropList list, GEvent event) {
-		person.getClothes().setWeather(list.getSelectedText());
+		screen2.getPerson().getClothes().setWeather(list.getSelectedText());
 	}
 	
 

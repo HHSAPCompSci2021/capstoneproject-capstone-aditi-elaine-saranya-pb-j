@@ -21,15 +21,18 @@ public class SecondScreen extends Screen {
 	 * Constructs the SecondScreen (the program screen)
 	 * @param surface The DrawingSurface to draw the second screen on
 	 */
-	public SecondScreen(DrawingSurface surface, Person p) {
+	public SecondScreen(DrawingSurface surface) {
 		super(600, 800);
 		this.surface = surface;
-		person = p;
+		person = new Person();
 	}
 
 
 	public void setup() {
 		surface.background(255);
+	}
+	public Person getPerson() {
+		return person;
 	}
 	/**
 	 * Draws the Screen to the given DrawingSurface
