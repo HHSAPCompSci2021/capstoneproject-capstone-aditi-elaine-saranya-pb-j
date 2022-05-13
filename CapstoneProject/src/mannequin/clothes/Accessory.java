@@ -10,7 +10,7 @@ import processing.core.PImage;
  * the Processing library. It is a subclass of the Clothes class.
  * 
  * @author Saranya
- * @version 5/6/2022
+ * @version 5/13/2022
  */
 public class Accessory extends Clothes {
 
@@ -19,7 +19,9 @@ public class Accessory extends Clothes {
 	/**
 	 * Constructs an accessory with specified image
 	 * 
-	 * @param image The image of the accessory
+	 * @param w The weather filter
+	 * @param i The image of the accessory
+	 * 
 	 */
 	public Accessory(String w, PImage i) {
 		super(w);
@@ -40,7 +42,11 @@ public class Accessory extends Clothes {
 		return 0;
 	}
 
-	@Override
+	/**
+	 * Sets the price of the accessory
+	 * 
+	 * @param p the price of the accessory to be set
+	 */
 	public void setPrice(double p) {
 		// TODO Auto-generated method stub
 		
