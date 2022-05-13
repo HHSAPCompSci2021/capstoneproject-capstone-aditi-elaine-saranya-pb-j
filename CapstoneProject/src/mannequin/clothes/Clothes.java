@@ -11,7 +11,7 @@ import processing.core.PImage;
  * Processing library.
  * 
  * @author Saranya
- * @version 5/6/2022
+ * @version 5/13/2022
  */
 public class Clothes extends PApplet {
 
@@ -26,6 +26,7 @@ public class Clothes extends PApplet {
 
 	/**
 	 * Sets all filters to their default value
+	 * @param w The initial weather filter to be set
 	 */
 	public Clothes(String w) {
 		
@@ -40,7 +41,6 @@ public class Clothes extends PApplet {
 	/**
 	 * Adds an image of an article of clothing to the user's wardrobe
 	 * @param image The image of the article of clothing to be added
-	 * @param type the type of clothing article it is 
 	 */
 	public void add(PImage image) {
 		
@@ -86,7 +86,7 @@ public class Clothes extends PApplet {
 		System.out.println(weather);
 	}
 
-	/**
+/*	/**
 	 * Gets the formality of the article of clothing
 	 * 
 	 * @return formality The formality of the article of clothing
@@ -96,7 +96,7 @@ public class Clothes extends PApplet {
 		return formality;
 	}*/
 
-	/**
+/*	/**
 	 * Sets the formality for the clothes
 	 * 
 	 * @param f The formality for the article of clothing
@@ -117,13 +117,19 @@ public class Clothes extends PApplet {
 		return price;
 	}
 	
+	/**
+	 * Sets the price of the article of clothing
+	 * 
+	 * @param p the price of the article of clothing to be set
+	 */
+	
 	public void setPrice(double p) {
 		price = p;
 	}
 	
 	/**
 	 * Calculates the price of the entire outfit
-	 * @return cost The total outfits cost
+	 * @return cost The total cost of the outfit
 	 */
 	public double calcTotalPrice() {
 		return 0.0;

@@ -5,9 +5,17 @@ import java.util.ArrayList;
 import processing.core.PApplet;
 import processing.core.PImage;
 
+/**
+ * The BottomList class represents a collection of all the Bottoms to be added to the screen using
+ * the Processing library.
+ * 
+ * @author 
+ * @version 5/13/2022
+ */
 public class BottomsList extends PApplet{
 	private ArrayList<Bottom> allList;
 	private ArrayList<Bottom> sortedList;
+	
 	
 	public BottomsList() {
 		allList = new ArrayList<>();
@@ -15,15 +23,18 @@ public class BottomsList extends PApplet{
 		
 	}
 	
+	/**
+	 * Adds bottoms to the collection 
+	 */
 	public void setup() {
 		Bottom bottom1 = new Bottom("Cold", loadImage("whitepants.png"));
 		allList.add(bottom1);
 	}
 
 	/**
-	 * Picks a random article of clothing based on the selected filters
+	 * Picks a random bottom based on the selected filters
 	 * 
-	 * @return The image of the article of clothing picked
+	 * @return The image of the bottom picked
 	 */
 	public Bottom pickRandom() {
 		int index = (int)(Math.random() * sortedList.size());
@@ -34,9 +45,9 @@ public class BottomsList extends PApplet{
 	}
 
 	/**
-	 * Picks the next article of clothing based on the selected filters
+	 * Picks the next bottom based on the selected filters
 	 * 
-	 * @return The image of the article of clothing picked
+	 * @return The image of the bottom picked
 	 */
 	public Bottom pickNextEntry() {
 		setup();
