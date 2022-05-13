@@ -28,7 +28,6 @@ public class ShoesList extends PApplet {
 
 
 	}
-
 	/**
 	 * Adds shoes to the collection 
 	 */
