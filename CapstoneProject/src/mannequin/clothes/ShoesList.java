@@ -13,6 +13,7 @@ import processing.core.PImage;
 public class ShoesList extends PApplet{
 	private ArrayList<Shoes> allList;
 	private ArrayList<Shoes> sortedList;
+	private int index=0;
 	
 	public ShoesList() {
 		allList = new ArrayList<>();
@@ -59,8 +60,14 @@ public class ShoesList extends PApplet{
 	 * @return The image of the article of clothing picked
 	 */
 	public Shoes pickNextEntry() {
-		setup();
-		return allList.get(0);
+		//setup();
+		while(index<allList.size()) {
+			index+=2;
+			return allList.get(index);
+			
+		}
+		index=0;
+		return allList.get(index);
 	}
 
 	

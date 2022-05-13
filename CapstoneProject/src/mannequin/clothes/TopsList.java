@@ -14,6 +14,7 @@ import java.io.IOException;
 public class TopsList{
 	private ArrayList<Top> allList;
 	private ArrayList<Top> sortedList;
+	private int index=0;
 	
 	public TopsList() {
 		allList = new ArrayList<>();
@@ -58,7 +59,13 @@ public class TopsList{
 	 * @return The image of the article of clothing picked
 	 */
 	public Top pickNextEntry() {
-		return allList.get(0);
+		while(index<allList.size()) {
+			index++;
+			return allList.get(index);
+			
+		}
+		index=0;
+		return allList.get(index);
 	}
 
 	
