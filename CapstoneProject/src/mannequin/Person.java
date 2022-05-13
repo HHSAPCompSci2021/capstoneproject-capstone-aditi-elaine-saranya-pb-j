@@ -5,6 +5,7 @@ import mannequin.clothes.Bottom;
 import mannequin.clothes.Clothes;
 import mannequin.clothes.Shoes;
 import mannequin.clothes.Top;
+import mannequin.clothes.TopsList;
 import processing.core.PApplet;
 /**
  * Represents a person who has different types of clothing
@@ -24,7 +25,8 @@ public class Person {
 	
 	
 	public Person() {
-		top = new Top();
+		TopsList topsList = new TopsList();
+		top = topsList.pickNextEntry();
 		bottom = new Bottom();
 		shoes = new Shoes();
 		accessory = new Accessory();
