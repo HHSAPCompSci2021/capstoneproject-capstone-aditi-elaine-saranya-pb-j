@@ -14,7 +14,7 @@ import processing.core.PImage;
  * The BottomList class represents a collection of all the Bottoms to be added to the screen using
  * the Processing library.
  * 
- * @author 
+ * @author Saranya
  * @version 5/13/2022
  */
 public class BottomsList extends PApplet{
@@ -22,7 +22,12 @@ public class BottomsList extends PApplet{
 	private ArrayList<Bottom> sortedList;
 	private int index=0;
 	
+	private int currentIndex;
 	
+	
+	/**
+	 * Constructs a list of bottoms with an arraylist of all the bottoms and an arraylist that is sorted based on the user settings
+	 */
 	public BottomsList() {
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
@@ -37,26 +42,65 @@ public class BottomsList extends PApplet{
 		Bottom bottom1 = new Bottom("Hot", whitePants);
 		allList.add(bottom1);
 		
-	}
-
-	
-	/**
-	 * Adds bottoms to the collection 
-	 */
-	public void setup() {
-		Bottom bottom1 = new Bottom("Cold", loadImage("whitepants.png"));
-		allList.add(bottom1);}
-
-	public PImage getImage(String path) {
+		img= null;
 		try {
-			return new PImage(ImageIO.read(new File(path)));
+			img = ImageIO.read(new File("res/beigepants.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return null;
 		}
-
+		PImage beigePants = new PImage(img);
+		Bottom bottom2 = new Bottom("Hot", beigePants);
+		allList.add(bottom2);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/blackpants.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blackPants = new PImage(img);
+		Bottom bottom3 = new Bottom("Hot", blackPants);
+		allList.add(bottom3);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/blueflarejeans.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blueFlareJeans = new PImage(img);
+		Bottom bottom4 = new Bottom("Hot", blueFlareJeans);
+		allList.add(bottom4);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/bluejeans.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blueJeans = new PImage(img);
+		Bottom bottom5 = new Bottom("Hot", blueJeans);
+		allList.add(bottom5);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/bluejeanswithrips.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blueJeansWRips = new PImage(img);
+		Bottom bottom6 = new Bottom("Hot", blueJeansWRips);
+		allList.add(bottom6);
+				
 	}
+
+	
+	
 
 	/**
 	 * Picks a random bottom based on the selected filters
@@ -77,14 +121,18 @@ public class BottomsList extends PApplet{
 	 * @return The image of the bottom picked
 	 */
 	public Bottom pickNextEntry() {
+
 		//setup();
 		while(index<allList.size()) {
 			index++;
 			return allList.get(index);
 			
 		}
-		index=0;
-		return allList.get(index);
+
+		if (currentIndex == sortedList.size()-1)
+			currentIndex = -1;
+		return allList.get(currentIndex+1);
+
 	}
 
 	

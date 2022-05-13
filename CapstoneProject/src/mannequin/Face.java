@@ -8,18 +8,16 @@ import processing.core.PImage;
 /**
  * The Face class represents an image of a face
  * @author Aditi 
- * @version 5/6/22
+ * @version 5/13/22
  *
  */
-
 public class Face {
 	
 	private ArrayList<PImage> faces;
 	private PImage curFace;
 	
 	/**
-	 * Takes in user input to add a face 
-	 * @param facePic Image of face to add to possible face list
+	 * Takes in user input to add a face
 	 */
 	public Face() {
 		faces=new ArrayList<PImage>();

@@ -38,7 +38,7 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 		super.setup();
 		screen1.setup();
 		screen2.setup();
-
+		screen2.setVisibility(false);
 	}
 	
 	public void draw() {
@@ -59,6 +59,8 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 	
 	public void switchScreen(int i) {
 		if (i == 0) {
+			SecondScreen secondScreen = (SecondScreen)activeScreen;
+			secondScreen.setVisibility(false);
 			activeScreen = screen1;
 			FirstScreen firstScreen = (FirstScreen)activeScreen;
 			firstScreen.setVisibility(true);
@@ -67,6 +69,8 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 			FirstScreen firstScreen = (FirstScreen)activeScreen;
 			firstScreen.setVisibility(false);
 			activeScreen = screen2;
+			SecondScreen secondScreen = (SecondScreen)activeScreen;
+			secondScreen.setVisibility(true);
 		}
 		activeScreen.setup();
 	}

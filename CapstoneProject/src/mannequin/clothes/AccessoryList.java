@@ -15,18 +15,29 @@ import processing.core.PImage;
  * The AccessoryList class represents a collection of all the Accessories to be added to the screen using
  * the Processing library.
  * 
- * @author 
+ * @author Saranya
  * @version 5/13/2022
  */
 
 public class AccessoryList extends PApplet{
 	private ArrayList<Accessory> allList;
 	private ArrayList<Accessory> sortedList;
+
 	private int index=0;
 	
+
+	private int currentIndex;
+
+	/**
+	 * Constructs a list of accessories with an arraylist of all the accessories and an arraylist that is sorted based on the user settings
+	 */
+
 	public AccessoryList() {
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
+		
+		currentIndex = -1;
+
 		BufferedImage img= null;
 		try {
 			img = ImageIO.read(new File("res/whitehat.png"));
@@ -41,22 +52,6 @@ public class AccessoryList extends PApplet{
 	}
 
 	
-	/**
-	 * Adds accessories to the collection 
-	 */
-	public void setup() {
-		Accessory accessory1 = new Accessory("Cold", loadImage("whitepants.png"));
-		allList.add(accessory1);
-	}
-	public PImage getImage(String path) {
-		try {
-			return new PImage(ImageIO.read(new File(path)));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
-		}
-	}
 
 	/**
 	 * Picks a random accessory based on the selected filters
@@ -77,14 +72,19 @@ public class AccessoryList extends PApplet{
 	 * @return The image of the accessory picked
 	 */
 	public Accessory pickNextEntry() {
+
 		//setup();
 		while(index<allList.size()) {
 			index++;
 			return allList.get(index);
 			
 		}
-		index=0;
-		return allList.get(index);
+		
+
+		if (currentIndex == sortedList.size()-1) 
+			currentIndex = -1;
+		return allList.get(currentIndex+1);
+
 	}
 
 	

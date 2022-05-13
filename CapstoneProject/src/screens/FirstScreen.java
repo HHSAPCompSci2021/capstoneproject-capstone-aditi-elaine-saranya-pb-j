@@ -10,7 +10,7 @@ import processing.core.PApplet;
 /**
  * The First Screen class represents the menu screen where the user sets the settings of the outfit
  * @author Elaine
- * @version 5/6/2022
+ * @version 5/13/2022
  *
  */
 public class FirstScreen extends Screen {
@@ -31,7 +31,9 @@ public class FirstScreen extends Screen {
 	
 	GButton submit;
 
-	
+	/**
+	 * Sets up the first screen and all the dropdown menus and submit button on the screen
+	 */
 	public void setup() {
 		G4P.setInputFont("Times New Roman", G4P.PLAIN, 14); // New for G4P V4.3
 		  G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
@@ -47,7 +49,7 @@ public class FirstScreen extends Screen {
 	}
 	
 	/**
-	 * Changes the visibility of the dropdown lists to what is specified
+	 * Changes the visibility of the dropdown lists and buttons to what is specified
 	 * @param v the visibility of the lists, true if on, false if off
 	 */
 	public void setVisibility(boolean v) {

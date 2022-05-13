@@ -14,30 +14,25 @@ import processing.core.PImage;
  * The ShoesList class represents a collection of all the Shoes to be added to
  * the screen using the Processing library.
  * 
- * @author
+ * @author Saranya
  * @version 5/13/2022
  */
-
 public class ShoesList extends PApplet {
 	private ArrayList<Shoes> allList;
 	private ArrayList<Shoes> sortedList;
 
+
 	private int index=0;
 	
+
+
+	/**
+	 * Constructs a list of shoes with an arraylist of all the shoes and an arraylist that is sorted based on the user settings
+	 */
 
 	public ShoesList() {
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
-
-
-	}
-	/**
-	 * Adds shoes to the collection 
-	 */
-	public void setup() {
-		Shoes shoes1L = new Shoes("Hot", loadImage("loafersL.png"));
-		allList.add(shoes1L);
-
 		BufferedImage img= null;
 		try {
 			img = ImageIO.read(new File("res/loafersL.png"));
@@ -45,21 +40,67 @@ public class ShoesList extends PApplet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		PImage loafersL = new PImage(img);
-		shoes1L = new Shoes("Hot", loafersL);
+		PImage loafersL  = new PImage(img);
+		Shoes shoes1L = new Shoes("Hot", loafersL);
 		allList.add(shoes1L);
 		
-	}
-	public PImage getImage(String path) {
+		img= null;
 		try {
-			return new PImage(ImageIO.read(new File(path)));
+			img = ImageIO.read(new File("res/loafersR.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return null;
 		}
+		PImage loafersR  = new PImage(img);
+		Shoes shoes1R = new Shoes("Hot", loafersR);
+		allList.add(shoes1R);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/dunksL.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage dunksL  = new PImage(img);
+		Shoes shoes2L = new Shoes("Hot", dunksL);
+		allList.add(shoes2L);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/dunksR.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage dunksR  = new PImage(img);
+		Shoes shoes2R = new Shoes("Hot", dunksR);
+		allList.add(shoes2R);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/blackconverseL.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage converseL  = new PImage(img);
+		Shoes shoes3L = new Shoes("Hot", converseL);
+		allList.add(shoes3L);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/blackconverseR.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage converseR  = new PImage(img);
+		Shoes shoes3R = new Shoes("Hot", converseR);
+		allList.add(shoes3R);
 
 	}
+	
 	
 
 	/**
