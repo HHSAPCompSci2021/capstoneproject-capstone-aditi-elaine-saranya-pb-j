@@ -82,16 +82,6 @@ public class ShoesList extends PApplet {
 		Shoes shoes2R = new Shoes("Hot", dunksR);
 		allList.add(shoes2R);
 		
-		img= null;
-		try {
-			img = ImageIO.read(new File("res/blackconveseL.png"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		PImage converseL  = new PImage(img);
-		Shoes shoes3L = new Shoes("Hot", converseL);
-		allList.add(shoes3L);
 		
 		img= null;
 		try {
