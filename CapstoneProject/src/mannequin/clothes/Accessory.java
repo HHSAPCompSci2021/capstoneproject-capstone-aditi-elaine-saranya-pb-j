@@ -14,15 +14,16 @@ import processing.core.PImage;
  */
 public class Accessory extends Clothes {
 
-	
+	private PImage image;
 
 	/**
 	 * Constructs an accessory with specified image
 	 * 
 	 * @param image The image of the accessory
 	 */
-	public Accessory(String w) {
+	public Accessory(String w, PImage i) {
 		super(w);
+		image = i;
 	}
 
 	
