@@ -11,10 +11,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class TopsList extends PApplet{
+public class TopsList{
 	private ArrayList<Top> allList;
 	private ArrayList<Top> sortedList;
-	PImage redBlouse;
 	
 	public TopsList() {
 		allList = new ArrayList<>();
@@ -26,7 +25,7 @@ public class TopsList extends PApplet{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		redBlouse = new PImage(img);
+		PImage redBlouse = new PImage(img);
 		Top top1 = new Top("Hot", redBlouse);
 		allList.add(top1);
 		

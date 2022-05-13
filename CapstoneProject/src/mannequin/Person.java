@@ -52,11 +52,10 @@ public class Person {
 	 * @param marker The PApplet used for displaying the image and drawing
 	 */
 	public void draw(PApplet marker) {
-//		marker.image(top.getImage(), 300, 300);
-//		marker.image(bottom.getImage(), 300, 400);
-//		marker.image(shoesL.getImage(), 250, 500);
-//		marker.image(shoesR.getImage(), 350, 500);
-//		marker.image(face.getImage(), 300, 200);
+		marker.image(top.getImage(), 300, 300);
+		marker.image(bottom.getImage(), 300, 400);
+		marker.image(shoesL.getImage(), 250, 500);
+		marker.image(shoesR.getImage(), 350, 500);
 	}
 	
 	/**

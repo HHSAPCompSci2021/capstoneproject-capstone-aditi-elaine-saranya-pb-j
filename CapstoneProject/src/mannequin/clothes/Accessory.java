@@ -46,5 +46,8 @@ public class Accessory extends Clothes {
 		
 	}
 
+	public PImage getImage() {
+		return image;
+	}
 
 }
