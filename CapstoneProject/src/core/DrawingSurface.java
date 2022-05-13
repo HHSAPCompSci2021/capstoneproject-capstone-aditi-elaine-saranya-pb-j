@@ -72,12 +72,18 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 			activeScreen = screen2;
 			SecondScreen secondScreen = (SecondScreen)activeScreen;
 			secondScreen.setVisibility(true);
+			screen2.getPerson().getTopsList().sortArray();
+			screen2.getPerson().getBottomsList().sortArray();
+			screen2.getPerson().getAccessoriesList().sortArray();
+			screen2.getPerson().getShoesList().sortArray();
+			screen2.getPerson().setClothes();
+
 		}
 		activeScreen.setup();
 	}
 	
 	public void handleDropListEvents(GDropList list, GEvent event) {
-		screen2.getPerson().getClothes().setWeather(list.getSelectedText());
+		screen2.getPerson().setWeatherCondition(list.getSelectedText());
 	}
 	
 

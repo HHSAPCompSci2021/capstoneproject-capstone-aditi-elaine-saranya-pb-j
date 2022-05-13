@@ -24,7 +24,7 @@ public class ShoesList extends PApplet {
 	private int currentIndex;
 
 
-	private int index=0;
+	private String weatherCondition;
 	
 
 
@@ -33,6 +33,8 @@ public class ShoesList extends PApplet {
 	 */
 
 	public ShoesList() {
+		weatherCondition = "Hot";
+
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
 		
@@ -46,7 +48,7 @@ public class ShoesList extends PApplet {
 			e.printStackTrace();
 		}
 		PImage loafersL  = new PImage(img);
-		Shoes shoes1L = new Shoes("Hot", loafersL);
+		Shoes shoes1L = new Shoes("Cold", loafersL);
 		allList.add(shoes1L);
 		
 		img= null;
@@ -57,7 +59,7 @@ public class ShoesList extends PApplet {
 			e.printStackTrace();
 		}
 		PImage loafersR  = new PImage(img);
-		Shoes shoes1R = new Shoes("Hot", loafersR);
+		Shoes shoes1R = new Shoes("Cold", loafersR);
 		allList.add(shoes1R);
 		
 		img= null;
@@ -94,9 +96,19 @@ public class ShoesList extends PApplet {
 		Shoes shoes3R = new Shoes("Hot", converseR);
 		allList.add(shoes3R);
 
+		
 	}
 	
 	
+	/**
+	 * Sorts the arraylist with all the shoes into the sorted arraylist
+	 */
+	public void sortArray() {
+		for (Shoes s: allList) {
+			if (s.getWeather().equals(weatherCondition))
+				sortedList.add(s);
+		}
+	}
 
 	/**
 	 * Picks a random shoe based on the selected filters
@@ -121,7 +133,14 @@ public class ShoesList extends PApplet {
 		if (currentIndex == sortedList.size()-1)
 			currentIndex = -1;
 		currentIndex++;
-		return allList.get(currentIndex);
+		return sortedList.get(currentIndex);
+	}
+	/**
+	 * Sets the weather condition outside to sort the clothes
+	 * @param w the weather
+	 */
+	public void setWeatherCondition(String w) {
+		weatherCondition = w;
 	}
 
 }

@@ -31,6 +31,8 @@ public class Top extends Clothes {
 	
 
 	
+	
+	
 	/**
 	 * Gets the price of the top
 	 * 

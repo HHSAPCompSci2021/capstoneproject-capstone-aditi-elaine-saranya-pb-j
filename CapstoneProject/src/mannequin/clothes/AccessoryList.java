@@ -23,7 +23,7 @@ public class AccessoryList extends PApplet{
 	private ArrayList<Accessory> allList;
 	private ArrayList<Accessory> sortedList;
 
-	private int index=0;
+	private String weatherCondition;
 	
 
 	private int currentIndex;
@@ -33,6 +33,8 @@ public class AccessoryList extends PApplet{
 	 */
 
 	public AccessoryList() {
+		weatherCondition = "Hot";
+
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
 		
@@ -49,8 +51,18 @@ public class AccessoryList extends PApplet{
 		Accessory accessory1 = new Accessory("Hot", whiteHat);
 		allList.add(accessory1);
 		
+		
 	}
 
+	/**
+	 * Sorts the arraylist with all the accessories into the sorted arraylist
+	 */
+	public void sortArray() {
+		for (Accessory a: allList) {
+			if (a.getWeather().equals(weatherCondition))
+				sortedList.add(a);
+		}
+	}
 	
 
 	/**
@@ -73,11 +85,19 @@ public class AccessoryList extends PApplet{
 	 */
 	public Accessory pickNextEntry() {
 
-
+		if (currentIndex == sortedList.size() - 1)
+			currentIndex = -1;
 		currentIndex++;
-		return allList.get(currentIndex);
+		return sortedList.get(currentIndex);
 	}
 
+	/**
+	 * Sets the weather condition outside to sort the clothes
+	 * @param w the weather
+	 */
+	public void setWeatherCondition(String w) {
+		weatherCondition = w;
+	}
 	
 	
 }

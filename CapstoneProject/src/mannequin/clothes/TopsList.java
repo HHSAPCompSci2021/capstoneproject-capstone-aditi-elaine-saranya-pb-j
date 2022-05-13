@@ -26,6 +26,7 @@ public class TopsList{
 	private ArrayList<Top> allList;
 	private ArrayList<Top> sortedList;
 
+	private String weatherCondition;
 
 	private int currentIndex;
 
@@ -34,6 +35,7 @@ public class TopsList{
 	 * Constructs a list of tops with an arraylist of all the tops and an arraylist that is sorted based on the user settings
 	 */
 	public TopsList() {
+		weatherCondition = "Hot";
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
 		currentIndex = -1;
@@ -79,7 +81,7 @@ public class TopsList{
 			e.printStackTrace();
 		}
 		PImage blackTShirt = new PImage(img);
-		Top top4 = new Top("Hot", blackTShirt);
+		Top top4 = new Top("Cold", blackTShirt);
 		allList.add(top4);
 		
 		img= null;
@@ -125,8 +127,20 @@ public class TopsList{
 		PImage whiteTShirt = new PImage(img);
 		Top top8 = new Top("Hot", whiteTShirt);
 		allList.add(top8);
+		
+		
+		
 	}
 	
+	/**
+	 * Sorts the arraylist with all the tops into the sorted arraylist
+	 */
+	public void sortArray() {
+		for (Top t: allList) {
+			if (t.getWeather().equals(weatherCondition))
+				sortedList.add(t);
+		}
+	}
 	
 	/**
 	 * Picks a random top based on the selected filters
@@ -148,11 +162,19 @@ public class TopsList{
 	 */
 	public Top pickNextEntry() {
 
-
+		if (currentIndex == sortedList.size() - 1)
+			currentIndex = -1;
 		currentIndex++;
-		return allList.get(currentIndex);
+		return sortedList.get(currentIndex);
 	}
 
+	/**
+	 * Sets the weather condition outside to sort the clothes
+	 * @param w the weather
+	 */
+	public void setWeatherCondition(String w) {
+		weatherCondition = w;
+	}
 	
 	
 }

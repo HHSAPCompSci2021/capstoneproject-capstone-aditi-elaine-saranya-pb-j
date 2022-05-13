@@ -20,7 +20,7 @@ import processing.core.PImage;
 public class BottomsList extends PApplet{
 	private ArrayList<Bottom> allList;
 	private ArrayList<Bottom> sortedList;
-	private int index=0;
+	private String weatherCondition;
 	
 	private int currentIndex;
 	
@@ -29,6 +29,8 @@ public class BottomsList extends PApplet{
 	 * Constructs a list of bottoms with an arraylist of all the bottoms and an arraylist that is sorted based on the user settings
 	 */
 	public BottomsList() {
+		weatherCondition = "Hot";
+
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
 		
@@ -42,7 +44,7 @@ public class BottomsList extends PApplet{
 			e.printStackTrace();
 		}
 		PImage whitePants = new PImage(img);
-		Bottom bottom1 = new Bottom("Hot", whitePants);
+		Bottom bottom1 = new Bottom("Cold", whitePants);
 		allList.add(bottom1);
 		
 		img= null;
@@ -53,7 +55,7 @@ public class BottomsList extends PApplet{
 			e.printStackTrace();
 		}
 		PImage beigePants = new PImage(img);
-		Bottom bottom2 = new Bottom("Hot", beigePants);
+		Bottom bottom2 = new Bottom("Cold", beigePants);
 		allList.add(bottom2);
 		
 		img= null;
@@ -64,7 +66,7 @@ public class BottomsList extends PApplet{
 			e.printStackTrace();
 		}
 		PImage blackPants = new PImage(img);
-		Bottom bottom3 = new Bottom("Hot", blackPants);
+		Bottom bottom3 = new Bottom("Cold", blackPants);
 		allList.add(bottom3);
 		
 		img= null;
@@ -100,9 +102,18 @@ public class BottomsList extends PApplet{
 		Bottom bottom6 = new Bottom("Hot", blueJeansWRips);
 		allList.add(bottom6);
 				
+		
 	}
 
-	
+	/**
+	 * Sorts the arraylist with all the bottoms into the sorted arraylist
+	 */
+	public void sortArray() {
+		for (Bottom b: allList) {
+			if (b.getWeather().equals(weatherCondition))
+				sortedList.add(b);
+		}
+	}
 	
 
 	/**
@@ -125,10 +136,19 @@ public class BottomsList extends PApplet{
 	 */
 	public Bottom pickNextEntry() {
 
+		if (currentIndex == sortedList.size() - 1)
+			currentIndex = -1;
 		currentIndex++;
-		return allList.get(currentIndex);
+		return sortedList.get(currentIndex);
 	}
 
+	/**
+	 * Sets the weather condition outside to sort the clothes
+	 * @param w the weather
+	 */
+	public void setWeatherCondition(String w) {
+		weatherCondition = w;
+	}
 	
 	
 }

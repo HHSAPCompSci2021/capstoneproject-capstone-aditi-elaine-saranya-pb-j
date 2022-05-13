@@ -83,7 +83,7 @@ public class SecondScreen extends Screen {
 		surface.fill(255);
 		surface.textSize(15);
 		surface.text("Settings:", 25, 50);
-		surface.text("Weather: " + person.getClothes().getWeather(), 25, 75);
+		surface.text("Weather: " + person.getWeatherCondition(), 25, 75);
 		person.draw(surface);
 		
 	}

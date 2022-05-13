@@ -30,22 +30,30 @@ public class Person {
 	private BottomsList bottomsList;
 	private ShoesList shoesList;
 	private AccessoryList accessoriesList;
-	
+	private String weatherCondition;
 	/**
 	 * Constructs a person and initializes all the lists and clothing
 	 */
 	public Person() {
+		weatherCondition = "Hot";
 		topsList = new TopsList();
-		top = topsList.pickNextEntry();
 		bottomsList = new BottomsList();
-		bottom = bottomsList.pickNextEntry();
 		shoesList = new ShoesList();
+		
+		accessoriesList = new AccessoryList();
+//		face = new Face();
+	}
+	
+	/**
+	 * Creates the initial outfit
+	 */
+	public void setClothes() {
+		top = topsList.pickNextEntry();
+		bottom = bottomsList.pickNextEntry();
 		shoesL = shoesList.pickNextEntry();
 		shoesR = shoesList.pickNextEntry();
-//		accessoriesList = new AccessoryList();
-//		accessory = accessoriesList.pickNextEntry();
-		face = new Face();
-		clothes = new Clothes("Hot");
+		accessory = accessoriesList.pickNextEntry();
+
 	}
 	/**
 	 * Graphical UI Displays an image (format PImage) of the clothes based on
@@ -102,6 +110,9 @@ public class Person {
 
 	}
 	
+	/**
+	 * Randomly picks an outfit
+	 */
 	public void pickRandom() {
 		top = topsList.pickRandom();
 		bottom = bottomsList.pickRandom();
@@ -197,6 +208,25 @@ public class Person {
 		return shoesList;
 	}
 	
+	/**
+	 * Sets the weather condition of the day and sets the weather criteria for the clothes lists 
+	 * @param w the weather condition
+	 */
+	public void setWeatherCondition(String w) {
+		topsList.setWeatherCondition(w);
+		bottomsList.setWeatherCondition(w);
+		shoesList.setWeatherCondition(w);
+		accessoriesList.setWeatherCondition(w);
+		weatherCondition = w;
+	}
+	
+	/**
+	 * Gets the weather condition that the person wants to match the outfit to
+	 * @return the weather condition
+	 */
+	public String getWeatherCondition() {
+		return weatherCondition;
+	}
 	
 	
 	
