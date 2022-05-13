@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.IOException;
 
 
+
 /**
  * The TopsList class represents a collection of all the Tops to be added to
  * the screen using the Processing library.
@@ -21,10 +22,12 @@ import java.io.IOException;
  * @version 5/13/2022
  */
 
-public class TopsList extends PApplet{
+
+
+public class TopsList{
+
 	private ArrayList<Top> allList;
 	private ArrayList<Top> sortedList;
-	PImage redBlouse;
 	
 	public TopsList() {
 		allList = new ArrayList<>();
@@ -36,7 +39,7 @@ public class TopsList extends PApplet{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		redBlouse = new PImage(img);
+		PImage redBlouse = new PImage(img);
 		Top top1 = new Top("Hot", redBlouse);
 		allList.add(top1);
 		

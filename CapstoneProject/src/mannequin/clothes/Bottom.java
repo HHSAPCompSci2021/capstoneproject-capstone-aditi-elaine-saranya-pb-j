@@ -49,7 +49,9 @@ public class Bottom extends Clothes {
 		// TODO Auto-generated method stub
 		
 	}
-
+	public PImage getImage() {
+		return image;
+	}
 
 
 	}

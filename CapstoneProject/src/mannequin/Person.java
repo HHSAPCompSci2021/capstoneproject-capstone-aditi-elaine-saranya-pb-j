@@ -19,7 +19,8 @@ public class Person {
 	
 	private Top top;
 	private Bottom bottom;
-	private Shoes shoes;
+	private Shoes shoesL;
+	private Shoes shoesR;
 	private Accessory accessory;
 	private Face face;
 	private double totalCost; //lets just keep this in the clothing class
@@ -35,7 +36,8 @@ public class Person {
 		bottomsList = new BottomsList();
 		bottom = bottomsList.pickNextEntry();
 		shoesList = new ShoesList();
-		shoes = shoesList.pickNextEntry();
+		shoesL = shoesList.pickNextEntry();
+		shoesR = shoesList.pickNextEntry();
 //		accessoriesList = new AccessoryList();
 //		accessory = accessoriesList.pickNextEntry();
 		face = new Face();
@@ -50,7 +52,10 @@ public class Person {
 	 * @param marker The PApplet used for displaying the image and drawing
 	 */
 	public void draw(PApplet marker) {
-		
+		marker.image(top.getImage(), 300, 300);
+		marker.image(bottom.getImage(), 300, 400);
+		marker.image(shoesL.getImage(), 250, 500);
+		marker.image(shoesR.getImage(), 350, 500);
 	}
 	
 	/**
@@ -127,8 +132,11 @@ public class Person {
 	public Accessory getAccessory() {
 		return accessory;
 	}
-	public Shoes getShoes() {
-		return shoes;
+	public Shoes getShoesLeft() {
+		return shoesL;
+	}
+	public Shoes getShoesRight() {
+		return shoesR;
 	}
 	
 }

@@ -53,6 +53,9 @@ public class Shoes extends Clothes {
 		// TODO Auto-generated method stub
 		
 	}
+	public PImage getImage() {
+		return image;
+	}
 }
 
 
