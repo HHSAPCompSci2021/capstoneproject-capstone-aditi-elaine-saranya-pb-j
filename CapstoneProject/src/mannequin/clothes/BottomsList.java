@@ -1,6 +1,11 @@
 package mannequin.clothes;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+
+import javax.imageio.ImageIO;
 
 import processing.core.PApplet;
 import processing.core.PImage;
@@ -12,12 +17,26 @@ public class BottomsList extends PApplet{
 	public BottomsList() {
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
+		BufferedImage img= null;
+		try {
+			img = ImageIO.read(new File("res/whitepants.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage whitePants = new PImage(img);
+		Bottom bottom1 = new Bottom("Hot", whitePants);
+		allList.add(bottom1);
 		
 	}
-	
-	public void setup() {
-		Bottom bottom1 = new Bottom("Cold", loadImage("whitepants.png"));
-		allList.add(bottom1);
+	public PImage getImage(String path) {
+		try {
+			return new PImage(ImageIO.read(new File(path)));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 	/**
