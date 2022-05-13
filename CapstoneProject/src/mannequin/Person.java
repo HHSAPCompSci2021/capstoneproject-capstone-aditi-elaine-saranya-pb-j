@@ -104,4 +104,18 @@ public class Person {
 	public Clothes getClothes() {
 		return clothes;
 	}
+	
+	public Top getTop() {
+		return top;
+	}
+	public Bottom getBottom() {
+		return bottom;
+	}
+	public Accessory getAccessory() {
+		return accessory;
+	}
+	public Shoes getShoes() {
+		return shoes;
+	}
+	
 }
