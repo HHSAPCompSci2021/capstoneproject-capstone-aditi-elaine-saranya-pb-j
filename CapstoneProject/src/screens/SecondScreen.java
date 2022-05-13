@@ -40,13 +40,23 @@ public class SecondScreen extends Screen {
 		  G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
 		  // Some start text
 
-		top = new GButton(surface,400, 300, 80, 40, "Top");
-		bottom = new GButton(surface,400, 40, 80, 40, "Bottom");
-		shoes = new GButton(surface,400, 500, 80, 40, "Shoes");
-		accessories = new GButton(surface,400, 200, 80, 40, "Accessories");
-		random = new GButton(surface,300, 600, 300, 60, "Randomly Generate");
+		top = new GButton(surface,450, 300, 80, 40, "Top");
+		bottom = new GButton(surface,450, 400, 80, 40, "Bottom");
+		shoes = new GButton(surface, 450, 500, 80, 40, "Shoes");
+		accessories = new GButton(surface, 450, 200, 80, 40, "Accessories");
+		random = new GButton(surface, 150, 600, 300, 60, "Randomly Generate");
 
 	}
+	
+	public void setVisibility(boolean v) {
+		top.setVisible(v);
+		bottom.setVisible(v);
+		shoes.setVisible(v);
+		accessories.setVisible(v);
+		random.setVisible(v);
+
+	}
+	
 	public Person getPerson() {
 		return person;
 	}
@@ -57,11 +67,11 @@ public class SecondScreen extends Screen {
 	public void draw() {
 		surface.fill(112, 110, 250);
 		surface.noStroke();
-		surface.rect(25, 75, 150, 80);		
+		surface.rect(10, 25, 130, 70);		
 		surface.fill(255);
 		surface.textSize(15);
-		surface.text("Settings:", 50, 100);
-		surface.text("Weather: " + person.getClothes().getWeather(), 50, 130);
+		surface.text("Settings:", 25, 50);
+		surface.text("Weather: " + person.getClothes().getWeather(), 25, 75);
 		person.draw(surface);
 		
 	}
