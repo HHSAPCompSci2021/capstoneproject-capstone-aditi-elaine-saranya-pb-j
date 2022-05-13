@@ -22,19 +22,12 @@ public class ShoesList extends PApplet {
 	private ArrayList<Shoes> allList;
 	private ArrayList<Shoes> sortedList;
 
+	/**
+	 * Constructs a list of shoes with an arraylist of all the shoes and an arraylist that is sorted based on the user settings
+	 */
 	public ShoesList() {
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
-
-
-	}
-	/**
-	 * Adds shoes to the collection 
-	 */
-	public void setup() {
-		Shoes shoes1L = new Shoes("Hot", loadImage("loafersL.png"));
-		allList.add(shoes1L);
-
 		BufferedImage img= null;
 		try {
 			img = ImageIO.read(new File("res/loafersL.png"));
@@ -42,21 +35,12 @@ public class ShoesList extends PApplet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		PImage loafersL = new PImage(img);
-		shoes1L = new Shoes("Hot", loafersL);
+		PImage loafersL  = new PImage(img);
+		Shoes shoes1L = new Shoes("Hot", loafersL);
 		allList.add(shoes1L);
-		
-	}
-	public PImage getImage(String path) {
-		try {
-			return new PImage(ImageIO.read(new File(path)));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
-		}
 
 	}
+	
 	
 
 	/**

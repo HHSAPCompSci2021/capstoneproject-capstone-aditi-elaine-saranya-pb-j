@@ -18,17 +18,17 @@ import java.io.IOException;
  * The TopsList class represents a collection of all the Tops to be added to
  * the screen using the Processing library.
  * 
- * @author
+ * @author Saranya
  * @version 5/13/2022
  */
-
-
-
 public class TopsList{
 
 	private ArrayList<Top> allList;
 	private ArrayList<Top> sortedList;
 	
+	/**
+	 * Constructs a list of tops with an arraylist of all the tops and an arraylist that is sorted based on the user settings
+	 */
 	public TopsList() {
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
@@ -44,15 +44,8 @@ public class TopsList{
 		allList.add(top1);
 		
 	}
-	public PImage getImage(String path) {
-		try {
-			return new PImage(ImageIO.read(new File(path)));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
-		}
-	}
+	
+	
 	/**
 	 * Picks a random top based on the selected filters
 	 * 

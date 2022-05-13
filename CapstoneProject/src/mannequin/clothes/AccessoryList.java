@@ -23,6 +23,10 @@ public class AccessoryList extends PApplet{
 	private ArrayList<Accessory> allList;
 	private ArrayList<Accessory> sortedList;
 	
+
+	/**
+	 * Constructs a list of accessories with an arraylist of all the accessories and an arraylist that is sorted based on the user settings
+	 */
 	public AccessoryList() {
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
@@ -40,22 +44,6 @@ public class AccessoryList extends PApplet{
 	}
 
 	
-	/**
-	 * Adds accessories to the collection 
-	 */
-	public void setup() {
-		Accessory accessory1 = new Accessory("Cold", loadImage("whitepants.png"));
-		allList.add(accessory1);
-	}
-	public PImage getImage(String path) {
-		try {
-			return new PImage(ImageIO.read(new File(path)));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
-		}
-	}
 
 	/**
 	 * Picks a random accessory based on the selected filters

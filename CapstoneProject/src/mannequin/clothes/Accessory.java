@@ -51,7 +51,10 @@ public class Accessory extends Clothes {
 		// TODO Auto-generated method stub
 		
 	}
-
+	/**
+	 * Returns the image of the top
+	 * @return the image of the top
+	 */
 	public PImage getImage() {
 		return image;
 	}

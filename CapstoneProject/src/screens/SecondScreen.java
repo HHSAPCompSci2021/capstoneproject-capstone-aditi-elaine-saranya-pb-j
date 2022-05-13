@@ -12,7 +12,7 @@ import mannequin.Person;
 /**
  * The Second Screen class represents the program screen where the mannequin and outfit are displayed
  * @author Elaine
- * @version 5/6/2022
+ * @version 5/13/2022
  *
  */
 public class SecondScreen extends Screen {
@@ -33,7 +33,9 @@ public class SecondScreen extends Screen {
 		person = new Person();
 	}
 
-
+	/**
+	 * Sets up the second screen and all the all the buttons to change the outfit
+	 */
 	public void setup() {
 		surface.background(255);
 		G4P.setInputFont("Times New Roman", G4P.PLAIN, 13); // New for G4P V4.3
@@ -48,6 +50,10 @@ public class SecondScreen extends Screen {
 
 	}
 	
+	/**
+	 * Changes the visibility of the dropdown lists and buttons to what is specified
+	 * @param v the visibility of the lists, true if on, false if off
+	 */
 	public void setVisibility(boolean v) {
 		top.setVisible(v);
 		bottom.setVisible(v);
@@ -57,6 +63,10 @@ public class SecondScreen extends Screen {
 
 	}
 	
+	/**
+	 * Returns the person
+	 * @return the person
+	 */
 	public Person getPerson() {
 		return person;
 	}

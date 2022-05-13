@@ -22,6 +22,9 @@ public class BottomsList extends PApplet{
 	private ArrayList<Bottom> sortedList;
 	
 	
+	/**
+	 * Constructs a list of bottoms with an arraylist of all the bottoms and an arraylist that is sorted based on the user settings
+	 */
 	public BottomsList() {
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
@@ -39,23 +42,7 @@ public class BottomsList extends PApplet{
 	}
 
 	
-	/**
-	 * Adds bottoms to the collection 
-	 */
-	public void setup() {
-		Bottom bottom1 = new Bottom("Cold", loadImage("whitepants.png"));
-		allList.add(bottom1);}
-
-	public PImage getImage(String path) {
-		try {
-			return new PImage(ImageIO.read(new File(path)));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
-		}
-
-	}
+	
 
 	/**
 	 * Picks a random bottom based on the selected filters
