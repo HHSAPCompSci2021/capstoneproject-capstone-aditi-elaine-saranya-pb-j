@@ -25,6 +25,7 @@ public class TopsList{
 
 	private ArrayList<Top> allList;
 	private ArrayList<Top> sortedList;
+	private int currentIndex;
 	
 	/**
 	 * Constructs a list of tops with an arraylist of all the tops and an arraylist that is sorted based on the user settings
@@ -32,6 +33,7 @@ public class TopsList{
 	public TopsList() {
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
+		currentIndex = -1;
 		
 		BufferedImage img= null;
 		try {
@@ -142,7 +144,9 @@ public class TopsList{
 	 * @return The image of the top picked
 	 */
 	public Top pickNextEntry() {
-		return allList.get(0);
+		if (currentIndex == sortedList.size()-1)
+			currentIndex = -1;
+		return allList.get(currentIndex+1);
 	}
 
 	

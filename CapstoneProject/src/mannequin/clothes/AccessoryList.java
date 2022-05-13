@@ -22,7 +22,7 @@ import processing.core.PImage;
 public class AccessoryList extends PApplet{
 	private ArrayList<Accessory> allList;
 	private ArrayList<Accessory> sortedList;
-	
+	private int currentIndex;
 
 	/**
 	 * Constructs a list of accessories with an arraylist of all the accessories and an arraylist that is sorted based on the user settings
@@ -30,6 +30,9 @@ public class AccessoryList extends PApplet{
 	public AccessoryList() {
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
+		
+		currentIndex = -1;
+
 		BufferedImage img= null;
 		try {
 			img = ImageIO.read(new File("res/whitehat.png"));
@@ -64,8 +67,9 @@ public class AccessoryList extends PApplet{
 	 * @return The image of the accessory picked
 	 */
 	public Accessory pickNextEntry() {
-		setup();
-		return allList.get(0);
+		if (currentIndex == sortedList.size()-1)
+			currentIndex = -1;
+		return allList.get(currentIndex+1);
 	}
 
 	

@@ -21,6 +21,8 @@ public class BottomsList extends PApplet{
 	private ArrayList<Bottom> allList;
 	private ArrayList<Bottom> sortedList;
 	
+	private int currentIndex;
+	
 	
 	/**
 	 * Constructs a list of bottoms with an arraylist of all the bottoms and an arraylist that is sorted based on the user settings
@@ -118,8 +120,9 @@ public class BottomsList extends PApplet{
 	 * @return The image of the bottom picked
 	 */
 	public Bottom pickNextEntry() {
-		setup();
-		return allList.get(0);
+		if (currentIndex == sortedList.size()-1)
+			currentIndex = -1;
+		return allList.get(currentIndex+1);
 	}
 
 	
