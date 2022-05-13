@@ -73,18 +73,9 @@ public class AccessoryList extends PApplet{
 	 */
 	public Accessory pickNextEntry() {
 
-		//setup();
-		while(index<allList.size()) {
-			index++;
-			return allList.get(index);
-			
-		}
-		
 
-		if (currentIndex == sortedList.size()-1) 
-			currentIndex = -1;
-		return allList.get(currentIndex+1);
-
+		currentIndex++;
+		return allList.get(currentIndex);
 	}
 
 	

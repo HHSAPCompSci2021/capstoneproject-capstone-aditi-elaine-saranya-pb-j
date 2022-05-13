@@ -19,11 +19,12 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 	private FirstScreen screen1;
 	private SecondScreen screen2;
 	public float ratioX, ratioY;
+	private boolean first;
 
 	
 	public DrawingSurface() {
 		
-		
+		first = true;
 		screen1 = new FirstScreen(this);
 
 		
@@ -82,8 +83,12 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 
 	public void handleButtonEvents(GButton button, GEvent event) {
 		// Create the control window?
-		if (event == GEvent.CLICKED) {
+		if(screen1.handleButtonEvents(button, event) && first) {
 			switchScreen(1);
+			first = false;
+		}
+		else {
+			screen2.handleButtonEvents(button, event);
 		}
 		
 	}

@@ -20,6 +20,8 @@ import processing.core.PImage;
 public class ShoesList extends PApplet {
 	private ArrayList<Shoes> allList;
 	private ArrayList<Shoes> sortedList;
+	
+	private int currentIndex;
 
 
 	private int index=0;
@@ -33,6 +35,9 @@ public class ShoesList extends PApplet {
 	public ShoesList() {
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
+		
+		currentIndex = -1;
+
 		BufferedImage img= null;
 		try {
 			img = ImageIO.read(new File("res/loafersL.png"));
@@ -79,7 +84,7 @@ public class ShoesList extends PApplet {
 		
 		img= null;
 		try {
-			img = ImageIO.read(new File("res/blackconverseL.png"));
+			img = ImageIO.read(new File("res/blackconveseL.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -122,14 +127,11 @@ public class ShoesList extends PApplet {
 	 * @return The image of the shoe picked
 	 */
 	public Shoes pickNextEntry() {
-		//setup();
-		while(index<allList.size()) {
-			index+=2;
-			return allList.get(index);
-			
-		}
-		index=0;
-		return allList.get(index);
+
+		if (currentIndex == sortedList.size()-1)
+			currentIndex = -1;
+		currentIndex++;
+		return allList.get(currentIndex);
 	}
 
 }

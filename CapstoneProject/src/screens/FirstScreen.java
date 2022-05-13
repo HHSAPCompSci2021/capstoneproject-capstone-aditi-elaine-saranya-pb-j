@@ -25,11 +25,11 @@ public class FirstScreen extends Screen {
 		this.surface = surface;
 
 	}
-	GDropList listTemp;
-	GDropList listFormality;
-	GDropList listExpression;
+	private GDropList listTemp;
+	private GDropList listFormality;
+	private GDropList listExpression;
 	
-	GButton submit;
+	private GButton submit;
 
 	/**
 	 * Sets up the first screen and all the dropdown menus and submit button on the screen
@@ -82,6 +82,19 @@ public class FirstScreen extends Screen {
 
 	}
 
+	/**
+	 * Handles all the button events on the second screen and acts accordingly
+	 * @param button the button that was pressed 
+	 * @param event what has happened to the button
+	 */
+	public boolean handleButtonEvents(GButton button, GEvent event) {
+		// Create the control window?
+		if (button == submit && event == GEvent.CLICKED) {
+			return true;
+		}
+		return false;
+		
+	}
 
 
 

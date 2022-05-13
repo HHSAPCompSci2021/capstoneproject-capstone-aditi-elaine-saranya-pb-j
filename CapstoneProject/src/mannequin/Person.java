@@ -1,6 +1,7 @@
 package mannequin;
 
 import mannequin.clothes.Accessory;
+import mannequin.clothes.AccessoryList;
 import mannequin.clothes.Bottom;
 import mannequin.clothes.BottomsList;
 import mannequin.clothes.Clothes;
@@ -28,7 +29,7 @@ public class Person {
 	private TopsList topsList;
 	private BottomsList bottomsList;
 	private ShoesList shoesList;
-//	private AccessoryList accessoriesList;
+	private AccessoryList accessoriesList;
 	
 	/**
 	 * Constructs a person and initializes all the lists and clothing
@@ -55,17 +56,18 @@ public class Person {
 	 * @param marker The PApplet used for displaying the image and drawing
 	 */
 	public void draw(PApplet marker) {
-		marker.image(top.getImage(), 300, 300);
-		marker.image(bottom.getImage(), 300, 400);
-		marker.image(shoesL.getImage(), 250, 500);
-		marker.image(shoesR.getImage(), 350, 500);
+		marker.image(top.getImage(), 200,100);
+		marker.image(bottom.getImage(), 200, 400);
+		marker.image(shoesL.getImage(), 150, 500);
+		marker.image(shoesR.getImage(), 250, 500);
 	}
 	
 	/**
 	 * Changes the top
 	 */
 	public void changeTop() {
-		
+		top = topsList.pickNextEntry();
+
 	}
 	
 	/**
@@ -76,14 +78,16 @@ public class Person {
 
 	 */
 	public void changeBottom() {
-	
+		bottom = bottomsList.pickNextEntry();
+
 	}
 	
 	/**
 	 * Changes the shoes
 	 */
 	public void changeShoes() {
-		
+		shoesL = shoesList.pickNextEntry();
+		shoesR = shoesList.pickNextEntry();
 	}
 	
 	/**
@@ -94,7 +98,16 @@ public class Person {
 
 	 */
 	public void changeAccessory() {
-		
+		accessory = accessoriesList.pickNextEntry();
+
+	}
+	
+	public void pickRandom() {
+		top = topsList.pickRandom();
+		bottom = bottomsList.pickRandom();
+		accessory = accessoriesList.pickRandom();
+		shoesL = shoesList.pickRandom();
+		shoesR = shoesList.pickNextEntry();
 	}
 	
 	/**
@@ -158,5 +171,35 @@ public class Person {
 	public Shoes getShoesRight() {
 		return shoesR;
 	}
+	
+	/**
+	 * @return tops list
+	 */
+	public TopsList getTopsList() {
+		return topsList;
+	}
+	/**
+	 * @return bottoms list
+	 */
+	public BottomsList getBottomsList() {
+		return bottomsList;
+	}
+	/**
+	 * @return accessories list
+	 */
+	public AccessoryList getAccessoriesList() {
+		return accessoriesList;
+	}
+	/**
+	 * @return shoes list
+	 */
+	public ShoesList getShoesList() {
+		return shoesList;
+	}
+	
+	
+	
+	
+	
 	
 }

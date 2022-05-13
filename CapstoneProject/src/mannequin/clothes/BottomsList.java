@@ -31,6 +31,9 @@ public class BottomsList extends PApplet{
 	public BottomsList() {
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
+		
+		currentIndex = -1;
+
 		BufferedImage img= null;
 		try {
 			img = ImageIO.read(new File("res/whitepants.png"));
@@ -122,17 +125,8 @@ public class BottomsList extends PApplet{
 	 */
 	public Bottom pickNextEntry() {
 
-		//setup();
-		while(index<allList.size()) {
-			index++;
-			return allList.get(index);
-			
-		}
-
-		if (currentIndex == sortedList.size()-1)
-			currentIndex = -1;
-		return allList.get(currentIndex+1);
-
+		currentIndex++;
+		return allList.get(currentIndex);
 	}
 
 	

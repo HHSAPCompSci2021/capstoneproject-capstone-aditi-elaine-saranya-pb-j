@@ -7,6 +7,7 @@ import g4p_controls.G4P;
 import g4p_controls.GButton;
 import g4p_controls.GCScheme;
 import g4p_controls.GDropList;
+import g4p_controls.GEvent;
 import mannequin.Person;
 
 /**
@@ -21,7 +22,7 @@ public class SecondScreen extends Screen {
 	
 	private Person person; 
 
-	GButton top, bottom, shoes, accessories, random;
+	private GButton top, bottom, shoes, accessories, random;
 
 	/**
 	 * Constructs the SecondScreen (the program screen)
@@ -47,6 +48,7 @@ public class SecondScreen extends Screen {
 		shoes = new GButton(surface, 450, 500, 80, 40, "Shoes");
 		accessories = new GButton(surface, 450, 200, 80, 40, "Accessories");
 		random = new GButton(surface, 150, 600, 300, 60, "Randomly Generate");
+		
 
 	}
 	
@@ -84,6 +86,34 @@ public class SecondScreen extends Screen {
 		surface.text("Weather: " + person.getClothes().getWeather(), 25, 75);
 		person.draw(surface);
 		
+	}
+	
+	/**
+	 * Handles all the button events on the second screen and acts accordingly
+	 * @param button the button that was pressed 
+	 * @param event what has happened to the button
+	 */
+	public void handleButtonEvents(GButton button, GEvent event) {
+		// Create the control window?
+		System.out.println(button.getText());
+
+		if (button.equals(top)) {
+			System.out.println("here2");
+			person.changeTop();
+		}
+		else if (button == bottom && event == GEvent.CLICKED) {
+			person.changeBottom();
+		}
+		else if (button == accessories && event == GEvent.CLICKED) {
+			person.changeAccessory();
+		}
+		else if (button == shoes && event == GEvent.CLICKED) {
+			person.changeShoes();
+		}
+		else if (button == random && event == GEvent.CLICKED) {
+			person.pickRandom();
+			
+		}
 	}
 }
 	

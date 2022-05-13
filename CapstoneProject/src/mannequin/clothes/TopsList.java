@@ -26,7 +26,6 @@ public class TopsList{
 	private ArrayList<Top> allList;
 	private ArrayList<Top> sortedList;
 
-	private int index=0;
 
 	private int currentIndex;
 
@@ -149,16 +148,9 @@ public class TopsList{
 	 */
 	public Top pickNextEntry() {
 
-		while(index<allList.size()) {
-			index++;
-			return allList.get(index);
-			
-		}
 
-		if (currentIndex == sortedList.size()-1)
-			currentIndex = -1;
-		return allList.get(currentIndex+1);
-
+		currentIndex++;
+		return allList.get(currentIndex);
 	}
 
 	
