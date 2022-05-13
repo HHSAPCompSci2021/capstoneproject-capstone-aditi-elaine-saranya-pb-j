@@ -6,12 +6,26 @@ import javax.imageio.ImageIO;
 
 import processing.core.PApplet;
 import processing.core.PImage;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+
+
+/**
+ * The TopsList class represents a collection of all the Tops to be added to
+ * the screen using the Processing library.
+ * 
+ * @author
+ * @version 5/13/2022
+ */
+
+
+
 public class TopsList{
+
 	private ArrayList<Top> allList;
 	private ArrayList<Top> sortedList;
 	private int index=0;
@@ -41,9 +55,9 @@ public class TopsList{
 		}
 	}
 	/**
-	 * Picks a random article of clothing based on the selected filters
+	 * Picks a random top based on the selected filters
 	 * 
-	 * @return The image of the article of clothing picked
+	 * @return The image of the top picked
 	 */
 	public Top pickRandom() {
 		int index = (int)(Math.random() * sortedList.size());
@@ -54,9 +68,9 @@ public class TopsList{
 	}
 
 	/**
-	 * Picks the next article of clothing based on the selected filters
+	 * Picks the next top based on the selected filters
 	 * 
-	 * @return The image of the article of clothing picked
+	 * @return The image of the top picked
 	 */
 	public Top pickNextEntry() {
 		while(index<allList.size()) {
