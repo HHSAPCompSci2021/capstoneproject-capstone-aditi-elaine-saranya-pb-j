@@ -32,6 +32,7 @@ public class TopsList{
 	public TopsList() {
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
+		
 		BufferedImage img= null;
 		try {
 			img = ImageIO.read(new File("res/redblouse.png"));
@@ -43,6 +44,82 @@ public class TopsList{
 		Top top1 = new Top("Hot", redBlouse);
 		allList.add(top1);
 		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/beigeshirt.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage beigeShirt = new PImage(img);
+		Top top2 = new Top("Hot", beigeShirt);
+		allList.add(top2);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/blacktanktop.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blackTankTop = new PImage(img);
+		Top top3 = new Top("Hot", blackTankTop);
+		allList.add(top3);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/blacktshirt.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blackTShirt = new PImage(img);
+		Top top4 = new Top("Hot", blackTShirt);
+		allList.add(top4);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/blueblouse.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blueBlouse = new PImage(img);
+		Top top5 = new Top("Hot", blueBlouse);
+		allList.add(top5);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/bluetshirt.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blueTShirt = new PImage(img);
+		Top top6 = new Top("Hot", blueTShirt);
+		allList.add(top6);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/whiteblouse.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage whiteBlouse = new PImage(img);
+		Top top7 = new Top("Hot", whiteBlouse);
+		allList.add(top7);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/whitetshirt.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage whiteTShirt = new PImage(img);
+		Top top8 = new Top("Hot", whiteTShirt);
+		allList.add(top8);
 	}
 	
 	

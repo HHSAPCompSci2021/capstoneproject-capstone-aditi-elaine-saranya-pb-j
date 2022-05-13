@@ -12,7 +12,7 @@ import processing.core.PApplet;
 /**
  * Represents a person who has different types of clothing
  * @author Aditi
- * @version 5/6/22
+ * @version 5/13/22
  *
  */
 public class Person {
@@ -30,6 +30,9 @@ public class Person {
 	private ShoesList shoesList;
 //	private AccessoryList accessoriesList;
 	
+	/**
+	 * Constructs a person and initializes all the lists and clothing
+	 */
 	public Person() {
 		topsList = new TopsList();
 		top = topsList.pickNextEntry();
@@ -105,36 +108,53 @@ public class Person {
 		
 	}
 
-	/**
-	 * Calculates the total cost of the outfit
-	 * @return total cost of the outfit
-=======
-	
+
 	/**
 	 * Calculates the cost of the entire outfit 
 	 * @return totalCost value of entire outfit
-
 	 */
 	public double calculateTotalCost() {
 		return totalCost;
 	}
 	
+	/**
+	 * @return the clothes
+	 */
 	public Clothes getClothes() {
 		return clothes;
 	}
 	
+	/**
+	 * @return the top
+	 */
 	public Top getTop() {
 		return top;
 	}
+	
+	/**
+	 * @return the bottom
+	 */
 	public Bottom getBottom() {
 		return bottom;
 	}
+	
+	/**
+	 * @return the accessory
+	 */
 	public Accessory getAccessory() {
 		return accessory;
 	}
+	
+	/**
+	 * @return the left shoe
+	 */
 	public Shoes getShoesLeft() {
 		return shoesL;
 	}
+	
+	/**
+	 * @return the right shoe
+	 */
 	public Shoes getShoesRight() {
 		return shoesR;
 	}
