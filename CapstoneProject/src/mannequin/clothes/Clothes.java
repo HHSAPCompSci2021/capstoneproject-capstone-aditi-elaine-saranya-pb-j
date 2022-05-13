@@ -15,8 +15,7 @@ import processing.core.PImage;
  */
 public class Clothes extends PApplet {
 
-	private ArrayList<ArrayList<PImage>> clothes;
-	private Color color;
+
 	private String weather; //{"Hot", "Cold"}
 //	private String formality;
 	//private int gender; //1 feminine 2 masculine 3 non-binary 
@@ -28,10 +27,9 @@ public class Clothes extends PApplet {
 	/**
 	 * Sets all filters to their default value
 	 */
-	public Clothes() {
-		clothes=new ArrayList<ArrayList<PImage>>();
-		color=null;
-		weather="Hot";
+	public Clothes(String w) {
+		
+		weather=w;
 		//formality="casual";
 		price= 0.0;
 		//gender=1;
@@ -48,57 +46,26 @@ public class Clothes extends PApplet {
 		
 	}
 
-	/**
-	 * Graphical UI Displays an image (format PImage) of specific articles of
-	 * clothing based on chosen filters. This supports interaction with the screen
-	 * using mouse clicks in the window.
-	 * 
-	 * @pre Properties affecting clothes are set on marker
-	 * @param drawer The PApplet used for displaying the image and drawing
-	 */
-	public void draw(PApplet drawer) {
-		
-	}
 
-	/**
-	 * Picks a random article of clothing based on the selected filters
-	 * 
-	 * @return The image of the article of clothing picked
-	 */
-	public PImage pickRandom(ArrayList<PImage> wardrobe) {
-		int index = (int)(Math.random() * wardrobe.size());
-		while (wardrobe.get(index) == null) {
-			index = (int)(Math.random() * wardrobe.size());
-		}
-		return wardrobe.get(index);
-	}
 
-	/**
-	 * Picks the next article of clothing based on the selected filters
-	 * 
-	 * @return The image of the article of clothing picked
-	 */
-	public PImage pickNextEntry() {
-		return null;
-	}
-
-	/**
-	 * Gets the color of the article of clothing
-	 * 
-	 * @return color The color of the article of clothing
-	 */
-	public Color getColor() {
-		return color;
-	}
-
-	/**
-	 * Sets the color of the clothes
-	 * 
-	 * @param c The color of the article of clothing
-	 */
-	public void setColor(Color c) {
-		color = c;
-	}
+	
+//	/**
+//	 * Gets the color of the article of clothing
+//	 * 
+//	 * @return color The color of the article of clothing
+//	 */
+//	public Color getColor() {
+//		return color;
+//	}
+//
+//	/**
+//	 * Sets the color of the clothes
+//	 * 
+//	 * @param c The color of the article of clothing
+//	 */
+//	public void setColor(Color c) {
+//		color = c;
+//	}
 	
 	/**
 	 * Gets the weather

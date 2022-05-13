@@ -14,28 +14,20 @@ import processing.core.PImage;
  */
 public class Bottom extends Clothes {
 
-
+	private PImage image;
+	
 	
 	/**
 	 * Constructs an bottom with specified image
 	 * 
 	 * @param image The image of the bottom
 	 */
-	public Bottom () {
-		
+	public Bottom(String w, PImage i) {
+		super(w);
+		image = i;
 	}
 
-	/**
-	 * Graphical UI Displays an image (format PImage) of specific bottom based on
-	 * chosen filters This supports interaction with the screen using mouse clicks in
-	 * the window.
-	 * 
-	 * @pre Properties affecting bottoms are set on marker
-	 * @param marker The PApplet used for displaying the image and drawing
-	 */
-	public void draw(PApplet marker) {
-
-	}
+	
 
 	/**
 	 * Gets the price of the bottom
@@ -52,6 +44,7 @@ public class Bottom extends Clothes {
 		// TODO Auto-generated method stub
 		
 	}
+
 
 
 	}

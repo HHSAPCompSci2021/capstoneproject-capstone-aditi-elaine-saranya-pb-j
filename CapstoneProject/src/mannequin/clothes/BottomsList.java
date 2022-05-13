@@ -5,18 +5,19 @@ import java.util.ArrayList;
 import processing.core.PApplet;
 import processing.core.PImage;
 
-public class TopsList extends PApplet{
-	private ArrayList<Top> allList;
-	private ArrayList<Top> sortedList;
-	PImage redBlouse;
+public class BottomsList extends PApplet{
+	private ArrayList<Bottom> allList;
+	private ArrayList<Bottom> sortedList;
 	
-	public TopsList() {
+	public BottomsList() {
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
-		redBlouse = loadImage("redblouse.png");
-		Top top1 = new Top("Hot", redBlouse);
-		allList.add(top1);
 		
+	}
+	
+	public void setup() {
+		Bottom bottom1 = new Bottom("Cold", loadImage("whitepants.png"));
+		allList.add(bottom1);
 	}
 
 	/**
@@ -24,7 +25,7 @@ public class TopsList extends PApplet{
 	 * 
 	 * @return The image of the article of clothing picked
 	 */
-	public Top pickRandom() {
+	public Bottom pickRandom() {
 		int index = (int)(Math.random() * sortedList.size());
 		while (sortedList.get(index) == null) {
 			index = (int)(Math.random() * sortedList.size());
@@ -37,7 +38,8 @@ public class TopsList extends PApplet{
 	 * 
 	 * @return The image of the article of clothing picked
 	 */
-	public Top pickNextEntry() {
+	public Bottom pickNextEntry() {
+		setup();
 		return allList.get(0);
 	}
 

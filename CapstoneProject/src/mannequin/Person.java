@@ -2,8 +2,10 @@ package mannequin;
 
 import mannequin.clothes.Accessory;
 import mannequin.clothes.Bottom;
+import mannequin.clothes.BottomsList;
 import mannequin.clothes.Clothes;
 import mannequin.clothes.Shoes;
+import mannequin.clothes.ShoesList;
 import mannequin.clothes.Top;
 import mannequin.clothes.TopsList;
 import processing.core.PApplet;
@@ -22,21 +24,30 @@ public class Person {
 	private Face face;
 	private double totalCost; //lets just keep this in the clothing class
 	private Clothes clothes;
-	
+	private TopsList topsList;
+	private BottomsList bottomsList;
+	private ShoesList shoesList;
+//	private AccessoryList accessoriesList;
 	
 	public Person() {
-		TopsList topsList = new TopsList();
+		topsList = new TopsList();
 		top = topsList.pickNextEntry();
-		bottom = new Bottom();
-		shoes = new Shoes();
-		accessory = new Accessory();
+		bottomsList = new BottomsList();
+		bottom = bottomsList.pickNextEntry();
+		shoesList = new ShoesList();
+		shoes = shoesList.pickNextEntry();
+//		accessoriesList = new AccessoryList();
+//		accessory = accessoriesList.pickNextEntry();
 		face = new Face();
-		clothes = new Clothes();
+		clothes = new Clothes("Hot");
 	}
 	/**
-	 * draws the person with all of their clothing
-	 * @param marker The Processing PApplet on which one draws on
-	 * @pre properties affecting the face are set on the marker 
+	 * Graphical UI Displays an image (format PImage) of the clothes based on
+	 * chosen filters This supports interaction with the screen using mouse clicks in
+	 * the window.
+	 * 
+	 * @pre Properties affecting tops are set on marker
+	 * @param marker The PApplet used for displaying the image and drawing
 	 */
 	public void draw(PApplet marker) {
 		

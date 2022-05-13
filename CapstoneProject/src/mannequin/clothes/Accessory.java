@@ -21,20 +21,10 @@ public class Accessory extends Clothes {
 	 * 
 	 * @param image The image of the accessory
 	 */
-	public Accessory() {
+	public Accessory(String w) {
+		super(w);
 	}
 
-	/**
-	 * Graphical UI Displays an image (format PImage) of specific accessory based on
-	 * chosen filters This supports interaction with the screen using mouse clicks in
-	 * the window.
-	 * 
-	 * @pre Properties affecting accessories are set on marker
-	 * @param marker The PApplet used for displaying the image and drawing
-	 */
-	public void draw(PApplet marker) {
-
-	}
 	
 
 

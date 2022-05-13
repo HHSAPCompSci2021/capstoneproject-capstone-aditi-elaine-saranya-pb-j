@@ -15,6 +15,7 @@ import processing.core.PImage;
 public class Shoes extends Clothes {
 
 	
+	private PImage image;
 	
 	
 	/**
@@ -22,22 +23,16 @@ public class Shoes extends Clothes {
 	 * 
 	 * @param image The image of the shoe
 	 */
-	public Shoes() {
+	public Shoes(String w, PImage i) {
+		super(w);
+		image = i;
+		
+	}
 	
-	}
 
-	/**
-	 * Graphical UI Displays an image (format PImage) of specific shoes based on
-	 * chosen filters This supports interaction with the screen using mouse clicks in
-	 * the window.
-	 * 
-	 * @pre Properties affecting shoes are set on marker
-	 * @param marker The PApplet used for displaying the image and drawing
-	 */
-	public void draw(PApplet marker) {
+	
 
-	}
-
+	
 	/**
 	 * Gets the price of the shoes
 	 * 

@@ -14,7 +14,6 @@ import processing.core.PImage;
  */
 public class Top extends Clothes {
 	
-	private String weather;
 	private PImage image;
 	
 	
@@ -24,25 +23,13 @@ public class Top extends Clothes {
 	 * @param image The image of the top
 	 */
 	public Top(String w, PImage i) {
+		super(w);
 		image = i;
-		weather = w;
 	}
 	
-	/**
-	 * Graphical UI Displays an image (format PImage) of specific tops based on
-	 * chosen filters This supports interaction with the screen using mouse clicks in
-	 * the window.
-	 * 
-	 * @pre Properties affecting tops are set on marker
-	 * @param marker The PApplet used for displaying the image and drawing
-	 */
-	public void draw(PApplet marker) {
+	
 
-	}
-
-	public void setWeather (String w) {
-		weather = w;
-	}
+	
 	/**
 	 * Gets the price of the top
 	 * 
