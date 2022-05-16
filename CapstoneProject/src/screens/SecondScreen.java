@@ -22,6 +22,7 @@ public class SecondScreen extends Screen {
 	
 	private Person person; 
 
+	private GDropList colorAccessory, colorTop, colorBottom, colorShoes;
 	private GButton top, bottom, shoes, accessories, random;
 
 	/**
@@ -40,9 +41,11 @@ public class SecondScreen extends Screen {
 	public void setup() {
 		surface.background(255);
 		G4P.setInputFont("Times New Roman", G4P.PLAIN, 13); // New for G4P V4.3
-		  G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
-		  // Some start text
-
+		G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
+		//Some start text
+		colorAccessory = new GDropList(surface, 100, 300, 100, 100, 0);
+		colorAccessory.setItems(new String[] {"Black", "Blue", "Green", "Purple", "Orange", "Pink", 
+				"Red", "White", "Yellow"}, 0);		
 		top = new GButton(surface,450, 300, 80, 40, "Top");
 		bottom = new GButton(surface,450, 400, 80, 40, "Bottom");
 		shoes = new GButton(surface, 450, 500, 80, 40, "Shoes");
@@ -62,7 +65,7 @@ public class SecondScreen extends Screen {
 		shoes.setVisible(v);
 		accessories.setVisible(v);
 		random.setVisible(v);
-
+		colorAccessory.setVisible(v);
 	}
 	
 	/**
@@ -77,6 +80,7 @@ public class SecondScreen extends Screen {
 	 * @pre The Screen will be drawn with attributes previously set on the given PApplet.
 	 */
 	public void draw() {
+		surface.background(255);
 		surface.fill(112, 110, 250);
 		surface.noStroke();
 		surface.rect(10, 25, 130, 70);		
@@ -113,6 +117,12 @@ public class SecondScreen extends Screen {
 		else if (button == random && event == GEvent.CLICKED) {
 			person.pickRandom();
 			
+		}
+	}
+	
+	public void handleDropListEvents (GDropList list, GEvent event) {
+		if (list == colorAccessory) {
+			person.getAccessory().setColor(list.getSelectedText());
 		}
 	}
 }

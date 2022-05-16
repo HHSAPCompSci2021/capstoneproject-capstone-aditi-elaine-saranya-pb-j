@@ -97,6 +97,12 @@ public class FirstScreen extends Screen {
 		
 	}
 
+	
+	public boolean handleDropListEvents (GDropList list, GEvent event) {
+		if (list == listTemp)
+			return true;
+		return false;
+	}
 
 
 	

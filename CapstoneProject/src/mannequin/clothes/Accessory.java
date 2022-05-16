@@ -1,5 +1,6 @@
 package mannequin.clothes;
 
+import java.awt.Color;
 import java.util.ArrayList;
 
 import processing.core.PApplet;
@@ -15,6 +16,7 @@ import processing.core.PImage;
 public class Accessory extends Clothes {
 
 	private PImage image;
+	private Color color;
 
 	/**
 	 * Constructs an accessory with specified image
@@ -26,6 +28,7 @@ public class Accessory extends Clothes {
 	public Accessory(String w, PImage i) {
 		super(w);
 		image = i;
+		color = null;
 	}
 
 	
@@ -57,6 +60,33 @@ public class Accessory extends Clothes {
 	 */
 	public PImage getImage() {
 		return image;
+	}
+	
+	public void setColor (String c) {
+		if (c.equals("Blue"))
+			color = Color.blue;
+		else if (c.equals("Black"))
+			color = Color.black;
+		else if (c.equals("Red"))
+			color = Color.red;
+		else if (c.equals("White"))
+			color = Color.white;
+		else if (c.equals("Red"))
+			color = Color.red;
+		else if (c.equals("Red"))
+			color = Color.red;
+		else if (c.equals("Green"))
+			color = Color.green;
+		else if (c.equals("Purple"))
+			color = Color.magenta;
+		else if (c.equals("Pink"))
+			color = Color.pink;
+		else if (c.equals("Yellow"))
+			color = Color.yellow;
+	}
+	
+	public Color getColor() {
+		return color;
 	}
 
 }

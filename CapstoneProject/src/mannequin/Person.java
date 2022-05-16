@@ -64,6 +64,11 @@ public class Person {
 	 * @param marker The PApplet used for displaying the image and drawing
 	 */
 	public void draw(PApplet marker) {
+//		if(accessory.getColor() != null) {
+//			marker.tint(accessory.getColor().getRGB());
+//			marker.image(accessory.getImage(), 100, 100);
+//		}
+
 		marker.image(top.getImage(), 200,100);
 		marker.image(bottom.getImage(), 200, 400);
 		marker.image(shoesL.getImage(), 150, 500);
