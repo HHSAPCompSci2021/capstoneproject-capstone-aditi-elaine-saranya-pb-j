@@ -64,6 +64,7 @@ public class Person {
 	 * @param marker The PApplet used for displaying the image and drawing
 	 */
 	public void draw(PApplet marker) {
+
 		if(accessory.getColor() != null) {
 			marker.tint(accessory.getColor().getRGB());
 		}else
@@ -72,8 +73,9 @@ public class Person {
 		
 		if(top.getColor() != null) {
 			marker.tint(top.getColor().getRGB());
-		}else
+		}else {
 			marker.noTint();
+		}
 		marker.image(top.getImage(), 100,100);
 		
 		if(bottom.getColor() != null) {

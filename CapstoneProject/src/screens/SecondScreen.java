@@ -131,19 +131,20 @@ public class SecondScreen extends Screen {
 	}
 	
 	public void handleDropListEvents (GDropList list, GEvent event) {
-		if (list.getText().equals(colorAccessory.getText())) {
+		if (list.getCY() == colorAccessory.getCY()) {
 			person.getAccessory().setColor(list.getSelectedText());
 		}
-		else if (list.getText().equals(colorTop.getText())) {
+		else if (list.getCY() == colorTop.getCY()) {
 			person.getTop().setColor(list.getSelectedText());
 		}
-		else if (list.getText().equals(colorBottom.getText())) {
+		else if (list.getCY() == colorBottom.getCY()) {
 			person.getBottom().setColor(list.getSelectedText());
 		}
-		if (list.getText().equals(colorShoes.getText())) {
+		else if (list.getCY() == colorShoes.getCY()) {
 			person.getShoesLeft().setColor(list.getSelectedText());
 			person.getShoesRight().setColor(list.getSelectedText());
 		}
+		
 	}
 }
 	

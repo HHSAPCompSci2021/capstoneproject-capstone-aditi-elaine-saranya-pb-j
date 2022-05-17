@@ -65,25 +65,23 @@ public class Top extends Clothes {
 	 */
 	public void setColor (String c) {
 		if (c.equals("Blue"))
-			color = Color.blue;
+			color = Color.BLUE;
 		else if (c.equals("Black"))
-			color = Color.black;
+			color = Color.BLACK;
 		else if (c.equals("Red"))
-			color = Color.red;
+			color = Color.RED;
 		else if (c.equals("White"))
-			color = Color.white;
-		else if (c.equals("Red"))
-			color = Color.red;
+			color = Color.WHITE;
 		else if (c.equals("Red"))
 			color = Color.red;
 		else if (c.equals("Green"))
-			color = Color.green;
+			color = Color.GREEN;
 		else if (c.equals("Purple"))
-			color = Color.magenta;
+			color = Color.MAGENTA;
 		else if (c.equals("Pink"))
-			color = Color.pink;
+			color = Color.PINK;
 		else if (c.equals("Yellow"))
-			color = Color.yellow;
+			color = Color.YELLOW;
 	}
 	
 	/**
