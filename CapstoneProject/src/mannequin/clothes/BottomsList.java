@@ -115,6 +115,65 @@ public class BottomsList {
 		PImage blackSweats = new PImage(img);
 		Bottom bottom7 = new Bottom("Cold",blackSweats,"Casual", "Neutral");
 		allList.add(bottom7);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/darkblueshorts.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage darkBlueShorts = new PImage(img);
+		Bottom bottom8 = new Bottom("Hot",darkBlueShorts,"Casual", "Feminine");
+		allList.add(bottom8);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/lightblueshorts.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage lightBlueShorts = new PImage(img);
+		Bottom bottom9 = new Bottom("Hot",lightBlueShorts,"Casual", "Feminine");
+		allList.add(bottom9);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/blueflarejeans.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blueFlareJeans2 = new PImage(img);
+		Bottom bottom10 = new Bottom("Cold",blueFlareJeans2,"Formal", "Feminine");
+		allList.add(bottom10);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/blackshorts.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blackshorts = new PImage(img);
+		Bottom bottom11 = new Bottom("Hot",blackshorts,"Formal", "Feminine");
+		allList.add(bottom11);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/blackskirt.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blackskirt = new PImage(img);
+		Bottom bottom12 = new Bottom("Hot",blackskirt,"Formal", "Feminine");
+		allList.add(bottom12);
+		
+		
+		
+		
 
 	}
 
@@ -136,7 +195,7 @@ public class BottomsList {
 	public Bottom pickRandom() {
 		int index = (int) (Math.random() * sortedList.size());
 		while (sortedList.get(index) == null) {
-			index = (int) (Math.random() * sortedList.size());
+			index = (int) (Math.random() * sortedList.size()); 
 		}
 		return sortedList.get(index);
 	}

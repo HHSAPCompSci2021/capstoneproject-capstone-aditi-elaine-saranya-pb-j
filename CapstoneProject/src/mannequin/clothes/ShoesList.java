@@ -26,6 +26,8 @@ public class ShoesList {
 	private String weatherCondition;
 	private String formality;
 	private String gender;
+	
+	
 
 	/**
 	 * Constructs an AccessoryList containing an ArrayList of all the accessories
@@ -107,6 +109,52 @@ public class ShoesList {
 		PImage converseR = new PImage(img);
 		Shoes shoes3R = new Shoes("Hot", "Casual","Neutral", converseR);
 		allList.add(shoes3R);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/af1L.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage af1L = new PImage(img);
+		Shoes shoes4L = new Shoes("Hot", "Casual","Neutral", af1L);
+		allList.add(shoes3L);
+
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/af1R.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage af1R = new PImage(img);
+		Shoes shoes4R = new Shoes("Hot", "Casual","Neutral", af1R);
+		allList.add(shoes4R);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/drmartensL.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage drmartensL = new PImage(img);
+		Shoes shoes5L = new Shoes("Cold", "Semi-Formal","Neutral", drmartensL);
+		allList.add(shoes5L);
+
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/drmartensR.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage drmartensR = new PImage(img);
+		Shoes shoes5R = new Shoes("Cold", "Semi-Formal","Neutral", drmartensR);
+		allList.add(shoes5R);
+		
+		
 
 	}
 
