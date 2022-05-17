@@ -5,6 +5,7 @@ import java.awt.Rectangle;
 
 import core.DrawingSurface;
 import g4p_controls.*;
+import mannequin.Person;
 import processing.core.PApplet;
 
 /**
@@ -55,8 +56,8 @@ public class FirstScreen extends Screen {
 	public void setVisibility(boolean v) {
 		listTemp.setVisible(v);
 		submit.setVisible(v);
-//		listFormality.setVisible(v);
-//		listExpression.setVisible(v);
+		listFormality.setVisible(v);
+		listExpression.setVisible(v);
 	}
 	
 	
@@ -77,8 +78,8 @@ public class FirstScreen extends Screen {
 		surface.fill(112, 110, 250);
 		surface.text("Please enter the settings to help us better generate an outfit for you", 100, 150);
 		surface.text("Temperature", 105, 295);
-//		surface.text("Formality", 270, 295);
-//		surface.text("Expression", 413, 295);
+		surface.text("Formality", 270, 295);
+		surface.text("Expression", 413, 295);
 
 	}
 
@@ -98,7 +99,7 @@ public class FirstScreen extends Screen {
 	}
 
 	
-	public boolean handleDropListEvents (GDropList list, GEvent event) {
+	public boolean handleDropListEvents (GDropList list, GEvent event, Person p) {
 		if (list == listTemp)
 			return true;
 		return false;
