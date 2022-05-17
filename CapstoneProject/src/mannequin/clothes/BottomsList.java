@@ -77,7 +77,7 @@ public class BottomsList extends PApplet{
 			e.printStackTrace();
 		}
 		PImage blueFlareJeans = new PImage(img);
-		Bottom bottom4 = new Bottom("Hot", blueFlareJeans);
+		Bottom bottom4 = new Bottom("Cold", blueFlareJeans);
 		allList.add(bottom4);
 		
 		img= null;
@@ -101,6 +101,18 @@ public class BottomsList extends PApplet{
 		PImage blueJeansWRips = new PImage(img);
 		Bottom bottom6 = new Bottom("Hot", blueJeansWRips);
 		allList.add(bottom6);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/blacksweats.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blackSweats = new PImage(img);
+		Bottom bottom7 = new Bottom("Cold", blackSweats);
+		allList.add(bottom7);
+		
 				
 		
 	}

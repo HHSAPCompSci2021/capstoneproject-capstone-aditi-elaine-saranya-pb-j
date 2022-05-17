@@ -51,6 +51,50 @@ public class AccessoryList extends PApplet{
 		Accessory accessory1 = new Accessory("Hot", whiteHat);
 		allList.add(accessory1);
 		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/blackhat.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blackHat = new PImage(img);
+		Accessory accessory2 = new Accessory("Hot", blackHat);
+		allList.add(accessory2);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/blackbeanie.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blackBeanie = new PImage(img);
+		Accessory accessory3 = new Accessory("Cold", blackBeanie);
+		allList.add(accessory3);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/graybeanie.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage grayBeanie = new PImage(img);
+		Accessory accessory4 = new Accessory("Cold", grayBeanie);
+		allList.add(accessory4);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/greenbeanie.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage greenBeanie = new PImage(img);
+		Accessory accessory5 = new Accessory("Cold", greenBeanie);
+		allList.add(accessory5);
+		
 		
 	}
 

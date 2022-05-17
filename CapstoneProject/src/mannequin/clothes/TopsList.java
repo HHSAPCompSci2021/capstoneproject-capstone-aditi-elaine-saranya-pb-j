@@ -128,6 +128,61 @@ public class TopsList{
 		Top top8 = new Top("Hot", whiteTShirt);
 		allList.add(top8);
 		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/blackbuttondown.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blackButtonDown = new PImage(img);
+		Top top9 = new Top("Cold", blackButtonDown);
+		allList.add(top9);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/blacksweater.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blackSweater = new PImage(img);
+		Top top10 = new Top("Cold", blackSweater);
+		allList.add(top10);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/bluebuttondown.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blueButtonDown = new PImage(img);
+		Top top11 = new Top("Cold", blueButtonDown);
+		allList.add(top11);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/greenbuttondown.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage greenButtonDown = new PImage(img);
+		Top top12 = new Top("Cold", greenButtonDown);
+		allList.add(top12);
+		
+		img= null;
+		try {
+			img = ImageIO.read(new File("res/whitesweater.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage whiteSweater = new PImage(img);
+		Top top13 = new Top("Cold", whiteSweater);
+		allList.add(top13);
+		
 		
 		
 	}
