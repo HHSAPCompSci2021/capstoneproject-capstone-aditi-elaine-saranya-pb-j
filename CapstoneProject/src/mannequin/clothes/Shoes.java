@@ -18,7 +18,7 @@ public class Shoes extends Clothes {
 	
 	private PImage image;
 	private Color color;
-	
+	private double price; 
 	
 	/**
 	 * Constructs a shoe with specified image
@@ -26,10 +26,11 @@ public class Shoes extends Clothes {
 	 * @param w The weather filter
 	 * @param i The image of the shoe
 	 */
-	public Shoes(String w, String f, String g, PImage i) {
+	public Shoes(String w, String f, String g, PImage i, double p) {
 		super(w,f,g);
 		image = i;
 		color = null;
+		price = p;
 	}
 	
 

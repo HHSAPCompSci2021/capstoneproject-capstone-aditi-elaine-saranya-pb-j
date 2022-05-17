@@ -24,7 +24,6 @@ public class Person {
 	private Shoes shoesR;
 	private Accessory accessory;
 	private Face face;
-	private double totalCost; //lets just keep this in the clothing class
 	private Clothes clothes;
 	private TopsList topsList;
 	private BottomsList bottomsList;
@@ -172,7 +171,8 @@ public class Person {
 	 * @return totalCost value of entire outfit
 	 */
 	public double calculateTotalCost() {
-		return totalCost;
+		double total = top.getPrice() + bottom.getPrice() + accessory.getPrice() + shoesL.getPrice() + shoesR.getPrice();
+		return total;
 	}
 	
 	/**

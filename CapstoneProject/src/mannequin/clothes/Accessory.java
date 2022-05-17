@@ -17,6 +17,7 @@ public class Accessory extends Clothes {
 
 	private PImage image;
 	private Color color;
+	private double price;
 
 	/**
 	 * Constructs an accessory with specified image
@@ -25,10 +26,11 @@ public class Accessory extends Clothes {
 	 * @param i The image of the accessory
 	 * 
 	 */
-	public Accessory(String w, String f, String g, PImage i) {
+	public Accessory(String w, String f, String g, PImage i, double p) {
 		super(w, f, g);
 		image = i;
 		color = null;
+		price = p;
 	}
 
 	

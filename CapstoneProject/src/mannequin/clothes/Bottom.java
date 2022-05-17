@@ -17,7 +17,7 @@ public class Bottom extends Clothes {
 
 	private PImage image;
 	private Color color;
-	//casual, 
+	private double price;
 	
 	/**
 	 * Constructs a bottom with specified image
@@ -27,10 +27,11 @@ public class Bottom extends Clothes {
 	 * @param f The formality of the bottom
 	 * @param g The gender of the person
 	 */
-	public Bottom(String w, PImage i, String f, String g) {
+	public Bottom(String w, PImage i, String f, String g, double p) {
 		super(w, f, g);
 		image = i;
 		color = null;
+		price = p;
 	}
 
 	
