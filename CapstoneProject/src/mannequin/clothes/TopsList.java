@@ -205,7 +205,7 @@ public class TopsList {
 		}
 		for (int i = 0; i < sortedList.size(); i++) {
 			Top t = sortedList.get(i);
-			if (!t.getExpression().equals(gender)) {
+			if (!t.getExpression().equals(gender) && !gender.equals("Neutral")) {
 				sortedList.remove(i);
 				i--;
 			}

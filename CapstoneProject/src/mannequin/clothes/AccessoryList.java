@@ -104,22 +104,17 @@ public class AccessoryList {
 	 * Sorts the ArrayList with all the accessories into the sorted ArrayList
 	 */
 	public void sortArray() {
-		for (Accessory a : allList) {
-			if (a.getWeather().equals(weatherCondition))
-				sortedList.add(a);
-		}
-		for (int i = 0; i < sortedList.size(); i++) {
-			Accessory a = sortedList.get(i);
-			if (!a.getFormality().equals(formality)) {
-				sortedList.remove(i);
-				i--;
+		if (formality.equals("Casual")) {
+			for (Accessory a : allList) {
+				if (a.getWeather().equals(weatherCondition))
+					sortedList.add(a);
 			}
-		}
-		for (int i = 0; i < sortedList.size(); i++) {
-			Accessory a = sortedList.get(i);
-			if (!a.getExpression().equals(gender)) {
-				sortedList.remove(i);
-				i--;
+			for (int i = 0; i < sortedList.size(); i++) {
+				Accessory a = sortedList.get(i);
+				if (!a.getExpression().equals(gender)) {
+					sortedList.remove(i);
+					i--;
+				}
 			}
 		}
 	}
@@ -144,6 +139,8 @@ public class AccessoryList {
 	 */
 	public Accessory pickNextEntry() {
 
+		if (sortedList.size() == 0)
+			return null;
 		if (currentIndex == sortedList.size() - 1)
 			currentIndex = -1;
 		currentIndex++;

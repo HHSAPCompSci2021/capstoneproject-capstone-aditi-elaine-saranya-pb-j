@@ -70,12 +70,13 @@ public class Person {
 	 */
 	public void draw(PApplet marker) {
 
-		if(accessory.getColor() != null) {
-			marker.tint(accessory.getColor().getRGB());
-		}else
-			marker.noTint();
-		marker.image(accessory.getImage(), 100, 100);
-		
+		if (accessory != null) {
+			if(accessory.getColor() != null) {
+				marker.tint(accessory.getColor().getRGB());
+			}else
+				marker.noTint();
+			marker.image(accessory.getImage(), 100, 100);
+		}	
 		if(top.getColor() != null) {
 			marker.tint(top.getColor().getRGB());
 		}else {

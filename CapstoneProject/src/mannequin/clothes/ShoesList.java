@@ -127,7 +127,7 @@ public class ShoesList {
 		}
 		for (int i = 0; i < sortedList.size(); i++) {
 			Shoes s = sortedList.get(i);
-			if (!s.getExpression().equals(gender)) {
+			if (!s.getExpression().equals(gender) && !gender.equals("Neutral")) {
 				sortedList.remove(i);
 				i--;
 			}
