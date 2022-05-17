@@ -75,16 +75,20 @@ public class Person {
 		}else
 			marker.noTint();
 		marker.image(top.getImage(), 100,100);
+		
 		if(bottom.getColor() != null) {
 			marker.tint(bottom.getColor().getRGB());
 		}else
 			marker.noTint();
 		marker.image(bottom.getImage(), 100, 300);
+		
+		
 		if(shoesL.getColor() != null) {
 			marker.tint(shoesL.getColor().getRGB());
 		}else
 			marker.noTint();
 		marker.image(shoesL.getImage(), 50, 500);
+		
 		if(shoesR.getColor() != null) {
 			marker.tint(shoesR.getColor().getRGB());
 		}else
