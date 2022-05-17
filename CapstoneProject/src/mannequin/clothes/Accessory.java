@@ -25,8 +25,8 @@ public class Accessory extends Clothes {
 	 * @param i The image of the accessory
 	 * 
 	 */
-	public Accessory(String w, PImage i) {
-		super(w);
+	public Accessory(String w, String f, String g, PImage i) {
+		super(w, f, g);
 		image = i;
 		color = null;
 	}

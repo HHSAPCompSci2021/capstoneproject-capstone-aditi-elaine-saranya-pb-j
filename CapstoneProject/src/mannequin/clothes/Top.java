@@ -25,8 +25,8 @@ public class Top extends Clothes {
 	 * @param w The weather filter
 	 * @param i The image of the top
 	 */
-	public Top(String w, PImage i) {
-		super(w);
+	public Top(String w, String f, String g, PImage i) {
+		super(w, f, g);
 		image = i;
 		color = null;
 	}
