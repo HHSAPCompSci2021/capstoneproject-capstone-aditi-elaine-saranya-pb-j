@@ -47,7 +47,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage whitePants = new PImage(img);
-		Bottom bottom1 = new Bottom("Cold",whitePants,  "Formal", "Neutral");
+		Bottom bottom1 = new Bottom("Cold",whitePants,  "Formal", "Neutral", 0.0);
 		allList.add(bottom1);
 
 		img = null;
@@ -58,7 +58,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage beigePants = new PImage(img);
-		Bottom bottom2 = new Bottom("Cold", beigePants,"Formal", "Neutral");
+		Bottom bottom2 = new Bottom("Cold", beigePants,"Formal", "Neutral", 0.0);
 		allList.add(bottom2);
 
 		img = null;
@@ -69,7 +69,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blackPants = new PImage(img);
-		Bottom bottom3 = new Bottom("Cold",blackPants,"Semi-Formal", "Neutral");
+		Bottom bottom3 = new Bottom("Cold",blackPants,"Semi-Formal", "Neutral", 0.0);
 		allList.add(bottom3);
 
 		img = null;
@@ -80,7 +80,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blueFlareJeans = new PImage(img);
-		Bottom bottom4 = new Bottom("Cold",blueFlareJeans,"Casual", "Feminine");
+		Bottom bottom4 = new Bottom("Cold",blueFlareJeans,"Casual", "Feminine", 0.0);
 		allList.add(bottom4);
 
 		img = null;
@@ -91,7 +91,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blueJeans = new PImage(img);
-		Bottom bottom5 = new Bottom("Hot",blueJeans,"Casual", "Neutral");
+		Bottom bottom5 = new Bottom("Hot",blueJeans,"Casual", "Neutral", 0.0);
 		allList.add(bottom5);
 
 		img = null;
@@ -102,7 +102,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blueJeansWRips = new PImage(img);
-		Bottom bottom6 = new Bottom("Hot",blueJeansWRips,"Casual", "Feminine");
+		Bottom bottom6 = new Bottom("Hot",blueJeansWRips,"Casual", "Feminine", 0.0);
 		allList.add(bottom6);
 
 		img = null;
@@ -113,7 +113,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blackSweats = new PImage(img);
-		Bottom bottom7 = new Bottom("Cold",blackSweats,"Casual", "Neutral");
+		Bottom bottom7 = new Bottom("Cold",blackSweats,"Casual", "Neutral", 0.0);
 		allList.add(bottom7);
 		
 		img = null;
@@ -184,6 +184,20 @@ public class BottomsList {
 		for (Bottom b : allList) {
 			if (b.getWeather().equals(weatherCondition))
 				sortedList.add(b);
+		}
+		for (int i = 0; i < sortedList.size(); i++) {
+			Bottom b = sortedList.get(i);
+			if (!b.getFormality().equals(formality)) {
+				sortedList.remove(i);
+				i--;
+			}
+		}
+		for (int i = 0; i < sortedList.size(); i++) {
+			Bottom b = sortedList.get(i);
+			if (!b.getExpression().equals(gender)) {
+				sortedList.remove(i);
+				i--;
+			}
 		}
 	}
 

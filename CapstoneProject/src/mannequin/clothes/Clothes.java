@@ -38,34 +38,7 @@ public class Clothes extends PApplet {
 
 	}
 
-	/**
-	 * Adds an image of an article of clothing to the user's wardrobe
-	 * @param image The image of the article of clothing to be added
-	 */
-	public void add(PImage image) {
-		
-	}
 
-
-
-	
-//	/**
-//	 * Gets the color of the article of clothing
-//	 * 
-//	 * @return color The color of the article of clothing
-//	 */
-//	public Color getColor() {
-//		return color;
-//	}
-//
-//	/**
-//	 * Sets the color of the clothes
-//	 * 
-//	 * @param c The color of the article of clothing
-//	 */
-//	public void setColor(Color c) {
-//		color = c;
-//	}
 	
 	/**
 	 * Gets the weather
@@ -86,26 +59,40 @@ public class Clothes extends PApplet {
 		System.out.println(weather);
 	}
 
-/*	/**
+	/**
 	 * Gets the formality of the article of clothing
 	 * 
 	 * @return formality The formality of the article of clothing
 	 */
-	/*
 	public String getFormality() {
 		return formality;
-	}*/
+	}
 
-/*	/**
+	/**
 	 * Sets the formality for the clothes
 	 * 
 	 * @param f The formality for the article of clothing
 	 */
-	
-//	public void setFormality(String f) {
-//		formality = f;
-//	}
-	
+	public void setFormality(String f) {
+		formality = f;
+	}
+	/**
+	 * Gets the gender expression of the article of clothing
+	 * 
+	 * @return formality The gender expression of the article of clothing
+	 */
+	public String getExpression() {
+		return gender;
+	}
+
+	/**
+	 * Sets the gender expression for the clothes
+	 * 
+	 * @param g The gender expression for the article of clothing
+	 */
+	public void setExpression(String g) {
+		gender = g;
+	}
 
 	
 	/**

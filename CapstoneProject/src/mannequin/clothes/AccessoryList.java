@@ -51,7 +51,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage whiteHat = new PImage(img);
-		Accessory accessory1 = new Accessory("Hot", "Casual", "Neutral", whiteHat);
+		Accessory accessory1 = new Accessory("Hot", "Casual", "Neutral", whiteHat, 0.0);
 		allList.add(accessory1);
 
 		img = null;
@@ -62,7 +62,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage blackHat = new PImage(img);
-		Accessory accessory2 = new Accessory("Hot", "Casual", "Neutral",blackHat);
+		Accessory accessory2 = new Accessory("Hot", "Casual", "Neutral",blackHat, 0.0);
 		allList.add(accessory2);
 
 		img = null;
@@ -73,7 +73,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage blackBeanie = new PImage(img);
-		Accessory accessory3 = new Accessory("Cold", "Casual", "Neutral",blackBeanie);
+		Accessory accessory3 = new Accessory("Cold", "Casual", "Neutral",blackBeanie, 0.0);
 		allList.add(accessory3);
 
 		img = null;
@@ -84,7 +84,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage grayBeanie = new PImage(img);
-		Accessory accessory4 = new Accessory("Cold", "Casual", "Neutral",grayBeanie);
+		Accessory accessory4 = new Accessory("Cold", "Casual", "Neutral",grayBeanie, 0.0);
 		allList.add(accessory4);
 
 		img = null;
@@ -95,7 +95,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage greenBeanie = new PImage(img);
-		Accessory accessory5 = new Accessory("Cold", "Casual", "Neutral",greenBeanie);
+		Accessory accessory5 = new Accessory("Cold", "Casual", "Neutral",greenBeanie, 0.0);
 		allList.add(accessory5);
 
 	}
@@ -104,9 +104,18 @@ public class AccessoryList {
 	 * Sorts the ArrayList with all the accessories into the sorted ArrayList
 	 */
 	public void sortArray() {
-		for (Accessory a : allList) {
-			if (a.getWeather().equals(weatherCondition))
-				sortedList.add(a);
+		if (formality.equals("Casual")) {
+			for (Accessory a : allList) {
+				if (a.getWeather().equals(weatherCondition))
+					sortedList.add(a);
+			}
+			for (int i = 0; i < sortedList.size(); i++) {
+				Accessory a = sortedList.get(i);
+				if (!a.getExpression().equals(gender)) {
+					sortedList.remove(i);
+					i--;
+				}
+			}
 		}
 	}
 
@@ -130,6 +139,8 @@ public class AccessoryList {
 	 */
 	public Accessory pickNextEntry() {
 
+		if (sortedList.size() == 0)
+			return null;
 		if (currentIndex == sortedList.size() - 1)
 			currentIndex = -1;
 		currentIndex++;

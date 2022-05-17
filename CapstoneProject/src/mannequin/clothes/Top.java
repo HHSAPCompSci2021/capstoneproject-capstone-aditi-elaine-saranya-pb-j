@@ -17,6 +17,7 @@ public class Top extends Clothes {
 	
 	private PImage image;
 	private Color color;
+	private double price;
 	
 	
 	/**
@@ -25,10 +26,11 @@ public class Top extends Clothes {
 	 * @param w The weather filter
 	 * @param i The image of the top
 	 */
-	public Top(String w, String f, String g, PImage i) {
+	public Top(String w, String f, String g, PImage i, double p) {
 		super(w, f, g);
 		image = i;
 		color = null;
+		price = p;
 	}
 	
 	
