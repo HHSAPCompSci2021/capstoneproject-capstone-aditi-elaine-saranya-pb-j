@@ -118,6 +118,20 @@ public class ShoesList {
 			if (s.getWeather().equals(weatherCondition))
 				sortedList.add(s);
 		}
+		for (int i = 0; i < sortedList.size(); i++) {
+			Shoes s = sortedList.get(i);
+			if (!s.getFormality().equals(formality)) {
+				sortedList.remove(i);
+				i--;
+			}
+		}
+		for (int i = 0; i < sortedList.size(); i++) {
+			Shoes s = sortedList.get(i);
+			if (!s.getExpression().equals(gender)) {
+				sortedList.remove(i);
+				i--;
+			}
+		}
 	}
 
 	/**

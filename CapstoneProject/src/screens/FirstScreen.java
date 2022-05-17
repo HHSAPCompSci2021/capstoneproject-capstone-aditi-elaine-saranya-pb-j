@@ -44,9 +44,9 @@ public class FirstScreen extends Screen {
 		  listTemp.setItems(new String[] {"Hot", "Cold"}, 0);
 		  submit = new GButton(surface,250, 500, 100, 40, "Submit");
 		  listFormality = new GDropList(surface, 250, 300, 100, 100, 0);
-		  listFormality.setItems(new String[] {"Casual", "Black-tie", "Business Casual"}, 0);
+		  listFormality.setItems(new String[] {"Casual", "Formal", "Semi-Formal"}, 0);
 		  listExpression = new GDropList(surface, 400, 300, 100, 100, 0);
-		  listExpression.setItems(new String[] {"Feminine", "Masculine", "Neutral"}, 0);
+		  listExpression.setItems(new String[] {"Neutral","Feminine", "Masculine"}, 0);
 	}
 	
 	/**

@@ -196,6 +196,20 @@ public class TopsList {
 			if (t.getWeather().equals(weatherCondition))
 				sortedList.add(t);
 		}
+		for (int i = 0; i < sortedList.size(); i++) {
+			Top t = sortedList.get(i);
+			if (!t.getFormality().equals(formality)) {
+				sortedList.remove(i);
+				i--;
+			}
+		}
+		for (int i = 0; i < sortedList.size(); i++) {
+			Top t = sortedList.get(i);
+			if (!t.getExpression().equals(gender)) {
+				sortedList.remove(i);
+				i--;
+			}
+		}
 	}
 
 	/**

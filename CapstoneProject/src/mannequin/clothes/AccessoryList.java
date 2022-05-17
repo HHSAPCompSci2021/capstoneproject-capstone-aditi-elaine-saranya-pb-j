@@ -108,6 +108,20 @@ public class AccessoryList {
 			if (a.getWeather().equals(weatherCondition))
 				sortedList.add(a);
 		}
+		for (int i = 0; i < sortedList.size(); i++) {
+			Accessory a = sortedList.get(i);
+			if (!a.getFormality().equals(formality)) {
+				sortedList.remove(i);
+				i--;
+			}
+		}
+		for (int i = 0; i < sortedList.size(); i++) {
+			Accessory a = sortedList.get(i);
+			if (!a.getExpression().equals(gender)) {
+				sortedList.remove(i);
+				i--;
+			}
+		}
 	}
 
 	/**

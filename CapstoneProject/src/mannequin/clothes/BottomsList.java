@@ -126,6 +126,20 @@ public class BottomsList {
 			if (b.getWeather().equals(weatherCondition))
 				sortedList.add(b);
 		}
+		for (int i = 0; i < sortedList.size(); i++) {
+			Bottom b = sortedList.get(i);
+			if (!b.getFormality().equals(formality)) {
+				sortedList.remove(i);
+				i--;
+			}
+		}
+		for (int i = 0; i < sortedList.size(); i++) {
+			Bottom b = sortedList.get(i);
+			if (!b.getExpression().equals(gender)) {
+				sortedList.remove(i);
+				i--;
+			}
+		}
 	}
 
 	/**
