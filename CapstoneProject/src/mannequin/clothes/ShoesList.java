@@ -50,7 +50,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage loafersL = new PImage(img);
-		Shoes shoes1L = new Shoes("Cold", loafersL);
+		Shoes shoes1L = new Shoes("Cold", "Formal","Non-Binary", loafersL);
 		allList.add(shoes1L);
 
 		img = null;
@@ -61,7 +61,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage loafersR = new PImage(img);
-		Shoes shoes1R = new Shoes("Cold", loafersR);
+		Shoes shoes1R = new Shoes("Cold", "Formal","Non-Binary", loafersR);
 		allList.add(shoes1R);
 
 		img = null;
@@ -72,7 +72,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage dunksL = new PImage(img);
-		Shoes shoes2L = new Shoes("Hot", dunksL);
+		Shoes shoes2L = new Shoes("Hot", "Semi-Formal","Non-Binary", dunksL);
 		allList.add(shoes2L);
 
 		img = null;
@@ -83,8 +83,19 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage dunksR = new PImage(img);
-		Shoes shoes2R = new Shoes("Hot", dunksR);
+		Shoes shoes2R = new Shoes("Hot", "Semi-Formal" ,"Non-Binary", dunksR);
 		allList.add(shoes2R);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/blackconverseL.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage converseL = new PImage(img);
+		Shoes shoes3L = new Shoes("Hot", "Casual","Non-Binary", converseL);
+		allList.add(shoes3L);
 
 		img = null;
 		try {
@@ -94,7 +105,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage converseR = new PImage(img);
-		Shoes shoes3R = new Shoes("Hot", converseR);
+		Shoes shoes3R = new Shoes("Hot", "Casual","Non-Binary", converseR);
 		allList.add(shoes3R);
 
 	}

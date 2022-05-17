@@ -51,7 +51,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage whiteHat = new PImage(img);
-		Accessory accessory1 = new Accessory("Hot", whiteHat);
+		Accessory accessory1 = new Accessory("Hot", "Casual", "Non-Binary", whiteHat);
 		allList.add(accessory1);
 
 		img = null;
@@ -62,7 +62,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage blackHat = new PImage(img);
-		Accessory accessory2 = new Accessory("Hot", blackHat);
+		Accessory accessory2 = new Accessory("Hot", "Casual", "Non-Binary",blackHat);
 		allList.add(accessory2);
 
 		img = null;
@@ -73,7 +73,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage blackBeanie = new PImage(img);
-		Accessory accessory3 = new Accessory("Cold", blackBeanie);
+		Accessory accessory3 = new Accessory("Cold", "Casual", "Non-Binary",blackBeanie);
 		allList.add(accessory3);
 
 		img = null;
@@ -84,7 +84,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage grayBeanie = new PImage(img);
-		Accessory accessory4 = new Accessory("Cold", grayBeanie);
+		Accessory accessory4 = new Accessory("Cold", "Casual", "Non-Binary",grayBeanie);
 		allList.add(accessory4);
 
 		img = null;
@@ -95,7 +95,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage greenBeanie = new PImage(img);
-		Accessory accessory5 = new Accessory("Cold", greenBeanie);
+		Accessory accessory5 = new Accessory("Cold", "Casual", "Non-Binary",greenBeanie);
 		allList.add(accessory5);
 
 	}
