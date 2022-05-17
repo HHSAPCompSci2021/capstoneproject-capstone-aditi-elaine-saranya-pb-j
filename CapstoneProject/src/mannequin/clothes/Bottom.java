@@ -17,16 +17,18 @@ public class Bottom extends Clothes {
 
 	private PImage image;
 	private Color color;
-	
+	//casual, 
 	
 	/**
 	 * Constructs a bottom with specified image
 	 * 
 	 * @param w The weather filter
 	 * @param i The image of the bottom
+	 * @param f The formality of the bottom
+	 * @param g The gender of the person
 	 */
-	public Bottom(String w, PImage i) {
-		super(w);
+	public Bottom(String w, PImage i, String f, String g) {
+		super(w, f, g);
 		image = i;
 		color = null;
 	}
