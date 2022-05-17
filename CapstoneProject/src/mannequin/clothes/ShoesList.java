@@ -17,13 +17,15 @@ import processing.core.PImage;
  * @author 
  * @version 5/17/2022
  */
-public class ShoesList extends PApplet {
+public class ShoesList {
 	private ArrayList<Shoes> allList;
 	private ArrayList<Shoes> sortedList;
 
 	private int currentIndex;
 
 	private String weatherCondition;
+	
+	//private String 
 
 	/**
 	 * Constructs an AccessoryList containing an ArrayList of all the accessories

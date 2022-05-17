@@ -17,7 +17,7 @@ import processing.core.PImage;
  * @author 
  * @version 5/17/2022
  */
-public class BottomsList extends PApplet {
+public class BottomsList {
 	private ArrayList<Bottom> allList;
 	private ArrayList<Bottom> sortedList;
 	private String weatherCondition;

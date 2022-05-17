@@ -18,7 +18,7 @@ import processing.core.PImage;
  * @version 5/17/2022
  */
 
-public class AccessoryList extends PApplet {
+public class AccessoryList {
 	private ArrayList<Accessory> allList;
 	private ArrayList<Accessory> sortedList;
 
