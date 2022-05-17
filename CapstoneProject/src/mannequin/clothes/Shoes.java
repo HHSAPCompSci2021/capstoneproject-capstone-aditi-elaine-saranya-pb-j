@@ -19,6 +19,7 @@ public class Shoes extends Clothes {
 	private PImage image;
 	private Color color;
 	private double price; 
+	private String side;
 	
 	/**
 	 * Constructs a shoe with specified image
@@ -26,11 +27,12 @@ public class Shoes extends Clothes {
 	 * @param w The weather filter
 	 * @param i The image of the shoe
 	 */
-	public Shoes(String w, String f, String g, PImage i, double p) {
+	public Shoes(String w, String f, String g, PImage i, double p, String s) {
 		super(w,f,g);
 		image = i;
 		color = null;
 		price = p;
+		side = s;
 	}
 	
 
@@ -96,6 +98,14 @@ public class Shoes extends Clothes {
 	 */
 	public Color getColor() {
 		return color;
+	}
+	
+	/**
+	 * Returns whether it is a right shoe or a left shoe
+	 * @return side of shoe
+	 */
+	public String getSide() {
+		return side;
 	}
 }
 

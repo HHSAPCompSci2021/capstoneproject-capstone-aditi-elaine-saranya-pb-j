@@ -59,7 +59,7 @@ public class SecondScreen extends Screen {
 		bottom = new GButton(surface,450, 500, 80, 40, "Bottom");
 		shoes = new GButton(surface, 450, 600, 80, 40, "Shoes");
 		accessories = new GButton(surface, 450, 300, 80, 40, "Accessories");
-		random = new GButton(surface, 200, 30, 300, 60, "Randomly Generate");
+		random = new GButton(surface, 200, 10, 300, 60, "Randomly Generate");
 		
 
 	}
@@ -95,11 +95,11 @@ public class SecondScreen extends Screen {
 		surface.background(255);
 		surface.fill(112, 110, 250);
 		surface.noStroke();
-		surface.rect(10, 25, 130, 70);		
+		surface.rect(10, 5, 130, 70);		
 		surface.fill(255);
 		surface.textSize(15);
-		surface.text("Settings:", 25, 50);
-		surface.text("Weather: " + person.getWeatherCondition(), 25, 75);
+		surface.text("Settings:", 25, 30);
+		surface.text("Weather: " + person.getWeatherCondition(), 25, 55);
 		person.draw(surface);
 		
 	}

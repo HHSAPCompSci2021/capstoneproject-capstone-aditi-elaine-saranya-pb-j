@@ -54,8 +54,8 @@ public class Person {
 	public void setClothes() {
 		top = topsList.pickNextEntry();
 		bottom = bottomsList.pickNextEntry();
-		shoesL = shoesList.pickNextEntry();
-		shoesR = shoesList.pickNextEntry();
+		shoesL = shoesList.pickNextEntry("left");
+		shoesR = shoesList.pickNextEntry("right");
 		accessory = accessoriesList.pickNextEntry();
 
 	}
@@ -69,38 +69,48 @@ public class Person {
 	 */
 	public void draw(PApplet marker) {
 
+
 		if (accessory != null) {
 			if(accessory.getColor() != null) {
 				marker.tint(accessory.getColor().getRGB());
 			}else
 				marker.noTint();
-			marker.image(accessory.getImage(), 100, 100);
+			accessory.getImage().resize(800, 800);
+			marker.image(accessory.getImage(), -96,-268);
 		}	
-		if(top.getColor() != null) {
-			marker.tint(top.getColor().getRGB());
-		}else {
-			marker.noTint();
-		}
-		marker.image(top.getImage(), 100,100);
-		
-		if(bottom.getColor() != null) {
-			marker.tint(bottom.getColor().getRGB());
-		}else
-			marker.noTint();
-		marker.image(bottom.getImage(), 100, 300);
-		
 		
 		if(shoesL.getColor() != null) {
 			marker.tint(shoesL.getColor().getRGB());
 		}else
 			marker.noTint();
-		marker.image(shoesL.getImage(), 50, 500);
+		shoesL.getImage().resize(700,700);
+		marker.image(shoesL.getImage(), -125, 380);
+		
 		
 		if(shoesR.getColor() != null) {
 			marker.tint(shoesR.getColor().getRGB());
 		}else
 			marker.noTint();
-		marker.image(shoesR.getImage(), 150, 500);
+		shoesR.getImage().resize(700,700);
+		marker.image(shoesR.getImage(), 40, 380);
+		
+		
+		if(bottom.getColor() != null) {
+			marker.tint(bottom.getColor().getRGB());
+		}else
+			marker.noTint();
+		bottom.getImage().resize(750, 750);
+		marker.image(bottom.getImage(), -72, 160);
+		
+		
+		if(top.getColor() != null) {
+			marker.tint(top.getColor().getRGB());
+		}else {
+			marker.noTint();
+		}
+		top.getImage().resize(1000, 1000);
+		marker.image(top.getImage(), -200,-200);
+		
 	}
 	
 	/**
@@ -127,8 +137,9 @@ public class Person {
 	 * Changes the shoes
 	 */
 	public void changeShoes() {
-		shoesL = shoesList.pickNextEntry();
-		shoesR = shoesList.pickNextEntry();
+
+		shoesL = shoesList.pickNextEntry("left");
+		shoesR = shoesList.pickNextEntry("right");
 	}
 	
 	/**
@@ -151,7 +162,7 @@ public class Person {
 		bottom = bottomsList.pickRandom();
 		accessory = accessoriesList.pickRandom();
 		shoesL = shoesList.pickRandom();
-		shoesR = shoesList.pickNextEntry();
+		shoesR = shoesList.pickNextEntry("right");
 	}
 	
 	/**
