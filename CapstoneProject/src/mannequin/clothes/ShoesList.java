@@ -14,22 +14,20 @@ import processing.core.PImage;
  * The ShoesList class represents a collection of all the Shoes to be added to
  * the screen using the Processing library.
  * 
- * @author Saranya
- * @version 5/13/2022
+ * @author 
+ * @version 5/17/2022
  */
 public class ShoesList extends PApplet {
 	private ArrayList<Shoes> allList;
 	private ArrayList<Shoes> sortedList;
-	
+
 	private int currentIndex;
 
-
 	private String weatherCondition;
-	
-
 
 	/**
-	 * Constructs a list of shoes with an arraylist of all the shoes and an arraylist that is sorted based on the user settings
+	 * Constructs an AccessoryList containing an ArrayList of all the accessories
+	 * and an ArrayList that is sorted based on the user settings
 	 */
 
 	public ShoesList() {
@@ -37,74 +35,71 @@ public class ShoesList extends PApplet {
 
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
-		
+
 		currentIndex = -1;
 
-		BufferedImage img= null;
+		BufferedImage img = null;
 		try {
 			img = ImageIO.read(new File("res/loafersL.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		PImage loafersL  = new PImage(img);
+		PImage loafersL = new PImage(img);
 		Shoes shoes1L = new Shoes("Cold", loafersL);
 		allList.add(shoes1L);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/loafersR.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		PImage loafersR  = new PImage(img);
+		PImage loafersR = new PImage(img);
 		Shoes shoes1R = new Shoes("Cold", loafersR);
 		allList.add(shoes1R);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/dunksL.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		PImage dunksL  = new PImage(img);
+		PImage dunksL = new PImage(img);
 		Shoes shoes2L = new Shoes("Hot", dunksL);
 		allList.add(shoes2L);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/dunksR.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		PImage dunksR  = new PImage(img);
+		PImage dunksR = new PImage(img);
 		Shoes shoes2R = new Shoes("Hot", dunksR);
 		allList.add(shoes2R);
-		
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/blackconverseR.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		PImage converseR  = new PImage(img);
+		PImage converseR = new PImage(img);
 		Shoes shoes3R = new Shoes("Hot", converseR);
 		allList.add(shoes3R);
 
-		
 	}
-	
-	
+
 	/**
-	 * Sorts the arraylist with all the shoes into the sorted arraylist
+	 * Sorts the ArrayList with all the shoes into the sorted ArrayList
 	 */
 	public void sortArray() {
-		for (Shoes s: allList) {
+		for (Shoes s : allList) {
 			if (s.getWeather().equals(weatherCondition))
 				sortedList.add(s);
 		}
@@ -130,13 +125,15 @@ public class ShoesList extends PApplet {
 	 */
 	public Shoes pickNextEntry() {
 
-		if (currentIndex == sortedList.size()-1)
+		if (currentIndex == sortedList.size() - 1)
 			currentIndex = -1;
 		currentIndex++;
 		return sortedList.get(currentIndex);
 	}
+
 	/**
 	 * Sets the weather condition outside to sort the clothes
+	 * 
 	 * @param w the weather
 	 */
 	public void setWeatherCondition(String w) {

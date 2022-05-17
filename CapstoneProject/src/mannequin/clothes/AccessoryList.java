@@ -10,26 +10,25 @@ import javax.imageio.ImageIO;
 import processing.core.PApplet;
 import processing.core.PImage;
 
-
 /**
- * The AccessoryList class represents a collection of all the Accessories to be added to the screen using
- * the Processing library.
+ * The AccessoryList class represents a collection of all the Accessories to be
+ * added to the screen using the Processing library.
  * 
- * @author Saranya
- * @version 5/13/2022
+ * @author 
+ * @version 5/17/2022
  */
 
-public class AccessoryList extends PApplet{
+public class AccessoryList extends PApplet {
 	private ArrayList<Accessory> allList;
 	private ArrayList<Accessory> sortedList;
 
 	private String weatherCondition;
-	
 
 	private int currentIndex;
 
 	/**
-	 * Constructs a list of accessories with an arraylist of all the accessories and an arraylist that is sorted based on the user settings
+	 * Constructs an AccessoryList containing an ArrayList of all the accessories and
+	 * an ArrayList that is sorted based on the user settings
 	 */
 
 	public AccessoryList() {
@@ -37,10 +36,10 @@ public class AccessoryList extends PApplet{
 
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
-		
+
 		currentIndex = -1;
 
-		BufferedImage img= null;
+		BufferedImage img = null;
 		try {
 			img = ImageIO.read(new File("res/whitehat.png"));
 		} catch (IOException e) {
@@ -50,8 +49,8 @@ public class AccessoryList extends PApplet{
 		PImage whiteHat = new PImage(img);
 		Accessory accessory1 = new Accessory("Hot", whiteHat);
 		allList.add(accessory1);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/blackhat.png"));
 		} catch (IOException e) {
@@ -61,8 +60,8 @@ public class AccessoryList extends PApplet{
 		PImage blackHat = new PImage(img);
 		Accessory accessory2 = new Accessory("Hot", blackHat);
 		allList.add(accessory2);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/blackbeanie.png"));
 		} catch (IOException e) {
@@ -72,8 +71,8 @@ public class AccessoryList extends PApplet{
 		PImage blackBeanie = new PImage(img);
 		Accessory accessory3 = new Accessory("Cold", blackBeanie);
 		allList.add(accessory3);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/graybeanie.png"));
 		} catch (IOException e) {
@@ -83,8 +82,8 @@ public class AccessoryList extends PApplet{
 		PImage grayBeanie = new PImage(img);
 		Accessory accessory4 = new Accessory("Cold", grayBeanie);
 		allList.add(accessory4);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/greenbeanie.png"));
 		} catch (IOException e) {
@@ -94,20 +93,18 @@ public class AccessoryList extends PApplet{
 		PImage greenBeanie = new PImage(img);
 		Accessory accessory5 = new Accessory("Cold", greenBeanie);
 		allList.add(accessory5);
-		
-		
+
 	}
 
 	/**
-	 * Sorts the arraylist with all the accessories into the sorted arraylist
+	 * Sorts the ArrayList with all the accessories into the sorted ArrayList
 	 */
 	public void sortArray() {
-		for (Accessory a: allList) {
+		for (Accessory a : allList) {
 			if (a.getWeather().equals(weatherCondition))
 				sortedList.add(a);
 		}
 	}
-	
 
 	/**
 	 * Picks a random accessory based on the selected filters
@@ -115,9 +112,9 @@ public class AccessoryList extends PApplet{
 	 * @return The image of the accessory picked
 	 */
 	public Accessory pickRandom() {
-		int index = (int)(Math.random() * sortedList.size());
+		int index = (int) (Math.random() * sortedList.size());
 		while (sortedList.get(index) == null) {
-			index = (int)(Math.random() * sortedList.size());
+			index = (int) (Math.random() * sortedList.size());
 		}
 		return sortedList.get(index);
 	}
@@ -137,12 +134,11 @@ public class AccessoryList extends PApplet{
 
 	/**
 	 * Sets the weather condition outside to sort the clothes
+	 * 
 	 * @param w the weather
 	 */
 	public void setWeatherCondition(String w) {
 		weatherCondition = w;
 	}
-	
-	
+
 }
- 

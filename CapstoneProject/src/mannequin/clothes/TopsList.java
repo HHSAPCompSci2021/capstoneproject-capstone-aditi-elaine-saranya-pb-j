@@ -12,16 +12,14 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-
-
 /**
- * The TopsList class represents a collection of all the Tops to be added to
- * the screen using the Processing library.
+ * The TopsList class represents a collection of all the Tops to be added to the
+ * screen using the Processing library.
  * 
- * @author Saranya
- * @version 5/13/2022
+ * @author
+ * @version 5/17/2022
  */
-public class TopsList{
+public class TopsList {
 
 	private ArrayList<Top> allList;
 	private ArrayList<Top> sortedList;
@@ -30,17 +28,17 @@ public class TopsList{
 
 	private int currentIndex;
 
-	
 	/**
-	 * Constructs a list of tops with an arraylist of all the tops and an arraylist that is sorted based on the user settings
+	 * Constructs an AccessoryList containing an ArrayList of all the accessories
+	 * and an ArrayList that is sorted based on the user settings
 	 */
 	public TopsList() {
 		weatherCondition = "Hot";
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
 		currentIndex = -1;
-		
-		BufferedImage img= null;
+
+		BufferedImage img = null;
 		try {
 			img = ImageIO.read(new File("res/redblouse.png"));
 		} catch (IOException e) {
@@ -50,8 +48,8 @@ public class TopsList{
 		PImage redBlouse = new PImage(img);
 		Top top1 = new Top("Hot", redBlouse);
 		allList.add(top1);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/beigetshirt.png"));
 		} catch (IOException e) {
@@ -61,8 +59,8 @@ public class TopsList{
 		PImage beigeShirt = new PImage(img);
 		Top top2 = new Top("Hot", beigeShirt);
 		allList.add(top2);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/blacktanktop.png"));
 		} catch (IOException e) {
@@ -72,8 +70,8 @@ public class TopsList{
 		PImage blackTankTop = new PImage(img);
 		Top top3 = new Top("Hot", blackTankTop);
 		allList.add(top3);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/blacktshirt.png"));
 		} catch (IOException e) {
@@ -83,8 +81,8 @@ public class TopsList{
 		PImage blackTShirt = new PImage(img);
 		Top top4 = new Top("Cold", blackTShirt);
 		allList.add(top4);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/blueblouse.png"));
 		} catch (IOException e) {
@@ -94,8 +92,8 @@ public class TopsList{
 		PImage blueBlouse = new PImage(img);
 		Top top5 = new Top("Hot", blueBlouse);
 		allList.add(top5);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/bluetshirt.png"));
 		} catch (IOException e) {
@@ -105,8 +103,8 @@ public class TopsList{
 		PImage blueTShirt = new PImage(img);
 		Top top6 = new Top("Hot", blueTShirt);
 		allList.add(top6);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/whiteblouse.png"));
 		} catch (IOException e) {
@@ -116,8 +114,8 @@ public class TopsList{
 		PImage whiteBlouse = new PImage(img);
 		Top top7 = new Top("Hot", whiteBlouse);
 		allList.add(top7);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/whitetshirt.png"));
 		} catch (IOException e) {
@@ -127,8 +125,8 @@ public class TopsList{
 		PImage whiteTShirt = new PImage(img);
 		Top top8 = new Top("Hot", whiteTShirt);
 		allList.add(top8);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/blackbuttondown.png"));
 		} catch (IOException e) {
@@ -138,8 +136,8 @@ public class TopsList{
 		PImage blackButtonDown = new PImage(img);
 		Top top9 = new Top("Cold", blackButtonDown);
 		allList.add(top9);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/blacksweater.png"));
 		} catch (IOException e) {
@@ -149,8 +147,8 @@ public class TopsList{
 		PImage blackSweater = new PImage(img);
 		Top top10 = new Top("Cold", blackSweater);
 		allList.add(top10);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/bluebuttondown.png"));
 		} catch (IOException e) {
@@ -160,8 +158,8 @@ public class TopsList{
 		PImage blueButtonDown = new PImage(img);
 		Top top11 = new Top("Cold", blueButtonDown);
 		allList.add(top11);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/greenbuttondown.png"));
 		} catch (IOException e) {
@@ -171,8 +169,8 @@ public class TopsList{
 		PImage greenButtonDown = new PImage(img);
 		Top top12 = new Top("Cold", greenButtonDown);
 		allList.add(top12);
-		
-		img= null;
+
+		img = null;
 		try {
 			img = ImageIO.read(new File("res/whitesweater.png"));
 		} catch (IOException e) {
@@ -182,30 +180,28 @@ public class TopsList{
 		PImage whiteSweater = new PImage(img);
 		Top top13 = new Top("Cold", whiteSweater);
 		allList.add(top13);
-		
-		
-		
+
 	}
-	
+
 	/**
-	 * Sorts the arraylist with all the tops into the sorted arraylist
+	 * Sorts the ArrayList with all the tops into the sorted ArrayList
 	 */
 	public void sortArray() {
-		for (Top t: allList) {
+		for (Top t : allList) {
 			if (t.getWeather().equals(weatherCondition))
 				sortedList.add(t);
 		}
 	}
-	
+
 	/**
 	 * Picks a random top based on the selected filters
 	 * 
 	 * @return The image of the top picked
 	 */
 	public Top pickRandom() {
-		int index = (int)(Math.random() * sortedList.size());
+		int index = (int) (Math.random() * sortedList.size());
 		while (sortedList.get(index) == null) {
-			index = (int)(Math.random() * sortedList.size());
+			index = (int) (Math.random() * sortedList.size());
 		}
 		return sortedList.get(index);
 	}
@@ -225,12 +221,11 @@ public class TopsList{
 
 	/**
 	 * Sets the weather condition outside to sort the clothes
+	 * 
 	 * @param w the weather
 	 */
 	public void setWeatherCondition(String w) {
 		weatherCondition = w;
 	}
-	
-	
+
 }
- 
