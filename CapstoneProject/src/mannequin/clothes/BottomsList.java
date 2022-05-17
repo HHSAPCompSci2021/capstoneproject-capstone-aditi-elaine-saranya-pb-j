@@ -124,7 +124,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage darkBlueShorts = new PImage(img);
-		Bottom bottom8 = new Bottom("Hot",darkBlueShorts,"Casual", "Feminine");
+		Bottom bottom8 = new Bottom("Hot",darkBlueShorts,"Casual", "Feminine", 68.0);
 		allList.add(bottom8);
 		
 		img = null;
@@ -135,7 +135,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage lightBlueShorts = new PImage(img);
-		Bottom bottom9 = new Bottom("Hot",lightBlueShorts,"Casual", "Feminine");
+		Bottom bottom9 = new Bottom("Hot",lightBlueShorts,"Casual", "Feminine", 68.0);
 		allList.add(bottom9);
 		
 		img = null;
@@ -146,7 +146,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blueFlareJeans2 = new PImage(img);
-		Bottom bottom10 = new Bottom("Cold",blueFlareJeans2,"Formal", "Feminine");
+		Bottom bottom10 = new Bottom("Cold",blueFlareJeans2,"Formal", "Feminine", 70.0 );
 		allList.add(bottom10);
 		
 		img = null;
@@ -157,7 +157,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blackshorts = new PImage(img);
-		Bottom bottom11 = new Bottom("Hot",blackshorts,"Formal", "Feminine");
+		Bottom bottom11 = new Bottom("Hot",blackshorts,"Formal", "Feminine", 35.0);
 		allList.add(bottom11);
 		
 		img = null;
@@ -168,7 +168,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blackskirt = new PImage(img);
-		Bottom bottom12 = new Bottom("Hot",blackskirt,"Formal", "Feminine");
+		Bottom bottom12 = new Bottom("Hot",blackskirt,"Formal", "Feminine", 35.0);
 		allList.add(bottom12);
 		
 		

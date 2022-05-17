@@ -118,7 +118,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage af1L = new PImage(img);
-		Shoes shoes4L = new Shoes("Hot", "Casual","Neutral", af1L);
+		Shoes shoes4L = new Shoes("Hot", "Casual","Neutral", af1L, 0.0);
 		allList.add(shoes3L);
 
 		img = null;
@@ -129,7 +129,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage af1R = new PImage(img);
-		Shoes shoes4R = new Shoes("Hot", "Casual","Neutral", af1R);
+		Shoes shoes4R = new Shoes("Hot", "Casual","Neutral", af1R, 0.0);
 		allList.add(shoes4R);
 		
 		img = null;
@@ -140,7 +140,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage drmartensL = new PImage(img);
-		Shoes shoes5L = new Shoes("Cold", "Semi-Formal","Neutral", drmartensL);
+		Shoes shoes5L = new Shoes("Cold", "Semi-Formal","Neutral", drmartensL, 0.0);
 		allList.add(shoes5L);
 
 		img = null;
@@ -151,7 +151,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage drmartensR = new PImage(img);
-		Shoes shoes5R = new Shoes("Cold", "Semi-Formal","Neutral", drmartensR);
+		Shoes shoes5R = new Shoes("Cold", "Semi-Formal","Neutral", drmartensR, 0.0);
 		allList.add(shoes5R);
 		
 		
