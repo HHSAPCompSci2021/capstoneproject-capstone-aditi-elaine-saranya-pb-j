@@ -31,11 +31,16 @@ public class Person {
 	private ShoesList shoesList;
 	private AccessoryList accessoriesList;
 	private String weatherCondition;
+	private String formalityType;
+	private String genderExpression;
 	/**
 	 * Constructs a person and initializes all the lists and clothing
 	 */
 	public Person() {
 		weatherCondition = "Hot";
+		formalityType = "Casual";
+		genderExpression = "Neutral";
+		
 		topsList = new TopsList();
 		bottomsList = new BottomsList();
 		shoesList = new ShoesList();
@@ -254,6 +259,48 @@ public class Person {
 	 */
 	public String getWeatherCondition() {
 		return weatherCondition;
+	}
+	
+	
+	/**
+	 * Sets the formality type of the occasion and sets the formality criteria for the clothes lists 
+	 * @param w the formality type
+	 */
+	public void setFormalityType(String w) {
+		topsList.setFormalityType(w);
+		bottomsList.setFormalityType(w);
+		shoesList.setFormalityType(w);
+		accessoriesList.setFormalityType(w);
+		formalityType = w;
+	}
+	
+	/**
+	 * Gets the formality type that the person wants to match the outfit to
+	 * @return the formality type
+	 */
+	public String getFormalityType() {
+		return formalityType;
+	}
+	
+	
+	/**
+	 * Sets the gender expression and sets the expression criteria for the clothes lists 
+	 * @param w the gender expression
+	 */
+	public void setGenderExpression(String w) {
+		topsList.setClothesGender(w);
+		bottomsList.setClothesGender(w);
+		shoesList.setClothesGender(w);
+		accessoriesList.setClothesGender(w);
+		genderExpression = w;
+	}
+	
+	/**
+	 * Gets the gender expression that the person wants to match the outfit to
+	 * @return the gender expression
+	 */
+	public String getGenderExpression() {
+		return genderExpression;
 	}
 	
 	

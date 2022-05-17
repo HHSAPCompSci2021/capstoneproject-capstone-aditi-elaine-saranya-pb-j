@@ -21,7 +21,8 @@ public class BottomsList {
 	private ArrayList<Bottom> allList;
 	private ArrayList<Bottom> sortedList;
 	private String weatherCondition;
-
+	private String formality;
+	private String gender;
 	private int currentIndex;
 
 	/**
@@ -30,7 +31,9 @@ public class BottomsList {
 	 */
 	public BottomsList() {
 		weatherCondition = "Hot";
-
+		formality = "Casual";
+		gender = "Neutral";
+		
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
 
@@ -159,5 +162,24 @@ public class BottomsList {
 	public void setWeatherCondition(String w) {
 		weatherCondition = w;
 	}
+	
+	/**
+	 * Sets the formality type to sort the clothes
+	 * 
+	 * @param w the formality
+	 */
+	public void setFormalityType (String w) {
+		formality = w;
+	}
+	
+	/**
+	 * Sets the gender expression to sort the clothes
+	 * 
+	 * @param w the gender expression
+	 */
+	public void setClothesGender(String w) {
+		gender = w;
+	}
+
 
 }
