@@ -86,6 +86,7 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 		if (screen1.handleDropListEvents(list, event))
 			screen2.getPerson().setWeatherCondition(list.getSelectedText());
 		else {
+
 			screen2.handleDropListEvents(list, event);
 		}
 	}

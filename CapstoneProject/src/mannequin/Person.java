@@ -64,15 +64,32 @@ public class Person {
 	 * @param marker The PApplet used for displaying the image and drawing
 	 */
 	public void draw(PApplet marker) {
-//		if(accessory.getColor() != null) {
-//			marker.tint(accessory.getColor().getRGB());
-//			marker.image(accessory.getImage(), 100, 100);
-//		}
-
-		marker.image(top.getImage(), 200,100);
-		marker.image(bottom.getImage(), 200, 400);
-		marker.image(shoesL.getImage(), 150, 500);
-		marker.image(shoesR.getImage(), 250, 500);
+		if(accessory.getColor() != null) {
+			marker.tint(accessory.getColor().getRGB());
+		}else
+			marker.noTint();
+		marker.image(accessory.getImage(), 100, 100);
+		
+		if(top.getColor() != null) {
+			marker.tint(top.getColor().getRGB());
+		}else
+			marker.noTint();
+		marker.image(top.getImage(), 100,100);
+		if(bottom.getColor() != null) {
+			marker.tint(bottom.getColor().getRGB());
+		}else
+			marker.noTint();
+		marker.image(bottom.getImage(), 100, 300);
+		if(shoesL.getColor() != null) {
+			marker.tint(shoesL.getColor().getRGB());
+		}else
+			marker.noTint();
+		marker.image(shoesL.getImage(), 50, 500);
+		if(shoesR.getColor() != null) {
+			marker.tint(shoesR.getColor().getRGB());
+		}else
+			marker.noTint();
+		marker.image(shoesR.getImage(), 150, 500);
 	}
 	
 	/**

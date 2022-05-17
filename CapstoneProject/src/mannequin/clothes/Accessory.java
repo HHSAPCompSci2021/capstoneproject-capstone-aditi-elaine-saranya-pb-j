@@ -62,6 +62,10 @@ public class Accessory extends Clothes {
 		return image;
 	}
 	
+	/**
+	 * Sets the color of the accessory
+	 * @param c the color to change to
+	 */
 	public void setColor (String c) {
 		if (c.equals("Blue"))
 			color = Color.blue;
@@ -85,6 +89,9 @@ public class Accessory extends Clothes {
 			color = Color.yellow;
 	}
 	
+	/**
+	 * @return the color of the accessory
+	 */
 	public Color getColor() {
 		return color;
 	}

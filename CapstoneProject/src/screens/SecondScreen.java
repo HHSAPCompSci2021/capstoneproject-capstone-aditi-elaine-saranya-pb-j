@@ -43,14 +43,23 @@ public class SecondScreen extends Screen {
 		G4P.setInputFont("Times New Roman", G4P.PLAIN, 13); // New for G4P V4.3
 		G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
 		//Some start text
-		colorAccessory = new GDropList(surface, 100, 300, 100, 100, 0);
+		colorAccessory = new GDropList(surface, 50, 300, 100, 100, 0);
 		colorAccessory.setItems(new String[] {"Black", "Blue", "Green", "Purple", "Orange", "Pink", 
-				"Red", "White", "Yellow"}, 0);		
-		top = new GButton(surface,450, 300, 80, 40, "Top");
-		bottom = new GButton(surface,450, 400, 80, 40, "Bottom");
-		shoes = new GButton(surface, 450, 500, 80, 40, "Shoes");
-		accessories = new GButton(surface, 450, 200, 80, 40, "Accessories");
-		random = new GButton(surface, 150, 600, 300, 60, "Randomly Generate");
+				"Red", "White", "Yellow"}, 0);	
+		colorTop = new GDropList(surface, 50, 400, 100, 100, 0);
+		colorTop.setItems(new String[] {"Black", "Blue", "Green", "Purple", "Orange", "Pink", 
+				"Red", "White", "Yellow"}, 0);	
+		colorBottom = new GDropList(surface, 50, 500, 100, 100, 0);
+		colorBottom.setItems(new String[] {"Black", "Blue", "Green", "Purple", "Orange", "Pink", 
+				"Red", "White", "Yellow"}, 0);	
+		colorShoes = new GDropList(surface, 50, 600, 100, 100, 0);
+		colorShoes.setItems(new String[] {"Black", "Blue", "Green", "Purple", "Orange", "Pink", 
+				"Red", "White", "Yellow"}, 0);	
+		top = new GButton(surface,450, 400, 80, 40, "Top");
+		bottom = new GButton(surface,450, 500, 80, 40, "Bottom");
+		shoes = new GButton(surface, 450, 600, 80, 40, "Shoes");
+		accessories = new GButton(surface, 450, 300, 80, 40, "Accessories");
+		random = new GButton(surface, 200, 30, 300, 60, "Randomly Generate");
 		
 
 	}
@@ -66,6 +75,9 @@ public class SecondScreen extends Screen {
 		accessories.setVisible(v);
 		random.setVisible(v);
 		colorAccessory.setVisible(v);
+		colorTop.setVisible(v);
+		colorBottom.setVisible(v);
+		colorShoes.setVisible(v);
 	}
 	
 	/**
@@ -99,30 +111,38 @@ public class SecondScreen extends Screen {
 	 */
 	public void handleButtonEvents(GButton button, GEvent event) {
 		// Create the control window?
-		System.out.println(button.getText());
 
-		if (button.equals(top)) {
-			System.out.println("here2");
+		if (button.getText().equals(top.getText())) {
 			person.changeTop();
 		}
-		else if (button == bottom && event == GEvent.CLICKED) {
+		else if (button.getText().equals(bottom.getText())) {
 			person.changeBottom();
 		}
-		else if (button == accessories && event == GEvent.CLICKED) {
+		else if (button.getText().equals(accessories.getText())) {
 			person.changeAccessory();
 		}
-		else if (button == shoes && event == GEvent.CLICKED) {
+		else if (button.getText().equals(shoes.getText())) {
 			person.changeShoes();
 		}
-		else if (button == random && event == GEvent.CLICKED) {
+		else if (button.getText().equals("Randomly Generate")) {
 			person.pickRandom();
 			
 		}
 	}
 	
 	public void handleDropListEvents (GDropList list, GEvent event) {
-		if (list == colorAccessory) {
+		if (list.getText().equals(colorAccessory.getText())) {
 			person.getAccessory().setColor(list.getSelectedText());
+		}
+		else if (list.getText().equals(colorTop.getText())) {
+			person.getTop().setColor(list.getSelectedText());
+		}
+		else if (list.getText().equals(colorBottom.getText())) {
+			person.getBottom().setColor(list.getSelectedText());
+		}
+		if (list.getText().equals(colorShoes.getText())) {
+			person.getShoesLeft().setColor(list.getSelectedText());
+			person.getShoesRight().setColor(list.getSelectedText());
 		}
 	}
 }
