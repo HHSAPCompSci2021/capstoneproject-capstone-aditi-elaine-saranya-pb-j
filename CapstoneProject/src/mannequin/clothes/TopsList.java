@@ -62,7 +62,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage beigeShirt = new PImage(img);
-		Top top2 = new Top("Hot", "Casual","Non-Binary",beigeShirt);
+		Top top2 = new Top("Hot", "Casual","Neutral",beigeShirt);
 		allList.add(top2);
 
 		img = null;
@@ -84,7 +84,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage blackTShirt = new PImage(img);
-		Top top4 = new Top("Cold", "Casual" ,"Non-Binary",blackTShirt);
+		Top top4 = new Top("Cold", "Casual" ,"Neutral",blackTShirt);
 		allList.add(top4);
 
 		img = null;
@@ -106,7 +106,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage blueTShirt = new PImage(img);
-		Top top6 = new Top("Hot", "Casual","Non-Binary",blueTShirt);
+		Top top6 = new Top("Hot", "Casual","Neutral",blueTShirt);
 		allList.add(top6);
 
 		img = null;
@@ -128,7 +128,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage whiteTShirt = new PImage(img);
-		Top top8 = new Top("Hot", "Casual","Non-Binary" ,whiteTShirt);
+		Top top8 = new Top("Hot", "Casual","Neutral" ,whiteTShirt);
 		allList.add(top8);
 
 		img = null;
@@ -150,7 +150,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage blackSweater = new PImage(img);
-		Top top10 = new Top("Cold", "Semi-Formal","Non-Binary",blackSweater);
+		Top top10 = new Top("Cold", "Semi-Formal","Neutral",blackSweater);
 		allList.add(top10);
 
 		img = null;

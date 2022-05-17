@@ -47,7 +47,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage whitePants = new PImage(img);
-		Bottom bottom1 = new Bottom("Cold",whitePants,  "Formal", "Non-Binary");
+		Bottom bottom1 = new Bottom("Cold",whitePants,  "Formal", "Neutral");
 		allList.add(bottom1);
 
 		img = null;
@@ -58,7 +58,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage beigePants = new PImage(img);
-		Bottom bottom2 = new Bottom("Cold", beigePants,"Formal", "Non-Binary");
+		Bottom bottom2 = new Bottom("Cold", beigePants,"Formal", "Neutral");
 		allList.add(bottom2);
 
 		img = null;
@@ -69,7 +69,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blackPants = new PImage(img);
-		Bottom bottom3 = new Bottom("Cold",blackPants,"Semi-Formal", "Non-Binary");
+		Bottom bottom3 = new Bottom("Cold",blackPants,"Semi-Formal", "Neutral");
 		allList.add(bottom3);
 
 		img = null;
@@ -91,7 +91,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blueJeans = new PImage(img);
-		Bottom bottom5 = new Bottom("Hot",blueJeans,"Casual", "Non-Binary");
+		Bottom bottom5 = new Bottom("Hot",blueJeans,"Casual", "Neutral");
 		allList.add(bottom5);
 
 		img = null;
@@ -113,7 +113,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blackSweats = new PImage(img);
-		Bottom bottom7 = new Bottom("Cold",blackSweats,"Casual", "Non-Binary");
+		Bottom bottom7 = new Bottom("Cold",blackSweats,"Casual", "Neutral");
 		allList.add(bottom7);
 
 	}

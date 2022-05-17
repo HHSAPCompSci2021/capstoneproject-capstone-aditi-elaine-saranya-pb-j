@@ -76,7 +76,7 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 			screen2.getPerson().getBottomsList().sortArray();
 			screen2.getPerson().getAccessoriesList().sortArray();
 			screen2.getPerson().getShoesList().sortArray();
-			screen2.getPerson().setClothes();
+			screen2.getPerson().setClothes(); 
 
 		}
 		activeScreen.setup();
