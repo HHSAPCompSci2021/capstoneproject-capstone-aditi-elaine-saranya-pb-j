@@ -23,7 +23,9 @@ public class AccessoryList {
 	private ArrayList<Accessory> sortedList;
 
 	private String weatherCondition;
-
+	private String formality;
+	private String gender;
+	
 	private int currentIndex;
 
 	/**
@@ -33,7 +35,9 @@ public class AccessoryList {
 
 	public AccessoryList() {
 		weatherCondition = "Hot";
-
+		formality = "Casual";
+		gender = "Neutral";
+		
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
 
@@ -47,7 +51,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage whiteHat = new PImage(img);
-		Accessory accessory1 = new Accessory("Hot", "Casual", "Non-Binary", whiteHat);
+		Accessory accessory1 = new Accessory("Hot", "Casual", "Neutral", whiteHat);
 		allList.add(accessory1);
 
 		img = null;
@@ -58,7 +62,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage blackHat = new PImage(img);
-		Accessory accessory2 = new Accessory("Hot", "Casual", "Non-Binary",blackHat);
+		Accessory accessory2 = new Accessory("Hot", "Casual", "Neutral",blackHat);
 		allList.add(accessory2);
 
 		img = null;
@@ -69,7 +73,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage blackBeanie = new PImage(img);
-		Accessory accessory3 = new Accessory("Cold", "Casual", "Non-Binary",blackBeanie);
+		Accessory accessory3 = new Accessory("Cold", "Casual", "Neutral",blackBeanie);
 		allList.add(accessory3);
 
 		img = null;
@@ -80,7 +84,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage grayBeanie = new PImage(img);
-		Accessory accessory4 = new Accessory("Cold", "Casual", "Non-Binary",grayBeanie);
+		Accessory accessory4 = new Accessory("Cold", "Casual", "Neutral",grayBeanie);
 		allList.add(accessory4);
 
 		img = null;
@@ -91,7 +95,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage greenBeanie = new PImage(img);
-		Accessory accessory5 = new Accessory("Cold", "Casual", "Non-Binary",greenBeanie);
+		Accessory accessory5 = new Accessory("Cold", "Casual", "Neutral",greenBeanie);
 		allList.add(accessory5);
 
 	}
@@ -139,6 +143,24 @@ public class AccessoryList {
 	 */
 	public void setWeatherCondition(String w) {
 		weatherCondition = w;
+	}
+	
+	/**
+	 * Sets the formality type to sort the clothes
+	 * 
+	 * @param w the formality
+	 */
+	public void setFormalityType (String w) {
+		formality = w;
+	}
+	
+	/**
+	 * Sets the gender expression to sort the clothes
+	 * 
+	 * @param w the gender expression
+	 */
+	public void setClothesGender(String w) {
+		gender = w;
 	}
 
 }

@@ -43,10 +43,10 @@ public class FirstScreen extends Screen {
 		  listTemp = new GDropList(surface, 100, 300, 100, 100, 0);
 		  listTemp.setItems(new String[] {"Hot", "Cold"}, 0);
 		  submit = new GButton(surface,250, 500, 100, 40, "Submit");
-//		  listFormality = new GDropList(surface, 250, 300, 100, 100, 0);
-//		  listFormality.setItems(new String[] {"Casual", "Black-tie", "Business Casual"}, 0);
-//		  listExpression = new GDropList(surface, 400, 300, 100, 100, 0);
-//		  listExpression.setItems(new String[] {"Feminine", "Masculine", "Neutral"}, 0);
+		  listFormality = new GDropList(surface, 250, 300, 100, 100, 0);
+		  listFormality.setItems(new String[] {"Casual", "Black-tie", "Business Casual"}, 0);
+		  listExpression = new GDropList(surface, 400, 300, 100, 100, 0);
+		  listExpression.setItems(new String[] {"Feminine", "Masculine", "Neutral"}, 0);
 	}
 	
 	/**
@@ -100,8 +100,18 @@ public class FirstScreen extends Screen {
 
 	
 	public boolean handleDropListEvents (GDropList list, GEvent event, Person p) {
-		if (list == listTemp)
+		if (list == listTemp) {
+			p.setWeatherCondition(list.getSelectedText());
 			return true;
+		}
+		if (list == listFormality) {
+			p.setFormalityType(list.getSelectedText());
+			return true;
+		}
+		if (list == listExpression) {
+			p.setGenderExpression(list.getSelectedText());
+			return true;
+		}
 		return false;
 	}
 
