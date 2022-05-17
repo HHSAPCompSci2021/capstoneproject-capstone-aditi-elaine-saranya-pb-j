@@ -25,7 +25,8 @@ public class ShoesList {
 
 	private String weatherCondition;
 	
-	//private String 
+	private String formality;
+	private String gender;
 
 	/**
 	 * Constructs an AccessoryList containing an ArrayList of all the accessories

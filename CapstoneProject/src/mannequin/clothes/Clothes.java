@@ -17,8 +17,8 @@ public class Clothes extends PApplet {
 
 
 	private String weather; //{"Hot", "Cold"}
-//	private String formality;
-	//private int gender; //1 feminine 2 masculine 3 non-binary 
+	private String formality;
+	private String gender; //1 feminine 2 masculine 3 non-binary 
 	private double price;
 
 	//private String website;
@@ -28,13 +28,13 @@ public class Clothes extends PApplet {
 	 * Sets all filters to their default value
 	 * @param w The initial weather filter to be set
 	 */
-	public Clothes(String w) {
+	public Clothes(String w, String formal, String gen) {
 		
 		weather=w;
-		//formality="casual";
+		formality=formal;
+		gender=gen;
 		price= 0.0;
-		//gender=1;
-		
+
 
 	}
 
