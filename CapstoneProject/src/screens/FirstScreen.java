@@ -22,7 +22,7 @@ public class FirstScreen extends Screen {
 	 * @param surface The DrawingSurface to draw the first screen on
 	 */
 	public FirstScreen(DrawingSurface surface) {
-		super(600,800);
+		super(800,800);
 		this.surface = surface;
 
 	}
