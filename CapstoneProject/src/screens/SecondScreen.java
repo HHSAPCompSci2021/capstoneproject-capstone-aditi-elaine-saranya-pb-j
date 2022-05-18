@@ -94,6 +94,9 @@ public class SecondScreen extends Screen {
 	public void draw() {
 		surface.background(255);
 		surface.fill(112, 110, 250);
+		
+		surface.rect (392, 72, 79, 79);
+
 		surface.noStroke();
 		surface.rect(70, 45, 170, 120);		
 		surface.fill(255);
@@ -154,6 +157,13 @@ public class SecondScreen extends Screen {
 			person.getShoesRight().setColor(list.getSelectedText());
 		}
 		
+	}
+	
+	public void mousePressed() {
+		if (surface.mousePressed) {
+			if (surface.mouseX > 392 && surface.mouseX < 471 && surface.mouseY > 72 && surface.mouseY < 151)
+				surface.link(null);
+		}
 	}
 }
 	
