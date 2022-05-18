@@ -23,6 +23,9 @@ public class Accessory extends Clothes {
 	 * 
 	 * @param w The weather filter
 	 * @param i The image of the accessory
+	 * @param f The formality of the accessory
+	 * @param g The gender of the person
+	 * @param p The price of the accessory
 	 * 
 	 */
 	public Accessory(String w, String f, String g, PImage i, double p) {
