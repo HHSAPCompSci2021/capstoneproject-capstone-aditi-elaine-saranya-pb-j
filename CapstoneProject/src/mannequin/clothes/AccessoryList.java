@@ -14,8 +14,8 @@ import processing.core.PImage;
  * The AccessoryList class represents a collection of all the Accessories to be
  * added to the screen using the Processing library.
  * 
- * @author 
- * @version 5/17/2022
+ * @author
+ * @version 5/18/2022
  */
 
 public class AccessoryList {
@@ -25,19 +25,19 @@ public class AccessoryList {
 	private String weatherCondition;
 	private String formality;
 	private String gender;
-	
+
 	private int currentIndex;
 
 	/**
-	 * Constructs an AccessoryList containing an ArrayList of all the accessories and
-	 * an ArrayList that is sorted based on the user settings
+	 * Constructs an AccessoryList containing an ArrayList of all the accessories
+	 * and an ArrayList that is sorted based on the user settings
 	 */
 
 	public AccessoryList() {
 		weatherCondition = "Hot";
 		formality = "Casual";
 		gender = "Neutral";
-		
+
 		allList = new ArrayList<>();
 		sortedList = new ArrayList<>();
 
@@ -62,7 +62,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage blackHat = new PImage(img);
-		Accessory accessory2 = new Accessory("Hot", "Casual", "Neutral",blackHat, 24.00);
+		Accessory accessory2 = new Accessory("Hot", "Casual", "Neutral", blackHat, 24.00);
 		allList.add(accessory2);
 
 		img = null;
@@ -73,7 +73,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage blackBeanie = new PImage(img);
-		Accessory accessory3 = new Accessory("Cold", "Casual", "Neutral",blackBeanie, 48.00);
+		Accessory accessory3 = new Accessory("Cold", "Casual", "Neutral", blackBeanie, 48.00);
 		allList.add(accessory3);
 
 		img = null;
@@ -84,7 +84,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage grayBeanie = new PImage(img);
-		Accessory accessory4 = new Accessory("Cold", "Casual", "Neutral",grayBeanie, 48.00);
+		Accessory accessory4 = new Accessory("Cold", "Casual", "Neutral", grayBeanie, 48.00);
 		allList.add(accessory4);
 
 		img = null;
@@ -95,7 +95,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage greenBeanie = new PImage(img);
-		Accessory accessory5 = new Accessory("Cold", "Casual", "Neutral",greenBeanie, 48.00);
+		Accessory accessory5 = new Accessory("Cold", "Casual", "Neutral", greenBeanie, 48.00);
 		allList.add(accessory5);
 
 	}
@@ -104,18 +104,17 @@ public class AccessoryList {
 	 * Sorts the ArrayList with all the accessories into the sorted ArrayList
 	 */
 	public void sortArray() {
-	
+
 		if (formality.equals("Casual")) {
 			if (weatherCondition.equals(" ")) {
 				sortedList = (ArrayList<Accessory>) allList.clone();
-			}
-			else {
+			} else {
 				for (Accessory a : allList) {
 					if (a.getWeather().equals(weatherCondition))
 						sortedList.add(a);
 				}
 			}
-			
+
 			for (int i = 0; i < sortedList.size(); i++) {
 				Accessory a = sortedList.get(i);
 				if (!a.getExpression().equals(gender) && !gender.equals("Neutral")) {
@@ -162,16 +161,16 @@ public class AccessoryList {
 	public void setWeatherCondition(String w) {
 		weatherCondition = w;
 	}
-	
+
 	/**
 	 * Sets the formality type to sort the clothes
 	 * 
 	 * @param w the formality
 	 */
-	public void setFormalityType (String w) {
+	public void setFormalityType(String w) {
 		formality = w;
 	}
-	
+
 	/**
 	 * Sets the gender expression to sort the clothes
 	 * 

@@ -7,18 +7,17 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 /**
- * The Top class represents an Top to be added to the screen using
- * the Processing library. It is a subclass of the Clothes class.
+ * The Top class represents an Top to be added to the screen using the
+ * Processing library. It is a subclass of the Clothes class.
  * 
- * @author 
- * @version 5/17/2022
+ * @author
+ * @version 5/18/2022
  */
 public class Top extends Clothes {
-	
+
 	private PImage image;
 	private Color color;
-	
-	
+
 	/**
 	 * Constructs a top with specified image
 	 * 
@@ -30,8 +29,6 @@ public class Top extends Clothes {
 		image = i;
 		color = null;
 	}
-	
-
 
 	/**
 	 * Sets the price of the top
@@ -40,10 +37,12 @@ public class Top extends Clothes {
 	 */
 	public void setPrice(double p) {
 		// TODO Auto-generated method stub
-		
+
 	}
+
 	/**
 	 * Returns the image of the top
+	 * 
 	 * @return the image of the top
 	 */
 	public PImage getImage() {
@@ -52,9 +51,10 @@ public class Top extends Clothes {
 
 	/**
 	 * Sets the color of the top
+	 * 
 	 * @param c the color to change to
 	 */
-	public void setColor (String c) {
+	public void setColor(String c) {
 		if (c.equals("Blue"))
 			color = Color.BLUE;
 		else if (c.equals("Black"))
@@ -76,7 +76,7 @@ public class Top extends Clothes {
 		else if (c.equals("None"))
 			color = null;
 	}
-	
+
 	/**
 	 * @return the color of the top
 	 */

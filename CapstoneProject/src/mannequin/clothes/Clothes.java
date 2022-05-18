@@ -10,36 +10,30 @@ import processing.core.PImage;
  * The Clothes class represents Clothes that can be displayed using the
  * Processing library.
  * 
- * @author 
- * @version 5/17/2022
+ * @author
+ * @version 5/18/2022
  */
 public class Clothes extends PApplet {
 
-
-	private String weather; //{"Hot", "Cold"}
+	private String weather;
 	private String formality;
-	private String gender; //1 feminine 2 masculine 3 non-binary 
+	private String gender;
 	private double price;
-
-	//private String website;
-	
 
 	/**
 	 * Sets all filters to their default value
+	 * 
 	 * @param w The initial weather filter to be set
 	 */
 	public Clothes(String w, String formal, String gen, double p) {
-		
-		weather=w;
-		formality=formal;
-		gender=gen;
-		price=p;
 
+		weather = w;
+		formality = formal;
+		gender = gen;
+		price = p;
 
 	}
 
-
-	
 	/**
 	 * Gets the weather
 	 * 
@@ -76,6 +70,7 @@ public class Clothes extends PApplet {
 	public void setFormality(String f) {
 		formality = f;
 	}
+
 	/**
 	 * Gets the gender expression of the article of clothing
 	 * 
@@ -94,7 +89,6 @@ public class Clothes extends PApplet {
 		gender = g;
 	}
 
-	
 	/**
 	 * Gets the price of the article of clothing
 	 * 
@@ -103,19 +97,20 @@ public class Clothes extends PApplet {
 	public double getPrice() {
 		return price;
 	}
-	
+
 	/**
 	 * Sets the price of the article of clothing
 	 * 
 	 * @param p the price of the article of clothing to be set
 	 */
-	
+
 	public void setPrice(double p) {
 		price = p;
 	}
-	
+
 	/**
 	 * Calculates the price of the entire outfit
+	 * 
 	 * @return cost The total cost of the outfit
 	 */
 	public double calcTotalPrice() {

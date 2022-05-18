@@ -7,17 +7,17 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 /**
- * The Bottom class represents an Bottom to be added to the screen using
- * the Processing library. It is a subclass of the Clothes class.
+ * The Bottom class represents an Bottom to be added to the screen using the
+ * Processing library. It is a subclass of the Clothes class.
  * 
- * @author 
- * @version 5/17/2022
+ * @author
+ * @version 5/18/2022
  */
 public class Bottom extends Clothes {
 
 	private PImage image;
 	private Color color;
-	
+
 	/**
 	 * Constructs a bottom with specified image
 	 * 
@@ -32,23 +32,21 @@ public class Bottom extends Clothes {
 		color = null;
 	}
 
-	
-
-	
 	/**
 	 * Returns the image of the top
+	 * 
 	 * @return the image of the top
 	 */
 	public PImage getImage() {
 		return image;
 	}
 
-	
 	/**
 	 * Sets the color of the bottom
+	 * 
 	 * @param c the color to change to
 	 */
-	public void setColor (String c) {
+	public void setColor(String c) {
 		if (c.equals("Blue"))
 			color = Color.blue;
 		else if (c.equals("Black"))
@@ -72,7 +70,7 @@ public class Bottom extends Clothes {
 		else if (c.equals("None"))
 			color = null;
 	}
-	
+
 	/**
 	 * @return the color of the bottom
 	 */
@@ -81,5 +79,3 @@ public class Bottom extends Clothes {
 	}
 
 }
-
-

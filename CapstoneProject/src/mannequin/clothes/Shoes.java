@@ -7,19 +7,18 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 /**
- * The Shoes class represents an Shoe to be added to the screen using
- * the Processing library. It is a subclass of the Clothes class.
+ * The Shoes class represents an Shoe to be added to the screen using the
+ * Processing library. It is a subclass of the Clothes class.
  * 
- * @author 
- * @version 5/17/2022
+ * @author
+ * @version 5/18/2022
  */
 public class Shoes extends Clothes {
 
-	
 	private PImage image;
 	private Color color;
 	private String side;
-	
+
 	/**
 	 * Constructs a shoe with specified image
 	 * 
@@ -27,27 +26,27 @@ public class Shoes extends Clothes {
 	 * @param i The image of the shoe
 	 */
 	public Shoes(String w, String f, String g, PImage i, double p, String s) {
-		super(w,f,g, p);
+		super(w, f, g, p);
 		image = i;
 		color = null;
 		side = s;
 	}
-	
-
 
 	/**
 	 * Returns the image of the top
+	 * 
 	 * @return the image of the top
 	 */
 	public PImage getImage() {
 		return image;
 	}
-	
+
 	/**
 	 * Sets the color of the shoes
+	 * 
 	 * @param c the color to change to
 	 */
-	public void setColor (String c) {
+	public void setColor(String c) {
 		if (c.equals("Blue"))
 			color = Color.blue;
 		else if (c.equals("Black"))
@@ -71,22 +70,20 @@ public class Shoes extends Clothes {
 		else if (c.equals("None"))
 			color = null;
 	}
-	
+
 	/**
 	 * @return the color of the shoes
 	 */
 	public Color getColor() {
 		return color;
 	}
-	
+
 	/**
 	 * Returns whether it is a right shoe or a left shoe
+	 * 
 	 * @return side of shoe
 	 */
 	public String getSide() {
 		return side;
 	}
 }
-
-
-
