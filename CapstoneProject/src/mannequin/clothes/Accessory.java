@@ -10,7 +10,7 @@ import processing.core.PImage;
  * The Accessory class represents an Accessory to be added to the screen using
  * the Processing library. It is a subclass of the Clothes class.
  * 
- * @author
+ * @author 
  * @version 5/18/2022
  */
 public class Accessory extends Clothes {
@@ -34,21 +34,21 @@ public class Accessory extends Clothes {
 		color = null;
 	}
 
+	
+
 	/**
 	 * Returns the image of the top
-	 * 
 	 * @return the image of the top
 	 */
 	public PImage getImage() {
 		return image;
 	}
-
+	
 	/**
 	 * Sets the color of the accessory
-	 * 
 	 * @param c the color to change to
 	 */
-	public void setColor(String c) {
+	public void setColor (String c) {
 		if (c.equals("Blue"))
 			color = Color.blue;
 		else if (c.equals("Black"))
@@ -72,7 +72,7 @@ public class Accessory extends Clothes {
 		else if (c.equals("None"))
 			color = null;
 	}
-
+	
 	/**
 	 * @return the color of the accessory
 	 */
