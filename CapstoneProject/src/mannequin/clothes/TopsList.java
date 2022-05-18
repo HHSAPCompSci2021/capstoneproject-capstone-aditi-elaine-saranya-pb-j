@@ -189,7 +189,7 @@ public class TopsList {
 	}
 
 	/**
-	 * Sorts the ArrayList with all the tops into the sorted ArrayList
+	 * Sorts the ArrayList with all the tops into the sorted ArrayList based on the user preferences
 	 */
 	public void sortArray() {
 		if (weatherCondition.equals(" ")) {

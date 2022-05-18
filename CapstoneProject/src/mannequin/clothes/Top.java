@@ -78,6 +78,7 @@ public class Top extends Clothes {
 	}
 
 	/**
+	 * 
 	 * @return the color of the top
 	 */
 	public Color getColor() {

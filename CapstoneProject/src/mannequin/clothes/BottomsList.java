@@ -196,7 +196,7 @@ public class BottomsList {
 	}
 
 	/**
-	 * Sorts the ArrayList with all the bottoms into the sorted ArrayList
+	 * Sorts the ArrayList with all the bottoms into the sorted ArrayList that is sorted based on user preferences
 	 */
 	public void sortArray() {
 		if (weatherCondition.equals(" ")) {
