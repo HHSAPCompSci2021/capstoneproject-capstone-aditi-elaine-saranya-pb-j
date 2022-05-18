@@ -170,6 +170,28 @@ public class BottomsList {
 		PImage blackskirt = new PImage(img);
 		Bottom bottom12 = new Bottom("Hot", blackskirt, "Formal", "Feminine", 35.00);
 		allList.add(bottom12);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/bluesweats.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage bluesweats = new PImage(img);
+		Bottom bottom13 = new Bottom("Cold", bluesweats, "Casual", "Neutral", 78.00);
+		allList.add(bottom13);
+
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/blacksweats.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blacksweats = new PImage(img);
+		Bottom bottom14 = new Bottom("Cold", blacksweats, "Casual", "Neutral", 78.00);
+		allList.add(bottom14);
 
 	}
 
