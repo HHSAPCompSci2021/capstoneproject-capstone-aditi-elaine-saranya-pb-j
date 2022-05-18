@@ -76,7 +76,7 @@ public class Person {
 			}else
 				marker.noTint();
 			accessory.getImage().resize(800, 800);
-			marker.image(accessory.getImage(), -96,-268);
+			marker.image(accessory.getImage(), 34,-288);
 		}	
 		
 		if(shoesL.getColor() != null) {
@@ -84,7 +84,7 @@ public class Person {
 		}else
 			marker.noTint();
 		shoesL.getImage().resize(700,700);
-		marker.image(shoesL.getImage(), -125, 380);
+		marker.image(shoesL.getImage(), 5, 375);
 		
 		
 		if(shoesR.getColor() != null) {
@@ -92,7 +92,7 @@ public class Person {
 		}else
 			marker.noTint();
 		shoesR.getImage().resize(700,700);
-		marker.image(shoesR.getImage(), 40, 380);
+		marker.image(shoesR.getImage(), 170, 375);
 		
 		
 		if(bottom.getColor() != null) {
@@ -100,7 +100,7 @@ public class Person {
 		}else
 			marker.noTint();
 		bottom.getImage().resize(750, 750);
-		marker.image(bottom.getImage(), -72, 160);
+		marker.image(bottom.getImage(), 58, 150);
 		
 		
 		if(top.getColor() != null) {
@@ -109,7 +109,7 @@ public class Person {
 			marker.noTint();
 		}
 		top.getImage().resize(1000, 1000);
-		marker.image(top.getImage(), -200,-200);
+		marker.image(top.getImage(), -70,-220);
 		
 	}
 	

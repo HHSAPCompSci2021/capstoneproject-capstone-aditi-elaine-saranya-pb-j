@@ -18,7 +18,6 @@ public class Shoes extends Clothes {
 	
 	private PImage image;
 	private Color color;
-	private double price; 
 	private String side;
 	
 	/**
@@ -28,36 +27,14 @@ public class Shoes extends Clothes {
 	 * @param i The image of the shoe
 	 */
 	public Shoes(String w, String f, String g, PImage i, double p, String s) {
-		super(w,f,g);
+		super(w,f,g, p);
 		image = i;
 		color = null;
-		price = p;
 		side = s;
 	}
 	
 
-	
 
-	
-	/**
-	 * Gets the price of the shoes
-	 * 
-	 * @return price The price of the shoes
-	 */
-	public double getPrice() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	/**
-	 * Sets the price of the shoes
-	 * 
-	 * @param p the price of the shoes to be set
-	 */
-	public void setPrice(double p) {
-		// TODO Auto-generated method stub
-		
-	}
 	/**
 	 * Returns the image of the top
 	 * @return the image of the top
@@ -91,6 +68,8 @@ public class Shoes extends Clothes {
 			color = Color.pink;
 		else if (c.equals("Yellow"))
 			color = Color.yellow;
+		else if (c.equals("None"))
+			color = null;
 	}
 	
 	/**

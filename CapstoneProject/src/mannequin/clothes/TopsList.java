@@ -51,7 +51,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage redBlouse = new PImage(img);
-		Top top1 = new Top("Hot", "Semi-Formal","Feminine",redBlouse, 40.0);
+		Top top1 = new Top("Hot", "Semi-Formal","Feminine",redBlouse, 40.00);
 		allList.add(top1);
 
 		img = null;
@@ -62,7 +62,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage beigeShirt = new PImage(img);
-		Top top2 = new Top("Hot", "Casual","Neutral",beigeShirt, 30.0);
+		Top top2 = new Top("Hot", "Casual","Neutral",beigeShirt, 30.00);
 		allList.add(top2);
 
 		img = null;
@@ -73,7 +73,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage blackTankTop = new PImage(img);
-		Top top3 = new Top("Hot", "Casual","Feminine",blackTankTop, 38.0);
+		Top top3 = new Top("Hot", "Casual","Feminine",blackTankTop, 38.00);
 		allList.add(top3);
 
 		img = null;
@@ -84,7 +84,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage blackTShirt = new PImage(img);
-		Top top4 = new Top("Cold", "Casual" ,"Neutral",blackTShirt, 30.0);
+		Top top4 = new Top("Cold", "Casual" ,"Neutral",blackTShirt, 30.00);
 		allList.add(top4);
 
 		img = null;
@@ -95,7 +95,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage blueBlouse = new PImage(img);
-		Top top5 = new Top("Hot", "Semi-Formal" ,"Feminine", blueBlouse, 40.0);
+		Top top5 = new Top("Hot", "Semi-Formal" ,"Feminine", blueBlouse, 40.00);
 		allList.add(top5);
 
 		img = null;
@@ -106,7 +106,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage blueTShirt = new PImage(img);
-		Top top6 = new Top("Hot", "Casual","Neutral",blueTShirt, 30.0);
+		Top top6 = new Top("Hot", "Casual","Neutral",blueTShirt, 30.00);
 		allList.add(top6);
 
 		img = null;
@@ -117,7 +117,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage whiteBlouse = new PImage(img);
-		Top top7 = new Top("Hot", "Formal","Feminine",whiteBlouse, 35.0);
+		Top top7 = new Top("Hot", "Formal","Feminine",whiteBlouse, 35.00);
 		allList.add(top7);
 
 		img = null;
@@ -128,7 +128,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage whiteTShirt = new PImage(img);
-		Top top8 = new Top("Hot", "Casual","Neutral" ,whiteTShirt, 30.0);
+		Top top8 = new Top("Hot", "Casual","Neutral" ,whiteTShirt, 30.00);
 		allList.add(top8);
 
 		img = null;
@@ -139,7 +139,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage blackButtonDown = new PImage(img);
-		Top top9 = new Top("Cold", "Formal" ,"Masculine",blackButtonDown, 80.0);
+		Top top9 = new Top("Cold", "Formal" ,"Masculine",blackButtonDown, 80.00);
 		allList.add(top9);
 
 		img = null;
@@ -150,7 +150,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage blackSweater = new PImage(img);
-		Top top10 = new Top("Cold", "Semi-Formal","Neutral",blackSweater, 100.0);
+		Top top10 = new Top("Cold", "Semi-Formal","Neutral",blackSweater, 100.00);
 		allList.add(top10);
 
 		img = null;
@@ -161,7 +161,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage blueButtonDown = new PImage(img);
-		Top top11 = new Top("Cold", "Formal","Masculine",blueButtonDown, 80.0);
+		Top top11 = new Top("Cold", "Formal","Masculine",blueButtonDown, 80.00);
 		allList.add(top11);
 
 		img = null;
@@ -172,7 +172,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage greenButtonDown = new PImage(img);
-		Top top12 = new Top("Cold", "Semi-Formal","Masculine",greenButtonDown, 80.0);
+		Top top12 = new Top("Cold", "Semi-Formal","Masculine",greenButtonDown, 80.00);
 		allList.add(top12);
 
 		img = null;
@@ -183,7 +183,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage whiteSweater = new PImage(img);
-		Top top13 = new Top("Cold", "Semi-Formal","Feminine",whiteSweater, 100.0);
+		Top top13 = new Top("Cold", "Semi-Formal","Feminine",whiteSweater, 100.00);
 		allList.add(top13);
 
 	}
@@ -192,17 +192,24 @@ public class TopsList {
 	 * Sorts the ArrayList with all the tops into the sorted ArrayList
 	 */
 	public void sortArray() {
-		for (Top t : allList) {
-			if (t.getWeather().equals(weatherCondition))
-				sortedList.add(t);
+		if (weatherCondition.equals(" ")) {
+			sortedList = (ArrayList<Top>) allList.clone();
 		}
-		for (int i = 0; i < sortedList.size(); i++) {
-			Top t = sortedList.get(i);
-			if (!t.getFormality().equals(formality)) {
-				sortedList.remove(i);
-				i--;
+		else {
+			for (Top t : allList) {
+				if (t.getWeather().equals(weatherCondition))
+					sortedList.add(t);
 			}
 		}
+		if (!formality.equals(" ")) {
+			for (int i = 0; i < sortedList.size(); i++) {
+				Top t = sortedList.get(i);
+				if (!t.getFormality().equals(formality)) {
+					sortedList.remove(i);
+					i--;
+				}
+			}
+		}	
 		for (int i = 0; i < sortedList.size(); i++) {
 			Top t = sortedList.get(i);
 			if (!t.getExpression().equals(gender) && !gender.equals("Neutral")) {

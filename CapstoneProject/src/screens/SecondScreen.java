@@ -30,7 +30,7 @@ public class SecondScreen extends Screen {
 	 * @param surface The DrawingSurface to draw the second screen on
 	 */
 	public SecondScreen(DrawingSurface surface) {
-		super(600, 800);
+		super(800, 800);
 		this.surface = surface;
 		person = new Person();
 	}
@@ -43,23 +43,23 @@ public class SecondScreen extends Screen {
 		G4P.setInputFont("Times New Roman", G4P.PLAIN, 13); // New for G4P V4.3
 		G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
 		//Some start text
-		colorAccessory = new GDropList(surface, 50, 300, 100, 100, 0);
-		colorAccessory.setItems(new String[] {"Black", "Blue", "Green", "Purple", "Orange", "Pink", 
+		colorAccessory = new GDropList(surface, 50, 290, 100, 100, 0);
+		colorAccessory.setItems(new String[] {"None","Black", "Blue", "Green", "Purple", "Orange", "Pink", 
 				"Red", "White", "Yellow"}, 0);	
-		colorTop = new GDropList(surface, 50, 400, 100, 100, 0);
-		colorTop.setItems(new String[] {"Black", "Blue", "Green", "Purple", "Orange", "Pink", 
+		colorTop = new GDropList(surface, 50, 380, 100, 100, 0);
+		colorTop.setItems(new String[] {"None","Black", "Blue", "Green", "Purple", "Orange", "Pink", 
 				"Red", "White", "Yellow"}, 0);	
-		colorBottom = new GDropList(surface, 50, 500, 100, 100, 0);
-		colorBottom.setItems(new String[] {"Black", "Blue", "Green", "Purple", "Orange", "Pink", 
+		colorBottom = new GDropList(surface, 50, 470, 100, 100, 0);
+		colorBottom.setItems(new String[] {"None","Black", "Blue", "Green", "Purple", "Orange", "Pink", 
 				"Red", "White", "Yellow"}, 0);	
-		colorShoes = new GDropList(surface, 50, 600, 100, 100, 0);
-		colorShoes.setItems(new String[] {"Black", "Blue", "Green", "Purple", "Orange", "Pink", 
+		colorShoes = new GDropList(surface, 50, 560, 100, 100, 0);
+		colorShoes.setItems(new String[] {"None","Black", "Blue", "Green", "Purple", "Orange", "Pink", 
 				"Red", "White", "Yellow"}, 0);	
-		top = new GButton(surface,450, 400, 80, 40, "Top");
-		bottom = new GButton(surface,450, 500, 80, 40, "Bottom");
-		shoes = new GButton(surface, 450, 600, 80, 40, "Shoes");
-		accessories = new GButton(surface, 450, 300, 80, 40, "Accessories");
-		random = new GButton(surface, 200, 10, 300, 60, "Randomly Generate");
+		top = new GButton(surface,175, 370, 80, 40, "Top");
+		bottom = new GButton(surface,175, 460, 80, 40, "Bottom");
+		shoes = new GButton(surface, 175, 550, 80, 40, "Shoes");
+		accessories = new GButton(surface, 175, 280, 80, 40, "Accessories");
+		random = new GButton(surface, 50, 200, 210, 50, "Randomly Generate");
 		
 
 	}
@@ -95,12 +95,21 @@ public class SecondScreen extends Screen {
 		surface.background(255);
 		surface.fill(112, 110, 250);
 		surface.noStroke();
-		surface.rect(10, 5, 130, 70);		
+		surface.rect(70, 45, 170, 120);		
 		surface.fill(255);
 		surface.textSize(15);
-		surface.text("Settings:", 25, 30);
-		surface.text("Weather: " + person.getWeatherCondition(), 25, 55);
+		surface.text("Settings:", 85, 70);
+		surface.text("Weather: " + person.getWeatherCondition(), 85, 95);
+		surface.text("Formality: " + person.getFormalityType(), 85, 120);
+		surface.text("Expression: " + person.getGenderExpression(), 85, 145);
 		person.draw(surface);
+		surface.fill(112, 110, 250);
+		if (person.getAccessory() != null)
+			surface.text("$" + person.getAccessory().getPrice(), 630, 100);
+		surface.text("$" + person.getTop().getPrice(), 630, 250);
+		surface.text("$" + person.getBottom().getPrice(), 630, 550);
+		surface.text("$" + (person.getShoesLeft().getPrice() + person.getShoesRight().getPrice()), 630, 735);
+		surface.text("Total Price: $" + person.calculateTotalCost(), 75, 700);
 		
 	}
 	

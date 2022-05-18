@@ -17,7 +17,6 @@ public class Top extends Clothes {
 	
 	private PImage image;
 	private Color color;
-	private double price;
 	
 	
 	/**
@@ -27,22 +26,12 @@ public class Top extends Clothes {
 	 * @param i The image of the top
 	 */
 	public Top(String w, String f, String g, PImage i, double p) {
-		super(w, f, g);
+		super(w, f, g, p);
 		image = i;
 		color = null;
-		price = p;
 	}
 	
-	
-	/**
-	 * Gets the price of the top
-	 * 
-	 * @return price The price of the top
-	 */
-	public double getPrice() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+
 
 	/**
 	 * Sets the price of the top
@@ -84,6 +73,8 @@ public class Top extends Clothes {
 			color = Color.PINK;
 		else if (c.equals("Yellow"))
 			color = Color.YELLOW;
+		else if (c.equals("None"))
+			color = null;
 	}
 	
 	/**

@@ -17,7 +17,6 @@ public class Accessory extends Clothes {
 
 	private PImage image;
 	private Color color;
-	private double price;
 
 	/**
 	 * Constructs an accessory with specified image
@@ -27,35 +26,13 @@ public class Accessory extends Clothes {
 	 * 
 	 */
 	public Accessory(String w, String f, String g, PImage i, double p) {
-		super(w, f, g);
+		super(w, f, g, p);
 		image = i;
 		color = null;
-		price = p;
 	}
 
 	
 
-
-
-	/**
-	 * Gets the price of the accessory
-	 * 
-	 * @return price The price of the accessory
-	 */
-	public double getPrice() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	/**
-	 * Sets the price of the accessory
-	 * 
-	 * @param p the price of the accessory to be set
-	 */
-	public void setPrice(double p) {
-		// TODO Auto-generated method stub
-		
-	}
 	/**
 	 * Returns the image of the top
 	 * @return the image of the top
@@ -89,6 +66,8 @@ public class Accessory extends Clothes {
 			color = Color.pink;
 		else if (c.equals("Yellow"))
 			color = Color.yellow;
+		else if (c.equals("None"))
+			color = null;
 	}
 	
 	/**

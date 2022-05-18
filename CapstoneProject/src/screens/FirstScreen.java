@@ -22,7 +22,7 @@ public class FirstScreen extends Screen {
 	 * @param surface The DrawingSurface to draw the first screen on
 	 */
 	public FirstScreen(DrawingSurface surface) {
-		super(600,800);
+		super(800,800);
 		this.surface = surface;
 
 	}
@@ -40,12 +40,12 @@ public class FirstScreen extends Screen {
 		  G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
 		  // Some start text
 
-		  listTemp = new GDropList(surface, 100, 300, 100, 100, 0);
-		  listTemp.setItems(new String[] {"Hot", "Cold"}, 0);
-		  submit = new GButton(surface,250, 500, 100, 40, "Submit");
-		  listFormality = new GDropList(surface, 250, 300, 100, 100, 0);
-		  listFormality.setItems(new String[] {"Casual", "Formal", "Semi-Formal"}, 0);
-		  listExpression = new GDropList(surface, 400, 300, 100, 100, 0);
+		  listTemp = new GDropList(surface, 200, 300, 100, 100, 0);
+		  listTemp.setItems(new String[] {" ", "Hot", "Cold"}, 0);
+		  submit = new GButton(surface,350, 500, 100, 40, "Submit");
+		  listFormality = new GDropList(surface, 350, 300, 100, 100, 0);
+		  listFormality.setItems(new String[] {" ", "Casual", "Formal", "Semi-Formal"}, 0);
+		  listExpression = new GDropList(surface, 500, 300, 100, 100, 0);
 		  listExpression.setItems(new String[] {"Neutral","Feminine", "Masculine"}, 0);
 	}
 	
@@ -70,16 +70,16 @@ public class FirstScreen extends Screen {
 		surface.background(255);
 		surface.fill(112, 110, 250);
 		surface.noStroke();
-		surface.rect(166, 75, 290,44);
+		surface.rect(266, 75, 290,44);
 		surface.fill(255);
 		surface.textSize(20);
-		surface.text("Random Outfit Generator", 190, 103);
+		surface.text("Random Outfit Generator", 290, 103);
 		surface.textSize(13);
 		surface.fill(112, 110, 250);
-		surface.text("Please enter the settings to help us better generate an outfit for you", 100, 150);
-		surface.text("Temperature", 105, 295);
-		surface.text("Formality", 270, 295);
-		surface.text("Expression", 413, 295);
+		surface.text("Please enter the settings to help us better generate an outfit for you", 200, 150);
+		surface.text("Temperature", 205, 295);
+		surface.text("Formality", 370, 295);
+		surface.text("Expression", 513, 295);
 
 	}
 

@@ -28,12 +28,12 @@ public class Clothes extends PApplet {
 	 * Sets all filters to their default value
 	 * @param w The initial weather filter to be set
 	 */
-	public Clothes(String w, String formal, String gen) {
+	public Clothes(String w, String formal, String gen, double p) {
 		
 		weather=w;
 		formality=formal;
 		gender=gen;
-		price= 0.0;
+		price=p;
 
 
 	}

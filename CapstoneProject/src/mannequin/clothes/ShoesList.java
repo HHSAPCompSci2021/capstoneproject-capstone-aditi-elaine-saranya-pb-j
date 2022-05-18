@@ -60,7 +60,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage loafersL = new PImage(img);
-		Shoes shoes1L = new Shoes("Cold", "Formal","Neutral", loafersL, 0.0, "left");
+		Shoes shoes1L = new Shoes("Cold", "Formal","Neutral", loafersL, 37.50, "left");
 		allList.add(shoes1L);
 
 		img = null;
@@ -71,7 +71,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage loafersR = new PImage(img);
-		Shoes shoes1R = new Shoes("Cold", "Formal","Neutral", loafersR, 0.0, "right");
+		Shoes shoes1R = new Shoes("Cold", "Formal","Neutral", loafersR, 37.50, "right");
 		allList.add(shoes1R);
 
 		img = null;
@@ -82,7 +82,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage dunksL = new PImage(img);
-		Shoes shoes2L = new Shoes("Hot", "Semi-Formal","Neutral", dunksL, 0.0, "left");
+		Shoes shoes2L = new Shoes("Hot", "Semi-Formal","Neutral", dunksL, 40.00, "left");
 		allList.add(shoes2L);
 
 		img = null;
@@ -93,7 +93,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage dunksR = new PImage(img);
-		Shoes shoes2R = new Shoes("Hot", "Semi-Formal" ,"Neutral", dunksR, 0.0, "right");
+		Shoes shoes2R = new Shoes("Hot", "Semi-Formal" ,"Neutral", dunksR, 40.00, "right");
 		allList.add(shoes2R);
 		
 		img = null;
@@ -104,7 +104,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage converseL = new PImage(img);
-		Shoes shoes3L = new Shoes("Hot", "Casual","Neutral", converseL, 0.0, "left");
+		Shoes shoes3L = new Shoes("Hot", "Casual","Neutral", converseL, 37.50, "left");
 		allList.add(shoes3L);
 
 		img = null;
@@ -115,7 +115,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage converseR = new PImage(img);
-		Shoes shoes3R = new Shoes("Hot", "Casual","Neutral", converseR, 0.0, "right");
+		Shoes shoes3R = new Shoes("Hot", "Casual","Neutral", converseR, 37.50, "right");
 		allList.add(shoes3R);
 		
 		img = null;
@@ -126,7 +126,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage af1L = new PImage(img);
-		Shoes shoes4L = new Shoes("Hot", "Casual","Neutral", af1L, 0.0, "left");
+		Shoes shoes4L = new Shoes("Hot", "Casual","Neutral", af1L, 50.00, "left");
 		allList.add(shoes4L);
 
 		img = null;
@@ -137,7 +137,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage af1R = new PImage(img);
-		Shoes shoes4R = new Shoes("Hot", "Casual","Neutral", af1R, 0.0, "right");
+		Shoes shoes4R = new Shoes("Hot", "Casual","Neutral", af1R,50.00, "right");
 		allList.add(shoes4R);
 		
 		img = null;
@@ -148,7 +148,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage drmartensL = new PImage(img);
-		Shoes shoes5L = new Shoes("Cold", "Semi-Formal","Neutral", drmartensL, 0.0, "left");
+		Shoes shoes5L = new Shoes("Cold", "Semi-Formal","Neutral", drmartensL, 100.00, "left");
 		allList.add(shoes5L);
 
 		img = null;
@@ -159,7 +159,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage drmartensR = new PImage(img);
-		Shoes shoes5R = new Shoes("Cold", "Semi-Formal","Neutral", drmartensR, 0.0, "right");
+		Shoes shoes5R = new Shoes("Cold", "Semi-Formal","Neutral", drmartensR, 100.00, "right");
 		allList.add(shoes5R);
 		
 		
@@ -170,23 +170,36 @@ public class ShoesList {
 	 * Sorts the ArrayList with all the shoes into the sorted ArrayList
 	 */
 	public void sortArray() {
-		for (Shoes s : allList) {
-			if (s.getWeather().equals(weatherCondition)) {
+		if (weatherCondition.equals(" ")) {
+			for (Shoes s : allList) {
 				if (s.getSide().equals("left"))
 					sortedListLeft.add(s);
 				else
 					sortedListRight.add(s);
 			}
 		}
-		
-		for (int i = 0; i < sortedListLeft.size(); i++) {
-			Shoes s = sortedListLeft.get(i);
-			if (!s.getFormality().equals(formality)) {
-				sortedListLeft.remove(i);
-				sortedListRight.remove(i);
-				i--;
+		else {
+			for (Shoes s : allList) {
+				if (s.getWeather().equals(weatherCondition)) {
+					if (s.getSide().equals("left"))
+						sortedListLeft.add(s);
+					else
+						sortedListRight.add(s);
+				}
 			}
 		}
+		
+		if (!formality.equals(" ")) {
+			for (int i = 0; i < sortedListLeft.size(); i++) {
+				Shoes s = sortedListLeft.get(i);
+				if (!s.getFormality().equals(formality)) {
+					sortedListLeft.remove(i);
+					sortedListRight.remove(i);
+					i--;
+				}
+			}
+		}
+		
 		for (int i = 0; i < sortedListLeft.size(); i++) {
 			Shoes s = sortedListLeft.get(i);
 			if (!s.getExpression().equals(gender) && !gender.equals("Neutral")) {
