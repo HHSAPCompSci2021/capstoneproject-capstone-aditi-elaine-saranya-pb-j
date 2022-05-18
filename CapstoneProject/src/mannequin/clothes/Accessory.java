@@ -28,8 +28,8 @@ public class Accessory extends Clothes {
 	 * @param p The price of the accessory
 	 * 
 	 */
-	public Accessory(String w, String f, String g, PImage i, double p) {
-		super(w, f, g, p);
+	public Accessory(String w, String f, String g, PImage i, double p, String l) {
+		super(w, f, g, p, l);
 		image = i;
 		color = null;
 	}

@@ -38,8 +38,8 @@ public class ShoesList {
 		currentIndexLeft = -1;
 		currentIndexRight = -1;
 
-		weatherCondition = "Hot";
-		formality = "Casual";
+		weatherCondition = " ";
+		formality = " ";
 		gender = "Neutral";
 
 		allList = new ArrayList<>();
@@ -54,7 +54,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage loafersL = new PImage(img);
-		Shoes shoes1L = new Shoes("Cold", "Formal", "Neutral", loafersL, 37.50, "left");
+		Shoes shoes1L = new Shoes("Cold", "Formal", "Neutral", loafersL, 37.50, "left", "");
 		allList.add(shoes1L);
 
 		img = null;
@@ -65,7 +65,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage loafersR = new PImage(img);
-		Shoes shoes1R = new Shoes("Cold", "Formal", "Neutral", loafersR, 37.50, "right");
+		Shoes shoes1R = new Shoes("Cold", "Formal", "Neutral", loafersR, 37.50, "right", "");
 		allList.add(shoes1R);
 
 		img = null;
@@ -76,7 +76,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage dunksL = new PImage(img);
-		Shoes shoes2L = new Shoes("Hot", "Semi-Formal", "Neutral", dunksL, 40.00, "left");
+		Shoes shoes2L = new Shoes("Hot", "Semi-Formal", "Neutral", dunksL, 40.00, "left", "");
 		allList.add(shoes2L);
 
 		img = null;
@@ -87,7 +87,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage dunksR = new PImage(img);
-		Shoes shoes2R = new Shoes("Hot", "Semi-Formal", "Neutral", dunksR, 40.00, "right");
+		Shoes shoes2R = new Shoes("Hot", "Semi-Formal", "Neutral", dunksR, 40.00, "right", "");
 		allList.add(shoes2R);
 
 		img = null;
@@ -98,7 +98,12 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage converseL = new PImage(img);
-		Shoes shoes3L = new Shoes("Hot", "Casual", "Neutral", converseL, 37.50, "left");
+		Shoes shoes3L = new Shoes("Hot", "Casual", "Neutral", converseL, 37.50, "left", "https://www.converse.com/shop/p/"
+				+ "chuck-taylor-all-star-lift-platform-canvas-womens-high-top-shoe/560845F_095.html?"
+				+ "cp=PLA_PRF_CNV_NA_US_EN_20190226_CPCS_CPCS-Shopping-[B]%20Shoes%20-%20"
+				+ "Womens_X_X_X_X_Google_X_X__Desktop/Tablet-[B]%20Shoes%20-%20Womens_X_X"
+				+ "&gclid=CjwKCAjwj42UBhAAEiwACIhADqgf0gwXrga5ix7qxHCbA0b4SS1ufhYWPkFWwgUjvGgv0SUt5"
+				+ "uTS0xoC2RAQAvD_BwE");
 		allList.add(shoes3L);
 
 		img = null;
@@ -109,7 +114,11 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage converseR = new PImage(img);
-		Shoes shoes3R = new Shoes("Hot", "Casual", "Neutral", converseR, 37.50, "right");
+		Shoes shoes3R = new Shoes("Hot", "Casual", "Neutral", converseR, 37.50, "right", "https://www.converse.com/shop/p/c"
+				+ "huck-taylor-all-star-lift-platform-canvas-womens-high-top-shoe/560845F_095.h"
+				+ "tml?cp=PLA_PRF_CNV_NA_US_EN_20190226_CPCS_CPCS-Shopping-[B]%20Shoes%20-%20Womens"
+				+ "_X_X_X_X_Google_X_X__Desktop/Tablet-[B]%20Shoes%20-%20Womens_X_X&gclid=CjwKCAjwj4"
+				+ "2UBhAAEiwACIhADqgf0gwXrga5ix7qxHCbA0b4SS1ufhYWPkFWwgUjvGgv0SUt5uTS0xoC2RAQAvD_BwE");
 		allList.add(shoes3R);
 
 		img = null;
@@ -120,7 +129,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage af1L = new PImage(img);
-		Shoes shoes4L = new Shoes("Hot", "Casual", "Neutral", af1L, 50.00, "left");
+		Shoes shoes4L = new Shoes("Hot", "Casual", "Neutral", af1L, 50.00, "left", "https://www.nike.com/t/air-force-1-07-womens-shoes-GCkPzr/DD8959-100");
 		allList.add(shoes4L);
 
 		img = null;
@@ -131,7 +140,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage af1R = new PImage(img);
-		Shoes shoes4R = new Shoes("Hot", "Casual", "Neutral", af1R, 50.00, "right");
+		Shoes shoes4R = new Shoes("Hot", "Casual", "Neutral", af1R, 50.00, "right", "https://www.nike.com/t/air-force-1-07-womens-shoes-GCkPzr/DD8959-100");
 		allList.add(shoes4R);
 
 		img = null;
@@ -142,7 +151,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage drmartensL = new PImage(img);
-		Shoes shoes5L = new Shoes("Cold", "Semi-Formal", "Neutral", drmartensL, 100.00, "left");
+		Shoes shoes5L = new Shoes("Cold", "Semi-Formal", "Neutral", drmartensL, 100.00, "left", "https://www.drmartens.com/us/en/jadon-smooth-leather-platform-boots/p/15265001");
 		allList.add(shoes5L);
 
 		img = null;
@@ -153,7 +162,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage drmartensR = new PImage(img);
-		Shoes shoes5R = new Shoes("Cold", "Semi-Formal", "Neutral", drmartensR, 100.00, "right");
+		Shoes shoes5R = new Shoes("Cold", "Semi-Formal", "Neutral", drmartensR, 100.00, "right", "https://www.drmartens.com/us/en/jadon-smooth-leather-platform-boots/p/15265001");
 		allList.add(shoes5R);
 
 	}

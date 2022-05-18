@@ -13,32 +13,17 @@ import processing.core.PImage;
  */
 public class Face {
 	
-	private ArrayList<PImage> faces;
-	private PImage curFace;
+	private PImage image;
 	
 	/**
 	 * Takes in user input to add a face
 	 */
-	public Face() {
-		faces=new ArrayList<PImage>();
+	public Face(PImage img) {
+		image = img;
 	}
 	
-	/**
-	 * Randomly selects one of the available faces
-	 */
-	public void pickFace() {
-		curFace=faces.get((int)Math.random()*faces.size());
-		
+	public PImage getImage() {
+		return image;
 	}
 	
-	
-	/**
-	 * draws the face
-	 * @param marker The Processing PApplet on which one draws on
-	 * @pre properties affecting the face are set on the marker
-	 */
-	public void draw(PApplet marker) {
-		
-	}
-
 }

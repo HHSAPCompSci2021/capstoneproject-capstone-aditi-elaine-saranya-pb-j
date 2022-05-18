@@ -34,8 +34,8 @@ public class AccessoryList {
 	 */
 
 	public AccessoryList() {
-		weatherCondition = "Hot";
-		formality = "Casual";
+		weatherCondition = " ";
+		formality = " ";
 		gender = "Neutral";
 
 		allList = new ArrayList<>();
@@ -51,7 +51,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage whiteHat = new PImage(img);
-		Accessory accessory1 = new Accessory("Hot", "Casual", "Neutral", whiteHat, 24.00);
+		Accessory accessory1 = new Accessory("Hot", "Casual", "Neutral", whiteHat, 24.00, "");
 		allList.add(accessory1);
 
 		img = null;
@@ -62,7 +62,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage blackHat = new PImage(img);
-		Accessory accessory2 = new Accessory("Hot", "Casual", "Neutral", blackHat, 24.00);
+		Accessory accessory2 = new Accessory("Hot", "Casual", "Neutral", blackHat, 24.00, "");
 		allList.add(accessory2);
 
 		img = null;
@@ -73,7 +73,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage blackBeanie = new PImage(img);
-		Accessory accessory3 = new Accessory("Cold", "Casual", "Neutral", blackBeanie, 48.00);
+		Accessory accessory3 = new Accessory("Cold", "Casual", "Neutral", blackBeanie, 48.0, "https://www.everlane.com/products/mens-chunky-beanie-black");
 		allList.add(accessory3);
 
 		img = null;
@@ -84,7 +84,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage grayBeanie = new PImage(img);
-		Accessory accessory4 = new Accessory("Cold", "Casual", "Neutral", grayBeanie, 48.00);
+		Accessory accessory4 = new Accessory("Cold", "Casual", "Neutral", grayBeanie, 48.00, "https://www.everlane.com/products/mens-chunky-beanie-hthr-charcoal");
 		allList.add(accessory4);
 
 		img = null;
@@ -95,7 +95,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage greenBeanie = new PImage(img);
-		Accessory accessory5 = new Accessory("Cold", "Casual", "Neutral", greenBeanie, 48.00);
+		Accessory accessory5 = new Accessory("Cold", "Casual", "Neutral", greenBeanie, 48.00, "https://www.everlane.com/products/unisex-chunky-beanie-breen");
 		allList.add(accessory5);
 
 	}
@@ -131,6 +131,8 @@ public class AccessoryList {
 	 * @return The image of the accessory picked
 	 */
 	public Accessory pickRandom() {
+		if (sortedList.size() == 0)
+			return null;
 		int index = (int) (Math.random() * sortedList.size());
 		while (sortedList.get(index) == null) {
 			index = (int) (Math.random() * sortedList.size());

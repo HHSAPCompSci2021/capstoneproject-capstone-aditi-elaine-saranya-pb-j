@@ -26,8 +26,8 @@ public class Bottom extends Clothes {
 	 * @param f The formality of the bottom
 	 * @param g The gender of the person
 	 */
-	public Bottom(String w, PImage i, String f, String g, double p) {
-		super(w, f, g, p);
+	public Bottom(String w, PImage i, String f, String g, double p, String l) {
+		super(w, f, g, p, l);
 		image = i;
 		color = null;
 	}

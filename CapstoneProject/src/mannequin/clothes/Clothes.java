@@ -19,19 +19,20 @@ public class Clothes extends PApplet {
 	private String formality;
 	private String gender;
 	private double price;
+	private String link;
 
 	/**
 	 * Sets all filters to their default value
 	 * 
 	 * @param w The initial weather filter to be set
 	 */
-	public Clothes(String w, String formal, String gen, double p) {
+	public Clothes(String w, String formal, String gen, double p, String l) {
 
 		weather = w;
 		formality = formal;
 		gender = gen;
 		price = p;
-
+		link = l;
 	}
 
 	/**
@@ -115,6 +116,10 @@ public class Clothes extends PApplet {
 	 */
 	public double calcTotalPrice() {
 		return 0.0;
+	}
+	
+	public String getLink() {
+		return link;
 	}
 
 }

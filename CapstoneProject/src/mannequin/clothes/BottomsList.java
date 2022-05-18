@@ -30,8 +30,8 @@ public class BottomsList {
 	 * and an ArrayList that is sorted based on the user settings
 	 */
 	public BottomsList() {
-		weatherCondition = "Hot";
-		formality = "Casual";
+		weatherCondition = " ";
+		formality = " ";
 		gender = "Neutral";
 
 		allList = new ArrayList<>();
@@ -47,7 +47,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage whitePants = new PImage(img);
-		Bottom bottom1 = new Bottom("Cold", whitePants, "Formal", "Neutral", 70.00);
+		Bottom bottom1 = new Bottom("Cold", whitePants, "Formal", "Neutral", 70.00, "");
 		allList.add(bottom1);
 
 		img = null;
@@ -58,7 +58,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage beigePants = new PImage(img);
-		Bottom bottom2 = new Bottom("Cold", beigePants, "Formal", "Neutral", 50.00);
+		Bottom bottom2 = new Bottom("Cold", beigePants, "Formal", "Neutral", 50.00, "https://www.zara.com/us/en/zw-the-marine-straight-jeans-p08246066.html?v1=170915825&v2=2025798");
 		allList.add(bottom2);
 
 		img = null;
@@ -69,7 +69,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blackPants = new PImage(img);
-		Bottom bottom3 = new Bottom("Cold", blackPants, "Semi-Formal", "Neutral", 70.00);
+		Bottom bottom3 = new Bottom("Cold", blackPants, "Semi-Formal", "Neutral", 70.00, "");
 		allList.add(bottom3);
 
 		img = null;
@@ -80,7 +80,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blueFlareJeans = new PImage(img);
-		Bottom bottom4 = new Bottom("Cold", blueFlareJeans, "Casual", "Feminine", 70.00);
+		Bottom bottom4 = new Bottom("Cold", blueFlareJeans, "Casual", "Feminine", 70.00, "https://www.zara.com/us/en/zw-good-american-classic-bootcut-jeans-p02553069.html?v1=176007504&v2=2025798");
 		allList.add(bottom4);
 
 		img = null;
@@ -91,7 +91,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blueJeans = new PImage(img);
-		Bottom bottom5 = new Bottom("Hot", blueJeans, "Casual", "Neutral", 60.00);
+		Bottom bottom5 = new Bottom("Hot", blueJeans, "Casual", "Neutral", 60.00, "");
 		allList.add(bottom5);
 
 		img = null;
@@ -102,7 +102,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blueJeansWRips = new PImage(img);
-		Bottom bottom6 = new Bottom("Hot", blueJeansWRips, "Casual", "Feminine", 50.00);
+		Bottom bottom6 = new Bottom("Hot", blueJeansWRips, "Casual", "Feminine", 50.00, "https://www.zara.com/us/en/ripped-mom-fit-jeans-p08197030.html?v1=173843073");
 		allList.add(bottom6);
 
 		img = null;
@@ -113,7 +113,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blackSweats = new PImage(img);
-		Bottom bottom7 = new Bottom("Cold", blackSweats, "Casual", "Neutral", 40.00);
+		Bottom bottom7 = new Bottom("Cold", blackSweats, "Casual", "Neutral", 40.00, "");
 		allList.add(bottom7);
 
 		img = null;
@@ -124,7 +124,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage darkBlueShorts = new PImage(img);
-		Bottom bottom8 = new Bottom("Hot", darkBlueShorts, "Casual", "Feminine", 68.00);
+		Bottom bottom8 = new Bottom("Hot", darkBlueShorts, "Casual", "Feminine", 68.00, "https://www.everlane.com/products/womens-relaxed-90s-short-deep-indigo");
 		allList.add(bottom8);
 
 		img = null;
@@ -135,7 +135,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage lightBlueShorts = new PImage(img);
-		Bottom bottom9 = new Bottom("Hot", lightBlueShorts, "Casual", "Feminine", 68.00);
+		Bottom bottom9 = new Bottom("Hot", lightBlueShorts, "Casual", "Feminine", 68.00, "https://www.everlane.com/products/womens-relaxed-90s-short-sunbleached-blue?collection=womens-skirts-shorts");
 		allList.add(bottom9);
 
 		img = null;
@@ -146,7 +146,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blueFlareJeans2 = new PImage(img);
-		Bottom bottom10 = new Bottom("Cold", blueFlareJeans2, "Formal", "Feminine", 70.00);
+		Bottom bottom10 = new Bottom("Cold", blueFlareJeans2, "Formal", "Feminine", 70.00, "https://www.zara.com/us/en/zw-good-american-classic-bootcut-jeans-p02553069.html?v1=176007504&v2=2025798");
 		allList.add(bottom10);
 
 		img = null;
@@ -157,9 +157,9 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blackshorts = new PImage(img);
-		Bottom bottom11 = new Bottom("Hot", blackshorts, "Formal", "Feminine", 35.00);
+		Bottom bottom11 = new Bottom("Hot", blackshorts, "Formal", "Feminine", 35.00, "");
 		allList.add(bottom11);
-
+ 
 		img = null;
 		try {
 			img = ImageIO.read(new File("res/blackskirt.png"));
@@ -168,7 +168,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blackskirt = new PImage(img);
-		Bottom bottom12 = new Bottom("Hot", blackskirt, "Formal", "Feminine", 35.00);
+		Bottom bottom12 = new Bottom("Hot", blackskirt, "Formal", "Feminine", 35.00, "");
 		allList.add(bottom12);
 		
 		img = null;
@@ -179,7 +179,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage bluesweats = new PImage(img);
-		Bottom bottom13 = new Bottom("Cold", bluesweats, "Casual", "Neutral", 78.00);
+		Bottom bottom13 = new Bottom("Cold", bluesweats, "Casual", "Neutral", 78.00, "");
 		allList.add(bottom13);
 
 		img = null;
@@ -190,7 +190,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blacksweats = new PImage(img);
-		Bottom bottom14 = new Bottom("Cold", blacksweats, "Casual", "Neutral", 78.00);
+		Bottom bottom14 = new Bottom("Cold", blacksweats, "Casual", "Neutral", 78.00, "");
 		allList.add(bottom14);
 
 	}

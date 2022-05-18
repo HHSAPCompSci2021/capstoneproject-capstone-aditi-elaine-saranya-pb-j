@@ -25,8 +25,8 @@ public class Shoes extends Clothes {
 	 * @param w The weather filter
 	 * @param i The image of the shoe
 	 */
-	public Shoes(String w, String f, String g, PImage i, double p, String s) {
-		super(w, f, g, p);
+	public Shoes(String w, String f, String g, PImage i, double p, String s, String l) {
+		super(w, f, g, p, l);
 		image = i;
 		color = null;
 		side = s;

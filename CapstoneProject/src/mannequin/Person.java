@@ -29,6 +29,7 @@ public class Person {
 	private BottomsList bottomsList;
 	private ShoesList shoesList;
 	private AccessoryList accessoriesList;
+	private FaceList faceList;
 	private String weatherCondition;
 	private String formalityType;
 	private String genderExpression;
@@ -36,16 +37,16 @@ public class Person {
 	 * Constructs a person and initializes all the lists and clothing
 	 */
 	public Person() {
-		weatherCondition = "Hot";
-		formalityType = "Casual";
+		weatherCondition = " ";
+		formalityType = " ";
 		genderExpression = "Neutral";
 		
 		topsList = new TopsList();
 		bottomsList = new BottomsList();
 		shoesList = new ShoesList();
-		
 		accessoriesList = new AccessoryList();
-//		face = new Face();
+		faceList = new FaceList();
+		face = faceList.pickNextEntry();
 	}
 	
 	/**
@@ -57,7 +58,6 @@ public class Person {
 		shoesL = shoesList.pickNextEntry("left");
 		shoesR = shoesList.pickNextEntry("right");
 		accessory = accessoriesList.pickNextEntry();
-
 	}
 	/**
 	 * Graphical UI Displays an image (format PImage) of the clothes based on
@@ -75,32 +75,32 @@ public class Person {
 				marker.tint(accessory.getColor().getRGB());
 			}else
 				marker.noTint();
-			accessory.getImage().resize(800, 800);
-			marker.image(accessory.getImage(), 34,-288);
+			accessory.getImage().resize(740, 740);
+			marker.image(accessory.getImage(), 50,-300);
 		}	
 		
 		if(shoesL.getColor() != null) {
 			marker.tint(shoesL.getColor().getRGB());
 		}else
 			marker.noTint();
-		shoesL.getImage().resize(700,700);
-		marker.image(shoesL.getImage(), 5, 375);
+		shoesL.getImage().resize(630 ,630);
+		marker.image(shoesL.getImage(), 25, 420);
 		
 		
 		if(shoesR.getColor() != null) {
 			marker.tint(shoesR.getColor().getRGB());
 		}else
 			marker.noTint();
-		shoesR.getImage().resize(700,700);
-		marker.image(shoesR.getImage(), 170, 375);
+		shoesR.getImage().resize(630,630);
+		marker.image(shoesR.getImage(), 190, 420);
 		
 		
 		if(bottom.getColor() != null) {
 			marker.tint(bottom.getColor().getRGB());
 		}else
 			marker.noTint();
-		bottom.getImage().resize(750, 750);
-		marker.image(bottom.getImage(), 58, 150);
+		bottom.getImage().resize(690, 690);
+		marker.image(bottom.getImage(), 78, 235);
 		
 		
 		if(top.getColor() != null) {
@@ -108,9 +108,12 @@ public class Person {
 		}else {
 			marker.noTint();
 		}
-		top.getImage().resize(1000, 1000);
-		marker.image(top.getImage(), -70,-220);
+		top.getImage().resize(940, 940);
+		marker.image(top.getImage(), -50,-150);
 		
+		marker.noTint();
+		face.getImage().resize(500, 500);
+		marker.image(face.getImage(), 170, -95);
 	}
 	
 	/**
@@ -122,11 +125,7 @@ public class Person {
 	}
 	
 	/**
-
 	 * Changes the bottom
-=======
-	 * Changes the bottom to a different one 
-
 	 */
 	public void changeBottom() {
 		bottom = bottomsList.pickNextEntry();
@@ -143,15 +142,18 @@ public class Person {
 	}
 	
 	/**
-
 	 * Changes the Accessory
-=======
-	 * Changes the accessory to something different 
-
 	 */
 	public void changeAccessory() {
 		accessory = accessoriesList.pickNextEntry();
 
+	}
+	
+	/**
+	 * Changes the face
+	 */
+	public void changeFace() {
+		face = faceList.pickNextEntry();
 	}
 	
 	/**
@@ -163,18 +165,9 @@ public class Person {
 		accessory = accessoriesList.pickRandom();
 		shoesL = shoesList.pickRandom();
 		shoesR = shoesList.pickNextEntry("right");
+		face = faceList.pickRandom();
 	}
-	
-	/**
 
-	 * Changes the face
-
-	 * Changes the face to a different one
-
-	 */
-	public void changeFace() {
-		
-	}
 
 
 	/**
@@ -182,7 +175,9 @@ public class Person {
 	 * @return totalCost value of entire outfit
 	 */
 	public double calculateTotalCost() {
-		double total = top.getPrice() + bottom.getPrice() + accessory.getPrice() + shoesL.getPrice() + shoesR.getPrice();
+		double total = top.getPrice() + bottom.getPrice() + shoesL.getPrice() + shoesR.getPrice();
+		if (accessory != null)
+			total += accessory.getPrice();
 		return total;
 	}
 	
