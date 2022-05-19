@@ -186,6 +186,42 @@ public class TopsList {
 		Top top13 = new Top("Cold", "Semi-Formal", "Feminine", whiteSweater, 100.00, "https://www.everlane.com/products/womens-texture-cotton-crew-canvas?collection=womens-sweaters");
 		allList.add(top13);
 
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/whitesweater.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage graphictee = new PImage(img);
+		Top top14 = new Top("Hot", "Casual", "Masculine", graphictee, 25.00, "https://www.pacsun.com/space-jam-vintage-dyed-t-shirt-0097438400002.html?tileCgid=mens-graphic-tees");
+		allList.add(top14);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/poloshirt.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage polo = new PImage(img);
+		Top top15 = new Top("Hot", "Formal", "Masculine", polo, 60.00, "https://bananarepublic.gap.com/browse/product.do?pid=857757002&cid=1184116&pcid=10894&vid=1&nav=meganav%3AMen%3AMen%27s+Clothing%3APolos#pdp-page-content");
+		allList.add(top15);
+		
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/whitecrewneck.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage whitecrew = new PImage(img);
+		Top top16 = new Top("Cold", "Semi-Formal", "Neutral", whitecrew, 75.00, "https://www.urbanoutfitters.com/shop/iets-frans-x-smiley-elbow-print-crew-neck-sweatshirt?category=SEARCHRESULTS&color=030&searchparams=_gl%3D1%2a1a1y740%2a_up%2aMQ..%26gclid%3DCjwKCAjwve2TBhByEiwAaktM1J77qhbvhQY0moxImWWaG3u-uMW-aE8idkMVjElb-0JjEEd6NIt2FxoCviwQAvD_BwE%26gclsrc%3Daw.ds%26q%3Dcrewneck&type=REGULAR&quantity=1");
+		allList.add(top16);
+		
+
 	}
 
 	/**

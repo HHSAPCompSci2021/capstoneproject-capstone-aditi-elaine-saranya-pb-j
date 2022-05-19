@@ -164,6 +164,107 @@ public class ShoesList {
 		PImage drmartensR = new PImage(img);
 		Shoes shoes5R = new Shoes("Cold", "Semi-Formal", "Neutral", drmartensR, 100.00, "right", "https://www.drmartens.com/us/en/jadon-smooth-leather-platform-boots/p/15265001");
 		allList.add(shoes5R);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/blackconverseL.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage converse2L = new PImage(img);
+		Shoes shoes6L = new Shoes("Cold", "Casual", "Neutral", converse2L, 37.50, "left", "https://www.converse.com/shop/p/"
+				+ "chuck-taylor-all-star-lift-platform-canvas-womens-high-top-shoe/560845F_095.html?"
+				+ "cp=PLA_PRF_CNV_NA_US_EN_20190226_CPCS_CPCS-Shopping-[B]%20Shoes%20-%20"
+				+ "Womens_X_X_X_X_Google_X_X__Desktop/Tablet-[B]%20Shoes%20-%20Womens_X_X"
+				+ "&gclid=CjwKCAjwj42UBhAAEiwACIhADqgf0gwXrga5ix7qxHCbA0b4SS1ufhYWPkFWwgUjvGgv0SUt5"
+				+ "uTS0xoC2RAQAvD_BwE");
+		allList.add(shoes6L);
+
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/blackconverseR.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage converse2R = new PImage(img);
+		Shoes shoes6R = new Shoes("Cold", "Casual", "Neutral", converse2R, 37.50, "right", "https://www.converse.com/shop/p/c"
+				+ "huck-taylor-all-star-lift-platform-canvas-womens-high-top-shoe/560845F_095.h"
+				+ "tml?cp=PLA_PRF_CNV_NA_US_EN_20190226_CPCS_CPCS-Shopping-[B]%20Shoes%20-%20Womens"
+				+ "_X_X_X_X_Google_X_X__Desktop/Tablet-[B]%20Shoes%20-%20Womens_X_X&gclid=CjwKCAjwj4"
+				+ "2UBhAAEiwACIhADqgf0gwXrga5ix7qxHCbA0b4SS1ufhYWPkFWwgUjvGgv0SUt5uTS0xoC2RAQAvD_BwE");
+		allList.add(shoes6R);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/af1L.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage af12L = new PImage(img);
+		Shoes shoes7L = new Shoes("Cold", "Casual", "Neutral", af12L, 50.00, "left", "https://www.nike.com/t/air-force-1-07-womens-shoes-GCkPzr/DD8959-100");
+		allList.add(shoes4L);
+
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/af1R.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage af12R = new PImage(img);
+		Shoes shoes7R = new Shoes("Cold", "Casual", "Neutral", af12R, 50.00, "right", "https://www.nike.com/t/air-force-1-07-womens-shoes-GCkPzr/DD8959-100");
+		allList.add(shoes4R);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/af1L.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage af13L = new PImage(img);
+		Shoes shoes8L = new Shoes("Cold", "Semi-Formal", "Neutral", af13L, 50.00, "left", "https://www.nike.com/t/air-force-1-07-womens-shoes-GCkPzr/DD8959-100");
+		allList.add(shoes8L);
+
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/af1R.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage af13R = new PImage(img);
+		Shoes shoes8R = new Shoes("Cold", "Semi-Formal", "Neutral", af13R, 50.00, "right", "https://www.nike.com/t/air-force-1-07-womens-shoes-GCkPzr/DD8959-100");
+		allList.add(shoes8R);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/af1L.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage af14L = new PImage(img);
+		Shoes shoes9L = new Shoes("Hot", "Semi-Formal", "Neutral", af14L, 50.00, "left", "https://www.nike.com/t/air-force-1-07-womens-shoes-GCkPzr/DD8959-100");
+		allList.add(shoes9L);
+
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/af1R.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage af14R = new PImage(img);
+		Shoes shoes9R = new Shoes("Hot", "Semi-Formal", "Neutral", af14R, 50.00, "right", "https://www.nike.com/t/air-force-1-07-womens-shoes-GCkPzr/DD8959-100");
+		allList.add(shoes9R);
+
+
+
+
 
 	}
 

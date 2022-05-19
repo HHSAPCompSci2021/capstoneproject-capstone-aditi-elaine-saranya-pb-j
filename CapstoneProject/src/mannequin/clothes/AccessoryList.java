@@ -97,6 +97,17 @@ public class AccessoryList {
 		PImage greenBeanie = new PImage(img);
 		Accessory accessory5 = new Accessory("Cold", "Casual", "Neutral", greenBeanie, 48.00, "https://www.everlane.com/products/unisex-chunky-beanie-breen");
 		allList.add(accessory5);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/buckethat.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage buckethat = new PImage(img);
+		Accessory accessory6 = new Accessory("Hot", "Casual", "Neutral", buckethat, 48.00, "https://shop.lululemon.com/p/hats/Both-Ways-Bucket-Hat/_/prod9820514?color=57307?ta=1&taterm=bucket&tasid=OKea5q3QsY");
+		allList.add(accessory6);
 
 	}
 
