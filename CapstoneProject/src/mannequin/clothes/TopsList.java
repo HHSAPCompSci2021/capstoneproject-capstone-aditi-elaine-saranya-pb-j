@@ -51,7 +51,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage redBlouse = new PImage(img);
-		Top top1 = new Top("Hot", "Semi-Formal", "Feminine", redBlouse, 40.00, "");
+		Top top1 = new Top("Hot", "Semi-Formal", "Feminine", redBlouse, 88.00, "https://www.aritzia.com/us/en/product/wander-linen-blouse/82942.html?dwvar_82942_color=23863");
 		allList.add(top1);
 
 		img = null;
@@ -95,7 +95,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage blueBlouse = new PImage(img);
-		Top top5 = new Top("Hot", "Semi-Formal", "Feminine", blueBlouse, 40.00, "");
+		Top top5 = new Top("Hot", "Semi-Formal", "Feminine", blueBlouse, 40.00, "https://www.aritzia.com/us/en/product/wander-linen-blouse/98314.html?dwvar_98314_color=25067");
 		allList.add(top5);
 
 		img = null;
@@ -117,7 +117,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage whiteBlouse = new PImage(img);
-		Top top7 = new Top("Hot", "Formal", "Feminine", whiteBlouse, 35.00, "");
+		Top top7 = new Top("Hot", "Formal", "Feminine", whiteBlouse, 98.00, "https://www.aritzia.com/us/en/product/vilette-linen-blouse/95909.html?dwvar_95909_color=1275");
 		allList.add(top7);
 
 		img = null;
@@ -139,7 +139,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage blackButtonDown = new PImage(img);
-		Top top9 = new Top("Cold", "Formal", "Masculine", blackButtonDown, 80.00, "");
+		Top top9 = new Top("Cold", "Formal", "Masculine", blackButtonDown, 80.00, "https://www.everlane.com/products/womens-silky-cttn-relaxed-shirt-black ");
 		allList.add(top9);
 
 		img = null;
@@ -150,7 +150,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage blackSweater = new PImage(img);
-		Top top10 = new Top("Cold", "Semi-Formal", "Neutral", blackSweater, 100.00, "");
+		Top top10 = new Top("Cold", "Semi-Formal", "Neutral", blackSweater, 67.00, "https://www.everlane.com/products/womens-light-chunky-turtleneck-black");
 		allList.add(top10);
 
 		img = null;
@@ -161,7 +161,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage blueButtonDown = new PImage(img);
-		Top top11 = new Top("Cold", "Formal", "Masculine", blueButtonDown, 80.00, "");
+		Top top11 = new Top("Cold", "Formal", "Masculine", blueButtonDown, 80.00, "https://www.everlane.com/products/womens-silky-cttn-relaxed-shirt-blue ");
 		allList.add(top11);
 
 		img = null;
@@ -172,7 +172,7 @@ public class TopsList {
 			e.printStackTrace();
 		}
 		PImage greenButtonDown = new PImage(img);
-		Top top12 = new Top("Cold", "Semi-Formal", "Masculine", greenButtonDown, 80.00, "");
+		Top top12 = new Top("Cold", "Semi-Formal", "Masculine", greenButtonDown, 80.00, "https://www.everlane.com/products/womens-oversized-org-cotton-shirt-laurel ");
 		allList.add(top12);
 
 		img = null;

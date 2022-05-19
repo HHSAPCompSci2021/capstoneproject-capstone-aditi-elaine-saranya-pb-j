@@ -54,7 +54,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage loafersL = new PImage(img);
-		Shoes shoes1L = new Shoes("Cold", "Formal", "Neutral", loafersL, 37.50, "left", "");
+		Shoes shoes1L = new Shoes("Cold", "Formal", "Neutral", loafersL, 99.95, "left", "https://www.stevemadden.com/products/lawrence-black-leather?variant=34612305100933&utm_source=google&utm_medium=cpc&utm_campaign=SM%20Smart%20Shopping%20-%20Bestseller&utm_content=&utm_term=&gclid=Cj0KCQjwspKUBhCvARIsAB2IYusDrqL14FaocGsYfpp-45S6MXRZqvhdMauGZA4L4Nu4qYds7cSPBwsaAi0TEALw_wcB");
 		allList.add(shoes1L);
 
 		img = null;
@@ -65,7 +65,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage loafersR = new PImage(img);
-		Shoes shoes1R = new Shoes("Cold", "Formal", "Neutral", loafersR, 37.50, "right", "");
+		Shoes shoes1R = new Shoes("Cold", "Formal", "Neutral", loafersR, 99.95, "right", "https://www.stevemadden.com/products/lawrence-black-leather?variant=34612305100933&utm_source=google&utm_medium=cpc&utm_campaign=SM%20Smart%20Shopping%20-%20Bestseller&utm_content=&utm_term=&gclid=Cj0KCQjwspKUBhCvARIsAB2IYusDrqL14FaocGsYfpp-45S6MXRZqvhdMauGZA4L4Nu4qYds7cSPBwsaAi0TEALw_wcB");
 		allList.add(shoes1R);
 
 		img = null;
@@ -76,7 +76,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage dunksL = new PImage(img);
-		Shoes shoes2L = new Shoes("Hot", "Semi-Formal", "Neutral", dunksL, 40.00, "left", "");
+		Shoes shoes2L = new Shoes("Hot", "Semi-Formal", "Neutral", dunksL, 181.00, "left", "https://www.goat.com/sneakers/wmns-dunk-low-light-violet-dd1503-116?utm_source=google_int&utm_medium=google_shopping_int&utm_campaign=16777478842_&utm_content=_&utm_term=195866273009&gclid=Cj0KCQjwspKUBhCvARIsAB2IYuucw7E96YSEgHyXWUl7nyuXu5MgMfXqQG9KKHIlEVA-bsMJB4efW-oaAop8EALw_wcB");
 		allList.add(shoes2L);
 
 		img = null;
@@ -87,7 +87,7 @@ public class ShoesList {
 			e.printStackTrace();
 		}
 		PImage dunksR = new PImage(img);
-		Shoes shoes2R = new Shoes("Hot", "Semi-Formal", "Neutral", dunksR, 40.00, "right", "");
+		Shoes shoes2R = new Shoes("Hot", "Semi-Formal", "Neutral", dunksR, 181.00, "right", "https://www.goat.com/sneakers/wmns-dunk-low-light-violet-dd1503-116?utm_source=google_int&utm_medium=google_shopping_int&utm_campaign=16777478842_&utm_content=_&utm_term=195866273009&gclid=Cj0KCQjwspKUBhCvARIsAB2IYuucw7E96YSEgHyXWUl7nyuXu5MgMfXqQG9KKHIlEVA-bsMJB4efW-oaAop8EALw_wcB");
 		allList.add(shoes2R);
 
 		img = null;

@@ -47,7 +47,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage whitePants = new PImage(img);
-		Bottom bottom1 = new Bottom("Cold", whitePants, "Formal", "Neutral", 70.00, "");
+		Bottom bottom1 = new Bottom("Cold", whitePants, "Formal", "Neutral", 78.00, "https://www.everlane.com/products/womens-easy-straight-leg-chino-canvas");
 		allList.add(bottom1);
 
 		img = null;
@@ -69,7 +69,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blackPants = new PImage(img);
-		Bottom bottom3 = new Bottom("Cold", blackPants, "Semi-Formal", "Neutral", 70.00, "");
+		Bottom bottom3 = new Bottom("Cold", blackPants, "Semi-Formal", "Neutral", 78.00, "https://www.everlane.com/products/womens-easy-straight-leg-chino-black");
 		allList.add(bottom3);
 
 		img = null;
@@ -91,7 +91,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blueJeans = new PImage(img);
-		Bottom bottom5 = new Bottom("Hot", blueJeans, "Casual", "Neutral", 60.00, "");
+		Bottom bottom5 = new Bottom("Hot", blueJeans, "Casual", "Neutral", 49.90, "https://www.zara.com/us/en/wide-leg-jeans-p06688023.html?v1=161314838");
 		allList.add(bottom5);
 
 		img = null;
@@ -113,7 +113,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blackSweats = new PImage(img);
-		Bottom bottom7 = new Bottom("Cold", blackSweats, "Casual", "Neutral", 40.00, "");
+		Bottom bottom7 = new Bottom("Cold", blackSweats, "Casual", "Neutral", 27.90, "https://www.zara.com/us/en/plush-jogging-pants-p08417814.html?v1=144435357");
 		allList.add(bottom7);
 
 		img = null;
@@ -157,7 +157,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blackshorts = new PImage(img);
-		Bottom bottom11 = new Bottom("Hot", blackshorts, "Formal", "Feminine", 35.00, "");
+		Bottom bottom11 = new Bottom("Hot", blackshorts, "Formal", "Feminine", 35.00, "https://www.zara.com/us/en/high-waisted-shorts-p02417324.html?v1=186310075");
 		allList.add(bottom11);
  
 		img = null;
@@ -168,7 +168,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blackskirt = new PImage(img);
-		Bottom bottom12 = new Bottom("Hot", blackskirt, "Formal", "Feminine", 35.00, "");
+		Bottom bottom12 = new Bottom("Hot", blackskirt, "Formal", "Feminine", 35.00, "https://www.zara.com/us/en/combination-skort-p03159636.html?v1=168349101");
 		allList.add(bottom12);
 		
 		img = null;
@@ -179,7 +179,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage bluesweats = new PImage(img);
-		Bottom bottom13 = new Bottom("Cold", bluesweats, "Casual", "Neutral", 78.00, "");
+		Bottom bottom13 = new Bottom("Cold", bluesweats, "Casual", "Neutral", 78.00, "https://www.everlane.com/products/mens-track-pant-blue");
 		allList.add(bottom13);
 
 		img = null;
@@ -190,7 +190,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blacksweats = new PImage(img);
-		Bottom bottom14 = new Bottom("Cold", blacksweats, "Casual", "Neutral", 78.00, "");
+		Bottom bottom14 = new Bottom("Cold", blacksweats, "Casual", "Neutral", 78.00, "https://www.everlane.com/products/mens-track-pant-black");
 		allList.add(bottom14);
 
 	}

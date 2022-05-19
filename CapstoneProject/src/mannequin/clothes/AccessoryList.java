@@ -51,7 +51,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage whiteHat = new PImage(img);
-		Accessory accessory1 = new Accessory("Hot", "Casual", "Neutral", whiteHat, 24.00, "");
+		Accessory accessory1 = new Accessory("Hot", "Casual", "Neutral", whiteHat, 17.90, "https://www.zara.com/us/en/basic-twill-cap-p00653037.html?v1=153871059");
 		allList.add(accessory1);
 
 		img = null;
@@ -62,7 +62,7 @@ public class AccessoryList {
 			e.printStackTrace();
 		}
 		PImage blackHat = new PImage(img);
-		Accessory accessory2 = new Accessory("Hot", "Casual", "Neutral", blackHat, 24.00, "");
+		Accessory accessory2 = new Accessory("Hot", "Casual", "Neutral", blackHat, 17.90, "https://www.zara.com/us/en/basic-twill-cap-p00653037.html?v1=153871059");
 		allList.add(accessory2);
 
 		img = null;
