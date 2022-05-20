@@ -105,6 +105,7 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 	}
 	
 	public void handleDropListEvents(GDropList list, GEvent event) {
+	
 		screen1.handleDropListEvents(list, event, screen2.getPerson());
 	}
 	
