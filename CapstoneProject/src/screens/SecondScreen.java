@@ -98,7 +98,9 @@ public class SecondScreen extends Screen {
 		surface.background(255);
 		surface.fill(112, 110, 250);
 		
-
+		
+		
+			
 		surface.noStroke();
 		surface.rect(70, 45, 170, 120);		
 		surface.fill(255);
@@ -117,6 +119,7 @@ public class SecondScreen extends Screen {
 		surface.text("Total Price: $" + person.calculateTotalCost(), 75, 700);
 		
 	}
+	
 	
 	/**
 	 * Handles all the button events on the second screen and acts accordingly

@@ -306,4 +306,13 @@ public class TopsList {
 	public void setClothesGender(String w) {
 		gender = w;
 	}
+	
+	/**
+	 * Returns the sorted arraylist
+	 * @return sorted list
+	 */
+	public ArrayList<Top> returnArrayList() {
+		return sortedList;
+	}
+
 }

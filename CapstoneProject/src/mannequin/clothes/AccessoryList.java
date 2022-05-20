@@ -116,7 +116,7 @@ public class AccessoryList {
 	 */
 	public void sortArray() {
 
-		if (formality.equals("Casual")) {
+		if (formality.equals("Casual") || formality.equals(" ")) {
 			if (weatherCondition.equals(" ")) {
 				sortedList = (ArrayList<Accessory>) allList.clone();
 			} else {
@@ -191,6 +191,14 @@ public class AccessoryList {
 	 */
 	public void setClothesGender(String w) {
 		gender = w;
+	}
+	
+	/**
+	 * Returns the sorted arraylist
+	 * @return sorted list
+	 */
+	public ArrayList<Accessory> returnArrayList() {
+		return sortedList;
 	}
 
 }
