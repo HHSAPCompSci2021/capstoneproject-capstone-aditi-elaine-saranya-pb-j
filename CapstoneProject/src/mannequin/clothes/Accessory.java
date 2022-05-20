@@ -11,7 +11,7 @@ import processing.core.PImage;
  * The Accessory class represents an Accessory to be added to the screen using
  * the Processing library. It is a subclass of the Clothes class.
  * 
- * @author 
+ * @author
  * @version 5/18/2022
  */
 public class Accessory extends Clothes {
@@ -27,6 +27,7 @@ public class Accessory extends Clothes {
 	 * @param f The formality of the accessory
 	 * @param g The gender of the person
 	 * @param p The price of the accessory
+	 * @param l The link to the website to buy the outfit
 	 * 
 	 */
 	public Accessory(String w, String f, String g, PImage i, double p, String l) {
@@ -35,18 +36,17 @@ public class Accessory extends Clothes {
 		color = -1;
 	}
 
-	
-
 	/**
-	 * Returns the image of the top
-	 * @return the image of the top
+	 * Returns the image of the accessory
+	 * 
+	 * @return the image of the accessory
 	 */
 	public PImage getImage() {
 		return image;
 	}
-	
+
 	/**
-	 * Sets the color of the top
+	 * Sets the color of the accessory
 	 * 
 	 */
 	public void setColor() {
@@ -54,12 +54,11 @@ public class Accessory extends Clothes {
 	}
 
 	/**
-	 * 
-	 * @return the color of the top
+	 * Gets the color of the accessory
+	 * @return the color of the accessory
 	 */
 	public int getColor() {
 		return color;
 	}
-
 
 }

@@ -25,6 +25,7 @@ public class SecondScreen extends Screen {
 	private GButton top, bottom, shoes, accessories, random, face, colorTop, colorAccessory, colorBottom, colorShoes;
 
 
+
 	/**
 	 * Constructs the SecondScreen (the program screen)
 	 * @param surface The DrawingSurface to draw the second screen on
@@ -53,6 +54,8 @@ public class SecondScreen extends Screen {
 		accessories = new GButton(surface, 175, 360, 80, 40, "Accessories");
 		random = new GButton(surface, 50, 200, 210, 50, "Randomly Generate");
 		face = new GButton(surface, 50, 280, 210, 50, "Face");
+		menu = new GButton(surface, 10, 10, 60, 50, "Menu");
+		
 
 		
 
@@ -73,6 +76,7 @@ public class SecondScreen extends Screen {
 		colorBottom.setVisible(v);
 		colorShoes.setVisible(v);
 		face.setVisible(v);
+		menu.setVisible(v);
 	}
 	
 	/**
@@ -118,7 +122,7 @@ public class SecondScreen extends Screen {
 	 * @param button the button that was pressed 
 	 * @param event what has happened to the button
 	 */
-	public void handleButtonEvents(GButton button, GEvent event) {
+	public boolean handleButtonEvents(GButton button, GEvent event) {
 		// Create the control window?
 
 		if (button.getText().equals(top.getText())) {
@@ -139,6 +143,7 @@ public class SecondScreen extends Screen {
 		else if (button.getText().equals(face.getText())) {
 			person.changeFace();
 		}
+
 		else if (button.getText().equals(colorTop.getText()))
 			person.getTop().setColor();
 		else if (button.getText().equals(colorBottom.getText()))
@@ -148,6 +153,7 @@ public class SecondScreen extends Screen {
 		}
 		else if (button.getText().equals(colorAccessory.getText()))
 			person.getAccessory().setColor();
+
 	}
 
 	public void mousePressed() {
