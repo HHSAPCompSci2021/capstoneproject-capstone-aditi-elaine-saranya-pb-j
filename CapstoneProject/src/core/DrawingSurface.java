@@ -77,18 +77,19 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 		}
 		else {
 			FirstScreen firstScreen = (FirstScreen)activeScreen;
-			firstScreen.setVisibility(false);
 			activeScreen = screen2;
 			SecondScreen secondScreen = (SecondScreen)activeScreen;
-			secondScreen.setVisibility(true);
 			screen2.getPerson().getTopsList().sortArray();
 			screen2.getPerson().getBottomsList().sortArray();
 			screen2.getPerson().getAccessoriesList().sortArray();
 			screen2.getPerson().getShoesList().sortArray();
 
 			if (!screen2.getPerson().ifNotValid())	{
+				
 				screen2.getPerson().setClothes(); 
 				valid = true;
+				firstScreen.setVisibility(false);
+				secondScreen.setVisibility(true);
 			}
 			else {
 				secondScreen.setVisibility(false);

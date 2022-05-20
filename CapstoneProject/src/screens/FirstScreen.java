@@ -66,6 +66,7 @@ public class FirstScreen extends Screen {
 		  listFormality.setItems(new String[] {" ", "Casual", "Formal", "Semi-Formal"}, 0);
 		  listExpression = new GDropList(surface, 500, 300, 100, 100, 0);
 		  listExpression.setItems(new String[] {"Neutral","Feminine", "Masculine"}, 0);
+
 	}
 	
 	/**
@@ -77,6 +78,7 @@ public class FirstScreen extends Screen {
 		submit.setVisible(v);
 		listFormality.setVisible(v);
 		listExpression.setVisible(v);
+		System.out.println(listExpression.isVisible());
 	}
 	
 	
@@ -89,7 +91,7 @@ public class FirstScreen extends Screen {
 		//surface.background(255);
 		//background.resize(800, 800);
 		//surface.background(background);
-		surface.image(background, 800, 800);
+ 		surface.image(background, 0, 0);
 		surface.fill(133, 94, 66);
 		surface.noStroke();
 		surface.rect(266, 75, 290,44);
