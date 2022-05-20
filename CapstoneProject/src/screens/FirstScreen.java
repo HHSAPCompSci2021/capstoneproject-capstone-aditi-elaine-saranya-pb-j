@@ -86,7 +86,7 @@ public class FirstScreen extends Screen {
 	public void setup() {
 		
 		G4P.setInputFont("Times New Roman", G4P.PLAIN, 14); // New for G4P V4.3
-
+		G4P.setGlobalColorScheme(GCScheme.RED_SCHEME);
 		  background.resize(800, 800);
 		  submitButton.resize(150,100);
 		  // Some start text

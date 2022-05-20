@@ -262,6 +262,49 @@ public class ShoesList {
 		Shoes shoes9R = new Shoes("Hot", "Semi-Formal", "Neutral", af14R, 50.00, "right", "https://www.nike.com/t/air-force-1-07-womens-shoes-GCkPzr/DD8959-100");
 		allList.add(shoes9R);
 
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/blackheelL.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blackHeelL = new PImage(img);
+		Shoes shoes10L = new Shoes("Hot", "Formal", "Feminine", blackHeelL, 136.0, "left", "https://www.stevemadden.com/collections/womens-heels/products/iesha-black-leather");
+		allList.add(shoes10L);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/blackheelR.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blackHeelR = new PImage(img);
+		Shoes shoes10R = new Shoes("Hot", "Formal", "Feminine", blackHeelR, 136.0, "right", "https://www.stevemadden.com/collections/womens-heels/products/iesha-black-leather");
+		allList.add(shoes10R);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/blackheelL.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blackHeelL2 = new PImage(img);
+		Shoes shoes11L = new Shoes("Cold", "Formal", "Feminine", blackHeelL2, 136.0, "left", "https://www.stevemadden.com/collections/womens-heels/products/iesha-black-leather");
+		allList.add(shoes11L);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/blackheelR.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage blackHeelR2 = new PImage(img);
+		Shoes shoes11R = new Shoes("Cold", "Formal", "Feminine", blackHeelR2, 136.0, "right", "https://www.stevemadden.com/collections/womens-heels/products/iesha-black-leather");
+		allList.add(shoes10R);
 
 
 

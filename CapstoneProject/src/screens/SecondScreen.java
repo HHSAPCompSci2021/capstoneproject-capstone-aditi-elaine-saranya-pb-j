@@ -22,7 +22,8 @@ public class SecondScreen extends Screen {
 	
 	private Person person; 
 
-	private GButton top, bottom, shoes, accessories, random, face, colorTop, colorAccessory, colorBottom, colorShoes;
+	private GDropList colorAccessory, colorTop, colorBottom, colorShoes;
+	private GButton top, bottom, shoes, accessories, random, face;
 
 	/**
 	 * Constructs the SecondScreen (the program screen)
@@ -40,12 +41,20 @@ public class SecondScreen extends Screen {
 	public void setup() {
 		surface.background(255);
 		G4P.setInputFont("Times New Roman", G4P.PLAIN, 13); // New for G4P V4.3
-		G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
+		G4P.setGlobalColorScheme(GCScheme.PURPLE_SCHEME);
 		//Some start text
-		colorAccessory = new GButton(surface, 50, 365, 100, 30, "Accessory Color");
-		colorTop = new GButton(surface, 50, 435, 100, 30, "Top Color");
-		colorBottom = new GButton(surface, 50, 505, 100, 30, "Bottom Color");
-		colorShoes = new GButton(surface, 50, 575, 100, 30, "Shoes Color");
+		colorAccessory = new GDropList(surface, 50, 365, 100, 100, 0);
+		colorAccessory.setItems(new String[] {"None","Black", "Blue", "Green", "Purple", "Orange", "Pink", 
+				"Red", "White", "Yellow"}, 0);	
+		colorTop = new GDropList(surface, 50, 435, 100, 100, 0);
+		colorTop.setItems(new String[] {"None","Black", "Blue", "Green", "Purple", "Orange", "Pink", 
+				"Red", "White", "Yellow"}, 0);	
+		colorBottom = new GDropList(surface, 50, 505, 100, 100, 0);
+		colorBottom.setItems(new String[] {"None","Black", "Blue", "Green", "Purple", "Orange", "Pink", 
+				"Red", "White", "Yellow"}, 0);	
+		colorShoes = new GDropList(surface, 50, 575, 100, 100, 0);
+		colorShoes.setItems(new String[] {"None","Black", "Blue", "Green", "Purple", "Orange", "Pink", 
+				"Red", "White", "Yellow"}, 0);	
 		top = new GButton(surface,175, 430, 80, 40, "Top");
 		bottom = new GButton(surface,175, 500, 80, 40, "Bottom");
 		shoes = new GButton(surface, 175, 570, 80, 40, "Shoes");
@@ -88,6 +97,8 @@ public class SecondScreen extends Screen {
 	public void draw() {
 		surface.background(255);
 		surface.fill(112, 110, 250);
+		
+		
 		
 			
 		surface.noStroke();
@@ -136,18 +147,24 @@ public class SecondScreen extends Screen {
 		else if (button.getText().equals(face.getText())) {
 			person.changeFace();
 		}
-		else if (button.getText().equals(colorTop.getText()))
-			person.getTop().setColor();
-		else if (button.getText().equals(colorBottom.getText()))
-			person.getBottom().setColor();
-		else if (button.getText().equals(colorShoes.getText())) {
-			person.getShoesLeft().setColor();
-		}
-		else if (button.getText().equals(colorAccessory.getText()))
-			person.getAccessory().setColor();
 	}
-	
-
+	/*
+	public void handleDropListEvents (GDropList list, GEvent event) {
+		if (list.getCY() == colorAccessory.getCY()) {
+			person.getAccessory().setColor(list.getSelectedText());
+		}
+		else if (list.getCY() == colorTop.getCY()) {
+			person.getTop().setColor(list.getSelectedText());
+		}
+		else if (list.getCY() == colorBottom.getCY()) {
+			person.getBottom().setColor(list.getSelectedText());
+		}
+		else if (list.getCY() == colorShoes.getCY()) {
+			person.getShoesLeft().setColor(list.getSelectedText());
+			person.getShoesRight().setColor(list.getSelectedText());
+		}
+		
+	}*/
 	
 	public void mousePressed() {
 		if (surface.mousePressed) {
