@@ -189,7 +189,7 @@ public class TopsList {
 		
 		img = null;
 		try {
-			img = ImageIO.read(new File("res/whitesweater.png"));
+			img = ImageIO.read(new File("res/graphictee.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -209,6 +209,17 @@ public class TopsList {
 		Top top15 = new Top("Hot", "Formal", "Masculine", polo, 60.00, "https://bananarepublic.gap.com/browse/product.do?pid=857757002&cid=1184116&pcid=10894&vid=1&nav=meganav%3AMen%3AMen%27s+Clothing%3APolos#pdp-page-content");
 		allList.add(top15);
 		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/poloshirt.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage polo2 = new PImage(img);
+		Top top17 = new Top("Hot", "Semi-Formal", "Masculine", polo2, 60.00, "https://bananarepublic.gap.com/browse/product.do?pid=857757002&cid=1184116&pcid=10894&vid=1&nav=meganav%3AMen%3AMen%27s+Clothing%3APolos#pdp-page-content");
+		allList.add(top17);
+		
 		
 		img = null;
 		try {
@@ -221,7 +232,7 @@ public class TopsList {
 		Top top16 = new Top("Cold", "Semi-Formal", "Neutral", whitecrew, 75.00, "https://www.urbanoutfitters.com/shop/iets-frans-x-smiley-elbow-print-crew-neck-sweatshirt?category=SEARCHRESULTS&color=030&searchparams=_gl%3D1%2a1a1y740%2a_up%2aMQ..%26gclid%3DCjwKCAjwve2TBhByEiwAaktM1J77qhbvhQY0moxImWWaG3u-uMW-aE8idkMVjElb-0JjEEd6NIt2FxoCviwQAvD_BwE%26gclsrc%3Daw.ds%26q%3Dcrewneck&type=REGULAR&quantity=1");
 		allList.add(top16);
 		
-
+		//18
 	}
 
 	/**
