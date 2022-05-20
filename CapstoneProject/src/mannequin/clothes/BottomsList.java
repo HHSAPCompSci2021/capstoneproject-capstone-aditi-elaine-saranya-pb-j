@@ -192,6 +192,88 @@ public class BottomsList {
 		PImage blacksweats = new PImage(img);
 		Bottom bottom14 = new Bottom("Cold", blacksweats, "Casual", "Neutral", 78.00, "https://www.everlane.com/products/mens-track-pant-black");
 		allList.add(bottom14);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/longblackskirt.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage longblackskirt = new PImage(img);
+		Bottom bottom15 = new Bottom("Cold", longblackskirt, "Formal", "Feminine", 98.00, "https://www.aritzia.com/us/en/product/eames-skirt/99842.html?dwvar_99842_color=1274");
+		allList.add(bottom15);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/longblackskirt.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage longblackskirt2 = new PImage(img);
+		Bottom bottom21 = new Bottom("Hot", longblackskirt2, "Formal", "Feminine", 98.00, "https://www.aritzia.com/us/en/product/eames-skirt/99842.html?dwvar_99842_color=1274");
+		allList.add(bottom21);
+		
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/longgrayshorts.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage longgrayshorts = new PImage(img);
+		Bottom bottom16 = new Bottom("Hot", longgrayshorts, "Semi-Formal", "Masculine", 65.00, "https://www.everlane.com/products/mens-performance-chino-7-short-slategrey");
+		allList.add(bottom16);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/longgrayshorts.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage longgrayshorts2 = new PImage(img);
+		Bottom bottom17 = new Bottom("Hot", longgrayshorts2, "Casual", "Masculine", 65.00, "https://www.everlane.com/products/mens-performance-chino-7-short-slategrey");
+		allList.add(bottom17);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/longkhakishorts.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage longkhakishorts = new PImage(img);
+		Bottom bottom18 = new Bottom("Hot", longkhakishorts, "Casual", "Masculine", 45.90, "https://www.zara.com/us/en/x-rhuigi-logo-shorts-p01538324.html?v1=177649009&v2=2030325");
+		allList.add(bottom18);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/longwhiteskirt.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage longwhiteskirt = new PImage(img);
+		Bottom bottom19 = new Bottom("Hot", longwhiteskirt, "Casual", "Feminine", 98.00, "https://www.aritzia.com/us/en/product/chariot-skirt/95802.html?dwvar_95802_color=11420");
+		allList.add(bottom19);
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/longwhiteskirt.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage longwhiteskirt2 = new PImage(img);
+		Bottom bottom20 = new Bottom("Hot", longwhiteskirt2, "Semi-Formal", "Feminine", 98.00, "https://www.aritzia.com/us/en/product/chariot-skirt/95802.html?dwvar_95802_color=11420");
+		allList.add(bottom20);
+		
+		
+		
+		
 
 	}
 
