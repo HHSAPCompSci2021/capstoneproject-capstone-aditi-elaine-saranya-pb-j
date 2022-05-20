@@ -91,15 +91,15 @@ public class FirstScreen extends Screen {
 		//surface.background(255);
 		//background.resize(800, 800);
 		//surface.background(background);
-		surface.image(background, 0, 0);
-		surface.fill(112, 110, 250);
+ 		surface.image(background, 0, 0);
+		surface.fill(133, 94, 66);
 		surface.noStroke();
 		surface.rect(266, 75, 290,44);
 		surface.fill(255);
 		surface.textSize(20);
 		surface.text("Random Outfit Generator", 290, 103);
 		surface.textSize(13);
-		surface.fill(112, 110, 250);
+		surface.fill(133, 94, 66);
 		surface.text("Please enter the settings to help us better generate an outfit for you", 200, 150);
 		surface.text("Temperature", 205, 295);
 		surface.text("Formality", 370, 295);
