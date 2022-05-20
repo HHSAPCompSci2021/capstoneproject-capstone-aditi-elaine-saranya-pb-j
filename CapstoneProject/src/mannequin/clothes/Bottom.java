@@ -3,6 +3,7 @@ package mannequin.clothes;
 import java.awt.Color;
 import java.util.ArrayList;
 
+import g4p_controls.G4P;
 import processing.core.PApplet;
 import processing.core.PImage;
 
@@ -16,7 +17,7 @@ import processing.core.PImage;
 public class Bottom extends Clothes {
 
 	private PImage image;
-	private Color color;
+	private int color;
 
 	/**
 	 * Constructs a bottom with specified image
@@ -29,7 +30,7 @@ public class Bottom extends Clothes {
 	public Bottom(String w, PImage i, String f, String g, double p, String l) {
 		super(w, f, g, p, l);
 		image = i;
-		color = null;
+		color = -1;
 	}
 
 	/**
@@ -42,40 +43,20 @@ public class Bottom extends Clothes {
 	}
 
 	/**
-	 * Sets the color of the bottom
+	 * Sets the color of the top
 	 * 
-	 * @param c the color to change to
 	 */
-	public void setColor(String c) {
-		if (c.equals("Blue"))
-			color = Color.BLUE;
-		else if (c.equals("Black"))
-			color = Color.BLACK;
-		else if (c.equals("Red"))
-			color = Color.RED;
-		else if (c.equals("White"))
-			color = Color.WHITE;
-		else if (c.equals("Red"))
-			color = Color.red;
-		else if (c.equals("Green"))
-			color = Color.GREEN;
-		else if (c.equals("Purple"))
-			color = Color.MAGENTA;
-		else if (c.equals("Pink"))
-			color = Color.PINK;
-		else if (c.equals("Yellow"))
-			color = Color.YELLOW;
-		else if (c.equals("Orange"))
-			color = Color.ORANGE;
-		else if (c.equals("None"))
-			color = null;
+	public void setColor() {
+		color = G4P.selectColor(0, 0, 0);
 	}
 
 	/**
-	 * @return the color of the bottom
+	 * 
+	 * @return the color of the top
 	 */
-	public Color getColor() {
+	public int getColor() {
 		return color;
 	}
+
 
 }

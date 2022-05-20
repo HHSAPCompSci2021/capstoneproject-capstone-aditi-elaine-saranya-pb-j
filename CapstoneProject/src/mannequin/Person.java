@@ -51,10 +51,7 @@ public class Person {
 	
 	
 	public boolean ifNotValid() {
-		System.out.println(topsList.returnArrayList().size());
-		System.out.println(bottomsList.returnArrayList().size());
-		System.out.println(shoesList.returnArrayList().size());
-
+	
 		return topsList.returnArrayList().size() == 0 || bottomsList.returnArrayList().size() == 0 || shoesList.returnArrayList().size() == 0;
 	}
 	/**
@@ -79,40 +76,40 @@ public class Person {
 
 
 		if (accessory != null) {
-			if(accessory.getColor() != null) {
-				marker.tint(accessory.getColor().getRGB());
+			if(accessory.getColor() != -1) {
+				marker.tint(accessory.getColor());
 			}else
 				marker.noTint();
 			accessory.getImage().resize(740, 740);
 			marker.image(accessory.getImage(), 50,-300);
 		}	
 		
-		if(shoesL.getColor() != null) {
-			marker.tint(shoesL.getColor().getRGB());
+		if(shoesL.getColor() != -1) {
+			marker.tint(shoesL.getColor());
 		}else
 			marker.noTint();
 		shoesL.getImage().resize(630 ,630);
 		marker.image(shoesL.getImage(), 25, 420);
 		
 		
-		if(shoesR.getColor() != null) {
-			marker.tint(shoesR.getColor().getRGB());
+		if(shoesR.getColor() != -1) {
+			marker.tint(shoesR.getColor());
 		}else
 			marker.noTint();
 		shoesR.getImage().resize(630,630);
 		marker.image(shoesR.getImage(), 190, 420);
 		
 		
-		if(bottom.getColor() != null) {
-			marker.tint(bottom.getColor().getRGB());
+		if(bottom.getColor() != -1) {
+			marker.tint(bottom.getColor());
 		}else
 			marker.noTint();
 		bottom.getImage().resize(690, 690);
 		marker.image(bottom.getImage(), 78, 235);
 		
 		
-		if(top.getColor() != null) {
-			marker.tint(top.getColor().getRGB());
+		if(top.getColor() != -1) {
+			marker.tint(top.getColor());
 		}else {
 			marker.noTint();
 		}
