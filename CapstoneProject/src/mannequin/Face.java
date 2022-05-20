@@ -8,7 +8,7 @@ import processing.core.PImage;
 /**
  * The Face class represents an image of a face
  * @author Aditi 
- * @version 5/13/22
+ * @version 5/20/2022
  *
  */
 public class Face {

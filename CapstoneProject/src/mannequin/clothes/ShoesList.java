@@ -14,8 +14,8 @@ import processing.core.PImage;
  * The ShoesList class represents a collection of all the Shoes to be added to
  * the screen using the Processing library.
  * 
- * @author
- * @version 5/18/2022
+ * @author Saranya
+ * @version 5/20/2022
  */
 public class ShoesList {
 	private ArrayList<Shoes> allList;
@@ -205,7 +205,7 @@ public class ShoesList {
 		}
 		PImage af12L = new PImage(img);
 		Shoes shoes7L = new Shoes("Cold", "Casual", "Neutral", af12L, 50.00, "left", "https://www.nike.com/t/air-force-1-07-womens-shoes-GCkPzr/DD8959-100");
-		allList.add(shoes4L);
+		allList.add(shoes7L);
 
 		img = null;
 		try {
@@ -216,7 +216,7 @@ public class ShoesList {
 		}
 		PImage af12R = new PImage(img);
 		Shoes shoes7R = new Shoes("Cold", "Casual", "Neutral", af12R, 50.00, "right", "https://www.nike.com/t/air-force-1-07-womens-shoes-GCkPzr/DD8959-100");
-		allList.add(shoes4R);
+		allList.add(shoes7R);
 		
 		img = null;
 		try {
@@ -304,7 +304,7 @@ public class ShoesList {
 		}
 		PImage blackHeelR2 = new PImage(img);
 		Shoes shoes11R = new Shoes("Cold", "Formal", "Feminine", blackHeelR2, 136.0, "right", "https://www.stevemadden.com/collections/womens-heels/products/iesha-black-leather");
-		allList.add(shoes10R);
+		allList.add(shoes11R);
 
 
 

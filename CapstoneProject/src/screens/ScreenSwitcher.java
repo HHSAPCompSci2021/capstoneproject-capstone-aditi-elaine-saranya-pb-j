@@ -3,7 +3,7 @@ package screens;
 /**
  * The ScreenSwitcher Interface helps switch screens
  * @author Elaine
- * @version 5/13/2022
+ * @version 5/20/2022
  *
  */
 public interface ScreenSwitcher {

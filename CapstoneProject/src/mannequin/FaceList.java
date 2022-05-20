@@ -10,9 +10,17 @@ import javax.imageio.ImageIO;
 import mannequin.clothes.Bottom;
 import processing.core.PImage;
 
+/**
+ * The FaceList class represents a collection of all the Faces to be added to the
+ * screen using the Processing library.
+ * 
+ * @author Elaine
+ * @version 5/20/2022
+ */
 public class FaceList {
 	private ArrayList<Face> faces = new ArrayList<>();
 	private int currentIndex;
+	
 	/**
 	 * Constructs a Face containing an ArrayList of all the faces
 	 */

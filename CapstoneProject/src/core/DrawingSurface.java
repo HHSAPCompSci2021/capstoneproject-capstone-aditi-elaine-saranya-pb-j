@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import g4p_controls.GButton;
 import g4p_controls.GDropList;
 import g4p_controls.GEvent;
+import g4p_controls.GImageButton;
 import mannequin.Person;
 import processing.core.PApplet;
 import screens.FirstScreen;
@@ -81,6 +82,7 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 			FirstScreen firstScreen = (FirstScreen)activeScreen;
 			activeScreen = screen2;
 			SecondScreen secondScreen = (SecondScreen)activeScreen;
+			
 			screen2.getPerson().getTopsList().sortArray();
 			screen2.getPerson().getBottomsList().sortArray();
 			screen2.getPerson().getAccessoriesList().sortArray();
@@ -88,10 +90,11 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 			
 			if (!screen2.getPerson().ifNotValid())	{
 				
+				
 				screen2.getPerson().setClothes(); 
-				valid = true;
 				firstScreen.setVisibility(false);
 				secondScreen.setVisibility(true);
+				valid = true;
 				first = false;
 				second = true;
 				
@@ -107,7 +110,6 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 			}
 
 		}
-		activeScreen.setup();
 	}
 	
 	public void handleDropListEvents(GDropList list, GEvent event) {
@@ -117,19 +119,22 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 	
 
 	public void handleButtonEvents(GButton button, GEvent event) {
+		if (screen2.handleButtonEvents(button, event) && second) {
+			
+			first = true;
+			second = false;
+			switchScreen(0);
+
+			
+		}
+	}
+	public void handleButtonEvents(GImageButton button, GEvent event) {
 		// Create the control window?
 
-		if(screen1.handleButtonEvents(button, event) && first) {
+		if(screen1.handleImageButtonEvents(button) && first) {
 			first = false;
 			switchScreen(1);
 			second = true;
-			
-		}
-		else if (screen2.handleButtonEvents(button, event) && second) {
-			
-			switchScreen(0);
-			first = true;
-			second = false;
 			
 		}
 		

@@ -11,8 +11,8 @@ import processing.core.PImage;
  * The Accessory class represents an Accessory to be added to the screen using
  * the Processing library. It is a subclass of the Clothes class.
  * 
- * @author
- * @version 5/18/2022
+ * @author Aditi
+ * @version 5/20/2022
  */
 public class Accessory extends Clothes {
 

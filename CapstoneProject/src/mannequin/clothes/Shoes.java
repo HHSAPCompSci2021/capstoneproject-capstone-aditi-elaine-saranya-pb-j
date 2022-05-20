@@ -11,8 +11,8 @@ import processing.core.PImage;
  * The Shoes class represents an Shoe to be added to the screen using the
  * Processing library. It is a subclass of the Clothes class.
  * 
- * @author
- * @version 5/18/2022
+ * @author Saranya
+ * @version 5/20/2022
  */
 public class Shoes extends Clothes {
 

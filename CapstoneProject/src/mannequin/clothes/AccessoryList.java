@@ -14,8 +14,8 @@ import processing.core.PImage;
  * The AccessoryList class represents a collection of all the Accessories to be
  * added to the screen using the Processing library.
  * 
- * @author
- * @version 5/18/2022
+ * @author Aditi
+ * @version 5/20/2022
  */
 
 public class AccessoryList {

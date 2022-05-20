@@ -1,5 +1,6 @@
 package screens;
 
+import java.awt.Color;
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
@@ -18,13 +19,12 @@ import processing.core.PImage;
 /**
  * The First Screen class represents the menu screen where the user sets the settings of the outfit
  * @author Elaine
- * @version 5/13/2022
+ * @version 5/20/2022
  *
  */
 public class FirstScreen extends Screen {
 	private DrawingSurface surface;
 	private PImage background;
-	private PImage submitButton;
 	private PImage title;
 	private PImage instructions;
 	
@@ -43,16 +43,7 @@ public class FirstScreen extends Screen {
 			e.printStackTrace();
 		}
 		background = new PImage(img);
-		
-		img=null;
-		try {
-			img = ImageIO.read(new File("res/submitbutton.png"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		submitButton=new PImage(img);
-		
+
 		img=null;
 		try {
 			img = ImageIO.read(new File("res/title.png"));
@@ -75,25 +66,23 @@ public class FirstScreen extends Screen {
 	private GDropList listTemp;
 	private GDropList listFormality;
 	private GDropList listExpression;
-	private GImageButton submit2;
-	private String[] submitTxt=new String[]{"submitbutton.png"};
 	
-	private GButton submit;
+	private GImageButton submit;
 
 	/**
 	 * Sets up the first screen and all the dropdown menus and submit button on the screen
 	 */
 	public void setup() {
-		
+		String[] submitTxt=new String[]{"res/submitbutton.png"};
+
 		G4P.setInputFont("Times New Roman", G4P.PLAIN, 14); // New for G4P V4.3
-		G4P.setGlobalColorScheme(GCScheme.RED_SCHEME);
+		G4P.setGlobalColorScheme(G4P.GOLD_SCHEME);
 		  background.resize(800, 800);
-		  submitButton.resize(150,100);
 		  // Some start text
 		  listTemp = new GDropList(surface, 200, 300, 100, 100, 0);
 		  listTemp.setItems(new String[] {" ", "Hot", "Cold"}, 0);
 		  //submit2=new GImageButton(surface, 350, 500, submitTxt, "submitbutton.png");
-		  submit = new GButton(surface,350, 500, 140, 70, "Submit");
+		  submit = new GImageButton(surface,300, 600, 175, 75, submitTxt);
 		  listFormality = new GDropList(surface, 350, 300, 100, 100, 0);
 		  listFormality.setItems(new String[] {" ", "Casual", "Formal", "Semi-Formal"}, 0);
 		  listExpression = new GDropList(surface, 500, 300, 100, 100, 0);
@@ -110,7 +99,6 @@ public class FirstScreen extends Screen {
 		submit.setVisible(v);
 		listFormality.setVisible(v);
 		listExpression.setVisible(v);
-		System.out.println(listExpression.isVisible());
 	}
 	
 	
@@ -120,26 +108,27 @@ public class FirstScreen extends Screen {
 	 * @pre The Screen will be drawn with attributes previously set on the given PApplet.
 	 */
 	public void draw() {
-		//surface.background(255);
-		//background.resize(800, 800);
-		//surface.background(background);
+
  		surface.image(background, 0, 0);
- 		surface.image(submitButton, 345,500);
  		surface.image(title, 150, 150);
  		surface.image(instructions, 20, 600);
 		surface.fill(133, 94, 66);
 		surface.noStroke();
-		//surface.rect(266, 75, 290,44);
-		//surface.fill(255);
-		//surface.textSize(20);
-		//surface.text("Random Outfit Generator", 290, 103);
+	
 		surface.textSize(20);
 		surface.fill(133, 94, 66);
-		//surface.text("Please enter the settings to help us better generate an outfit for you", 200, 150);
-		surface.text("Temperature", 205, 295);
-		surface.fill(74, 53, 38);
+		surface.rect(185, 270, 145, 35);
+		surface.fill(255);
+		surface.text("Temperature", 195, 295);
+		
+		surface.fill(133, 94, 66);
+		surface.rect(359, 270, 112, 35);
+		surface.fill(255);		
 		surface.text("Formality", 370, 295);
-		surface.fill(176, 102, 49);
+		
+		surface.fill(133, 94, 66);
+		surface.rect(503, 270, 122, 35);
+		surface.fill(255);		
 		surface.text("Expression", 513, 295);
 
 	}
@@ -150,10 +139,9 @@ public class FirstScreen extends Screen {
 	 * @param event what has happened to the button
 	 * @return returns true if the submit button was clicked, false if not
 	 */
-	
-	public boolean handleButtonEvents(GButton button, GEvent event) {
+	public boolean handleImageButtonEvents(GImageButton button) {
 		// Create the control window?		
-		if (button.getText().equals(submit.getText())) {
+		if (button == submit) {
 			return true;
 		}
 		return false;
@@ -161,6 +149,12 @@ public class FirstScreen extends Screen {
 	}
 
 	
+	/**
+	 * Handles all the dropdown lists on the second screen and acts accordingly
+	 * @param list dropdown list that was pressed
+	 * @param event what has happened to the drop down list
+	 * @param p the person
+	 */
 	public void handleDropListEvents (GDropList list, GEvent event, Person p) {
 		if (list.getCX() == listTemp.getCX()) {
 			p.setWeatherCondition(list.getSelectedText());

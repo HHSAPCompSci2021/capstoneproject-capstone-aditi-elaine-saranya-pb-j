@@ -13,7 +13,7 @@ import mannequin.Person;
 /**
  * The Second Screen class represents the program screen where the mannequin and outfit are displayed
  * @author Elaine
- * @version 5/13/2022
+ * @version 5/20/2022
  *
  */
 public class SecondScreen extends Screen {
@@ -22,7 +22,7 @@ public class SecondScreen extends Screen {
 	
 	private Person person; 
 
-	private GButton top, bottom, shoes, accessories, random, face, colorTop, colorAccessory, colorBottom, colorShoes;
+	private GButton top, bottom, shoes, accessories, random, face, colorTop, colorAccessory, colorBottom, colorShoes, menu;
 
 
 
@@ -40,7 +40,7 @@ public class SecondScreen extends Screen {
 	 * Sets up the second screen and all the all the buttons to change the outfit
 	 */
 	public void setup() {
-		surface.background(255);
+		//surface.background(255);
 		G4P.setInputFont("Times New Roman", G4P.PLAIN, 13); // New for G4P V4.3
 		G4P.setGlobalColorScheme(GCScheme.PURPLE_SCHEME);
 		//Some start text
@@ -54,10 +54,9 @@ public class SecondScreen extends Screen {
 		accessories = new GButton(surface, 175, 360, 80, 40, "Accessories");
 		random = new GButton(surface, 50, 200, 210, 50, "Randomly Generate");
 		face = new GButton(surface, 50, 280, 210, 50, "Face");
-		menu = new GButton(surface, 10, 10, 60, 50, "Menu");
-		
+		menu = new GButton(surface, 50, 100, 100, 50, "Menu");
 
-		
+	
 
 	}
 	
@@ -77,6 +76,7 @@ public class SecondScreen extends Screen {
 		colorShoes.setVisible(v);
 		face.setVisible(v);
 		menu.setVisible(v);
+		System.out.println(menu.isVisible());
 	}
 	
 	/**
@@ -92,11 +92,9 @@ public class SecondScreen extends Screen {
 	 */
 	public void draw() {
 		surface.background(255);
-		surface.fill(112, 110, 250);
+		surface.fill(133, 94, 66);
 		
-		
-		
-			
+	
 		surface.noStroke();
 		surface.rect(70, 45, 170, 120);		
 		surface.fill(255);
@@ -153,6 +151,10 @@ public class SecondScreen extends Screen {
 		}
 		else if (button.getText().equals(colorAccessory.getText()))
 			person.getAccessory().setColor();
+			
+		else if (button.getText().equals(menu.getText()))
+			return true;
+		return false;
 
 	}
 

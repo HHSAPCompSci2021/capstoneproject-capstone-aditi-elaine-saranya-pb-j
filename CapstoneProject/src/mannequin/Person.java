@@ -13,7 +13,7 @@ import processing.core.PApplet;
 /**
  * Represents a person who has different types of clothing
  * @author Aditi
- * @version 5/13/22
+ * @version 5/20/2022
  *
  */
 public class Person {

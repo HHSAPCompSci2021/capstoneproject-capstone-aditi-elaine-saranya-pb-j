@@ -10,8 +10,8 @@ import processing.core.PImage;
  * The Clothes class represents Clothes that can be displayed using the
  * Processing library.
  * 
- * @author
- * @version 5/18/2022
+ * @author Saranya
+ * @version 5/20/2022
  */
 public class Clothes extends PApplet {
 

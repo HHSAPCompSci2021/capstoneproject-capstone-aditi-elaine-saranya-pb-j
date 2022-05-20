@@ -16,8 +16,8 @@ import java.io.IOException;
  * The TopsList class represents a collection of all the Tops to be added to the
  * screen using the Processing library.
  * 
- * @author
- * @version 5/18/2022
+ * @author Saranya
+ * @version 5/20/2022
  */
 public class TopsList {
 
