@@ -2,11 +2,18 @@ package screens;
 
 import java.awt.Point;
 import java.awt.Rectangle;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 import core.DrawingSurface;
 import g4p_controls.*;
 import mannequin.Person;
+import mannequin.clothes.Top;
 import processing.core.PApplet;
+import processing.core.PImage;
 
 /**
  * The First Screen class represents the menu screen where the user sets the settings of the outfit
@@ -16,6 +23,7 @@ import processing.core.PApplet;
  */
 public class FirstScreen extends Screen {
 	private DrawingSurface surface;
+	private PImage background;
 	
 	/**
 	 * Constructs the FirstScreen (the menu screen)
@@ -24,6 +32,16 @@ public class FirstScreen extends Screen {
 	public FirstScreen(DrawingSurface surface) {
 		super(800,800);
 		this.surface = surface;
+		BufferedImage img = null;
+		try {
+			img = ImageIO.read(new File("res/background.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		background = new PImage(img);
+		
+		
 
 	}
 	private GDropList listTemp;
@@ -36,8 +54,10 @@ public class FirstScreen extends Screen {
 	 * Sets up the first screen and all the dropdown menus and submit button on the screen
 	 */
 	public void setup() {
+		
 		G4P.setInputFont("Times New Roman", G4P.PLAIN, 14); // New for G4P V4.3
 		  G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
+		background.resize(800, 800);
 		  // Some start text
 		  listTemp = new GDropList(surface, 200, 300, 100, 100, 0);
 		  listTemp.setItems(new String[] {" ", "Hot", "Cold"}, 0);
@@ -66,7 +86,10 @@ public class FirstScreen extends Screen {
 	 * @pre The Screen will be drawn with attributes previously set on the given PApplet.
 	 */
 	public void draw() {
-		surface.background(255);
+		//surface.background(255);
+		//background.resize(800, 800);
+		//surface.background(background);
+		surface.image(background, 800, 800);
 		surface.fill(112, 110, 250);
 		surface.noStroke();
 		surface.rect(266, 75, 290,44);
