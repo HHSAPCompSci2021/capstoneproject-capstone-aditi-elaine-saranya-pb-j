@@ -22,8 +22,12 @@ public class SecondScreen extends Screen {
 	
 	private Person person; 
 
+
 	private GDropList colorAccessory, colorTop, colorBottom, colorShoes;
-	private GButton top, bottom, shoes, accessories, random, face;
+	
+
+	private GButton top, bottom, shoes, accessories, random, face, menu;
+
 
 	/**
 	 * Constructs the SecondScreen (the program screen)
@@ -61,6 +65,8 @@ public class SecondScreen extends Screen {
 		accessories = new GButton(surface, 175, 360, 80, 40, "Accessories");
 		random = new GButton(surface, 50, 200, 210, 50, "Randomly Generate");
 		face = new GButton(surface, 50, 280, 210, 50, "Face");
+		menu = new GButton(surface, 10, 10, 60, 50, "Menu");
+		
 
 		
 
@@ -81,6 +87,7 @@ public class SecondScreen extends Screen {
 		colorBottom.setVisible(v);
 		colorShoes.setVisible(v);
 		face.setVisible(v);
+		menu.setVisible(v);
 	}
 	
 	/**
@@ -126,7 +133,7 @@ public class SecondScreen extends Screen {
 	 * @param button the button that was pressed 
 	 * @param event what has happened to the button
 	 */
-	public void handleButtonEvents(GButton button, GEvent event) {
+	public boolean handleButtonEvents(GButton button, GEvent event) {
 		// Create the control window?
 
 		if (button.getText().equals(top.getText())) {
@@ -147,6 +154,21 @@ public class SecondScreen extends Screen {
 		else if (button.getText().equals(face.getText())) {
 			person.changeFace();
 		}
+
+		else if (button.getText().equals(colorTop.getText()))
+			person.getTop().setColor();
+		else if (button.getText().equals(colorBottom.getText()))
+			person.getBottom().setColor();
+		else if (button.getText().equals(colorShoes.getText())) {
+			person.getShoesLeft().setColor();
+		}
+		else if (button.getText().equals(colorAccessory.getText()))
+			person.getAccessory().setColor();
+		else if (button.getText().equals("Menu") ){
+			return true;
+		}
+		return false;
+
 	}
 	/*
 	public void handleDropListEvents (GDropList list, GEvent event) {

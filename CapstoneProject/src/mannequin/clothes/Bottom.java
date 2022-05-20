@@ -26,6 +26,8 @@ public class Bottom extends Clothes {
 	 * @param i The image of the bottom
 	 * @param f The formality of the bottom
 	 * @param g The gender of the person
+	 * @param p The price of the accessory
+	 * @param l The link to the website to buy the outfit
 	 */
 	public Bottom(String w, PImage i, String f, String g, double p, String l) {
 		super(w, f, g, p, l);
@@ -34,9 +36,9 @@ public class Bottom extends Clothes {
 	}
 
 	/**
-	 * Returns the image of the top
+	 * Returns the image of the bottom
 	 * 
-	 * @return the image of the top
+	 * @return the image of the bottom
 	 */
 	public PImage getImage() {
 		return image;
@@ -51,8 +53,8 @@ public class Bottom extends Clothes {
 	}
 
 	/**
-	 * 
-	 * @return the color of the top
+	 * Gets the color of the bottom
+	 * @return the color of the bottom
 	 */
 	public int getColor() {
 		return color;

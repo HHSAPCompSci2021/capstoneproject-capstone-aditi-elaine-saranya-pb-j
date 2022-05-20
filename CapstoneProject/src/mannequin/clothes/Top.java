@@ -24,6 +24,10 @@ public class Top extends Clothes {
 	 * 
 	 * @param w The weather filter
 	 * @param i The image of the top
+	 * @param f The formality of the accessory
+	 * @param g The gender of the person
+	 * @param p The price of the accessory
+	 * @param l The link to the website to buy the outfit
 	 */
 	public Top(String w, String f, String g, PImage i, double p, String l) {
 		super(w, f, g, p, l);
@@ -59,7 +63,7 @@ public class Top extends Clothes {
 	}
 
 	/**
-	 * 
+	 * Gets the color of the top
 	 * @return the color of the top
 	 */
 	public int getColor() {

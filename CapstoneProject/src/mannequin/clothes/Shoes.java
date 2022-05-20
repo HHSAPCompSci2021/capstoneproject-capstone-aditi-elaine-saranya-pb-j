@@ -25,6 +25,10 @@ public class Shoes extends Clothes {
 	 * 
 	 * @param w The weather filter
 	 * @param i The image of the shoe
+	 * @param f The formality of the accessory
+	 * @param g The gender of the person
+	 * @param p The price of the accessory
+	 * @param l The link to the website to buy the outfit
 	 */
 	public Shoes(String w, String f, String g, PImage i, double p, String s, String l) {
 		super(w, f, g, p, l);
@@ -34,9 +38,9 @@ public class Shoes extends Clothes {
 	}
 
 	/**
-	 * Returns the image of the top
+	 * Returns the image of the shoe
 	 * 
-	 * @return the image of the top
+	 * @return the image of the shoe
 	 */
 	public PImage getImage() {
 		return image;
@@ -44,7 +48,7 @@ public class Shoes extends Clothes {
 
 
 	/**
-	 * Sets the color of the top
+	 * Sets the color of the shoe
 	 * 
 	 */
 	public void setColor() {
@@ -52,8 +56,8 @@ public class Shoes extends Clothes {
 	}
 
 	/**
-	 * 
-	 * @return the color of the top
+	 * Gets the color of the shoe
+	 * @return the color of the shoe
 	 */
 	public int getColor() {
 		return color;

@@ -19,12 +19,13 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 	private FirstScreen screen1;
 	private SecondScreen screen2;
 	public float ratioX, ratioY;
-	private boolean first;
+	private boolean first, second;
 	private boolean valid;
 	
 	public DrawingSurface() {
 		
 		first = true;
+		second = false;
 		screen1 = new FirstScreen(this);
 
 		
@@ -74,6 +75,7 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 			activeScreen = screen1;
 			FirstScreen firstScreen = (FirstScreen)activeScreen;
 			firstScreen.setVisibility(true);
+			
 		}
 		else {
 			FirstScreen firstScreen = (FirstScreen)activeScreen;
@@ -83,13 +85,16 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 			screen2.getPerson().getBottomsList().sortArray();
 			screen2.getPerson().getAccessoriesList().sortArray();
 			screen2.getPerson().getShoesList().sortArray();
-
+			
 			if (!screen2.getPerson().ifNotValid())	{
 				
 				screen2.getPerson().setClothes(); 
 				valid = true;
 				firstScreen.setVisibility(false);
 				secondScreen.setVisibility(true);
+				first = false;
+				second = true;
+				
 			}
 			else {
 				secondScreen.setVisibility(false);
@@ -97,6 +102,7 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 				firstScreen.setVisibility(true);
 				valid = false;
 				first = true;
+				second = false;
 				
 			}
 
@@ -115,11 +121,17 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 		if(screen1.handleButtonEvents(button, event) && first) {
 			first = false;
 			switchScreen(1);
+			second = true;
 			
 		}
-		else {
-			screen2.handleButtonEvents(button, event);
+		else if (screen2.handleButtonEvents(button, event) && second) {
+			
+			switchScreen(0);
+			first = true;
+			second = false;
+			
 		}
+		
 		
 	}
 
