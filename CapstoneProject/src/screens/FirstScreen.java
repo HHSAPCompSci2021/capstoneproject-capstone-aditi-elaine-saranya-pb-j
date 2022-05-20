@@ -56,8 +56,8 @@ public class FirstScreen extends Screen {
 	public void setup() {
 		
 		G4P.setInputFont("Times New Roman", G4P.PLAIN, 14); // New for G4P V4.3
-		  G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
-		background.resize(800, 800);
+
+		  background.resize(800, 800);
 		  // Some start text
 		  listTemp = new GDropList(surface, 200, 300, 100, 100, 0);
 		  listTemp.setItems(new String[] {" ", "Hot", "Cold"}, 0);
@@ -123,20 +123,16 @@ public class FirstScreen extends Screen {
 	}
 
 	
-	public boolean handleDropListEvents (GDropList list, GEvent event, Person p) {
+	public void handleDropListEvents (GDropList list, GEvent event, Person p) {
 		if (list.getCX() == listTemp.getCX()) {
 			p.setWeatherCondition(list.getSelectedText());
-			return true;
 		}
 		if (list.getCX() == listFormality.getCX()) {
 			p.setFormalityType(list.getSelectedText());
-			return true;
 		}
 		if (list.getCX() == listExpression.getCX()) {
 			p.setGenderExpression(list.getSelectedText());
-			return true;
 		}
-		return false;
 	}
 
 
