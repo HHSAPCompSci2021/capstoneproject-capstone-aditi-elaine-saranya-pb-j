@@ -91,7 +91,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blueJeans = new PImage(img);
-		Bottom bottom5 = new Bottom("Hot", blueJeans, "Casual", "Neutral", 49.90, "https://www.zara.com/us/en/wide-leg-jeans-p06688023.html?v1=161314838");
+		Bottom bottom5 = new Bottom("Hot", blueJeans, "Casual", "Neutral", 50.0, "https://www.zara.com/us/en/wide-leg-jeans-p06688023.html?v1=161314838");
 		allList.add(bottom5);
 
 		img = null;
@@ -113,7 +113,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage blackSweats = new PImage(img);
-		Bottom bottom7 = new Bottom("Cold", blackSweats, "Casual", "Neutral", 27.90, "https://www.zara.com/us/en/plush-jogging-pants-p08417814.html?v1=144435357");
+		Bottom bottom7 = new Bottom("Cold", blackSweats, "Casual", "Neutral", 28.0, "https://www.zara.com/us/en/plush-jogging-pants-p08417814.html?v1=144435357");
 		allList.add(bottom7);
 
 		img = null;
@@ -246,7 +246,7 @@ public class BottomsList {
 			e.printStackTrace();
 		}
 		PImage longkhakishorts = new PImage(img);
-		Bottom bottom18 = new Bottom("Hot", longkhakishorts, "Casual", "Masculine", 45.90, "https://www.zara.com/us/en/x-rhuigi-logo-shorts-p01538324.html?v1=177649009&v2=2030325");
+		Bottom bottom18 = new Bottom("Hot", longkhakishorts, "Casual", "Masculine", 46.0, "https://www.zara.com/us/en/x-rhuigi-logo-shorts-p01538324.html?v1=177649009&v2=2030325");
 		allList.add(bottom18);
 		
 		img = null;
