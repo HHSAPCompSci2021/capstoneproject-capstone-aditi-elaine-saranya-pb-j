@@ -49,6 +49,14 @@ public class Person {
 		face = faceList.pickNextEntry();
 	}
 	
+	
+	public boolean ifNotValid() {
+		System.out.println(topsList.returnArrayList().size());
+		System.out.println(bottomsList.returnArrayList().size());
+		System.out.println(shoesList.returnArrayList().size());
+
+		return topsList.returnArrayList().size() == 0 || bottomsList.returnArrayList().size() == 0 || shoesList.returnArrayList().size() == 0;
+	}
 	/**
 	 * Creates the initial outfit
 	 */

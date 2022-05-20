@@ -361,4 +361,11 @@ public class BottomsList {
 		gender = w;
 	}
 
+	/**
+	 * Returns the sorted arraylist
+	 * @return sorted list
+	 */
+	public ArrayList<Bottom> returnArrayList() {
+		return sortedList;
+	}
 }

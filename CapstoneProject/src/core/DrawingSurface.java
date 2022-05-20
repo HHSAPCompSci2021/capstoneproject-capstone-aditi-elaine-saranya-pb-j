@@ -20,7 +20,7 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 	private SecondScreen screen2;
 	public float ratioX, ratioY;
 	private boolean first;
-
+	private boolean valid;
 	
 	public DrawingSurface() {
 		
@@ -30,6 +30,7 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 		
 		screen2 = new SecondScreen(this);
 
+		valid = true;
 		
 		activeScreen = screen1;
 		
@@ -51,6 +52,12 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 		
 		scale(ratioX, ratioY);
 		activeScreen.draw();
+		
+		if (!valid) {
+			fill(255, 0, 0);
+			text("Sorry, at the moment, we are unable to generate an outfit with these settings", 200, 700);
+		}
+		
 		pop();
 	}
 	
@@ -78,7 +85,19 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 			screen2.getPerson().getBottomsList().sortArray();
 			screen2.getPerson().getAccessoriesList().sortArray();
 			screen2.getPerson().getShoesList().sortArray();
-			screen2.getPerson().setClothes(); 
+
+			if (!screen2.getPerson().ifNotValid())	{
+				screen2.getPerson().setClothes(); 
+				valid = true;
+			}
+			else {
+				secondScreen.setVisibility(false);
+				activeScreen = screen1;
+				firstScreen.setVisibility(true);
+				valid = false;
+				first = true;
+				
+			}
 
 		}
 		activeScreen.setup();
@@ -92,9 +111,11 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 
 	public void handleButtonEvents(GButton button, GEvent event) {
 		// Create the control window?
+
 		if(screen1.handleButtonEvents(button, event) && first) {
-			switchScreen(1);
 			first = false;
+			switchScreen(1);
+			
 		}
 		else {
 			screen2.handleButtonEvents(button, event);

@@ -73,6 +73,8 @@ public class Top extends Clothes {
 			color = Color.PINK;
 		else if (c.equals("Yellow"))
 			color = Color.YELLOW;
+		else if (c.equals("Orange"))
+			color = Color.ORANGE;
 		else if (c.equals("None"))
 			color = null;
 	}

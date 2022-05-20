@@ -112,8 +112,8 @@ public class FirstScreen extends Screen {
 	 * @return returns true if the submit button was clicked, false if not
 	 */
 	public boolean handleButtonEvents(GButton button, GEvent event) {
-		// Create the control window?
-		if (button == submit && event == GEvent.CLICKED) {
+		// Create the control window?		
+		if (button.getText().equals(submit.getText())) {
 			return true;
 		}
 		return false;
@@ -122,15 +122,15 @@ public class FirstScreen extends Screen {
 
 	
 	public boolean handleDropListEvents (GDropList list, GEvent event, Person p) {
-		if (list == listTemp) {
+		if (list.getCX() == listTemp.getCX()) {
 			p.setWeatherCondition(list.getSelectedText());
 			return true;
 		}
-		if (list == listFormality) {
+		if (list.getCX() == listFormality.getCX()) {
 			p.setFormalityType(list.getSelectedText());
 			return true;
 		}
-		if (list == listExpression) {
+		if (list.getCX() == listExpression.getCX()) {
 			p.setGenderExpression(list.getSelectedText());
 			return true;
 		}
