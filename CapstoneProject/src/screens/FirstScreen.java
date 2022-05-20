@@ -24,6 +24,9 @@ import processing.core.PImage;
 public class FirstScreen extends Screen {
 	private DrawingSurface surface;
 	private PImage background;
+	private PImage submitButton;
+	private PImage title;
+	private PImage instructions;
 	
 	/**
 	 * Constructs the FirstScreen (the menu screen)
@@ -41,12 +44,39 @@ public class FirstScreen extends Screen {
 		}
 		background = new PImage(img);
 		
+		img=null;
+		try {
+			img = ImageIO.read(new File("res/submitbutton.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		submitButton=new PImage(img);
 		
+		img=null;
+		try {
+			img = ImageIO.read(new File("res/title.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		title=new PImage(img);
+		
+		img=null;
+		try {
+			img = ImageIO.read(new File("res/instructions.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		instructions=new PImage(img);
 
 	}
 	private GDropList listTemp;
 	private GDropList listFormality;
 	private GDropList listExpression;
+	private GImageButton submit2;
+	private String[] submitTxt=new String[]{"submitbutton.png"};
 	
 	private GButton submit;
 
@@ -58,10 +88,12 @@ public class FirstScreen extends Screen {
 		G4P.setInputFont("Times New Roman", G4P.PLAIN, 14); // New for G4P V4.3
 
 		  background.resize(800, 800);
+		  submitButton.resize(150,100);
 		  // Some start text
 		  listTemp = new GDropList(surface, 200, 300, 100, 100, 0);
 		  listTemp.setItems(new String[] {" ", "Hot", "Cold"}, 0);
-		  submit = new GButton(surface,350, 500, 100, 40, "Submit");
+		  //submit2=new GImageButton(surface, 350, 500, submitTxt, "submitbutton.png");
+		  submit = new GButton(surface,350, 500, 140, 70, "Submit");
 		  listFormality = new GDropList(surface, 350, 300, 100, 100, 0);
 		  listFormality.setItems(new String[] {" ", "Casual", "Formal", "Semi-Formal"}, 0);
 		  listExpression = new GDropList(surface, 500, 300, 100, 100, 0);
@@ -92,17 +124,22 @@ public class FirstScreen extends Screen {
 		//background.resize(800, 800);
 		//surface.background(background);
  		surface.image(background, 0, 0);
+ 		surface.image(submitButton, 345,500);
+ 		surface.image(title, 150, 150);
+ 		surface.image(instructions, 20, 600);
 		surface.fill(133, 94, 66);
 		surface.noStroke();
-		surface.rect(266, 75, 290,44);
-		surface.fill(255);
+		//surface.rect(266, 75, 290,44);
+		//surface.fill(255);
+		//surface.textSize(20);
+		//surface.text("Random Outfit Generator", 290, 103);
 		surface.textSize(20);
-		surface.text("Random Outfit Generator", 290, 103);
-		surface.textSize(13);
 		surface.fill(133, 94, 66);
-		surface.text("Please enter the settings to help us better generate an outfit for you", 200, 150);
+		//surface.text("Please enter the settings to help us better generate an outfit for you", 200, 150);
 		surface.text("Temperature", 205, 295);
+		surface.fill(74, 53, 38);
 		surface.text("Formality", 370, 295);
+		surface.fill(176, 102, 49);
 		surface.text("Expression", 513, 295);
 
 	}
@@ -113,6 +150,7 @@ public class FirstScreen extends Screen {
 	 * @param event what has happened to the button
 	 * @return returns true if the submit button was clicked, false if not
 	 */
+	
 	public boolean handleButtonEvents(GButton button, GEvent event) {
 		// Create the control window?		
 		if (button.getText().equals(submit.getText())) {
