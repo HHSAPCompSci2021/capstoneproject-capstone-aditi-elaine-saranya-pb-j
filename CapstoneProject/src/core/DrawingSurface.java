@@ -57,7 +57,8 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 		
 		if (!valid) {
 			fill(255, 0, 0);
-			text("Sorry, at the moment, we are unable to generate an outfit with these settings", 200, 700);
+			textSize(16);
+			text("Sorry, at the moment, we are unable to generate an outfit with these settings", 100, 500);
 		}
 		
 		pop();
