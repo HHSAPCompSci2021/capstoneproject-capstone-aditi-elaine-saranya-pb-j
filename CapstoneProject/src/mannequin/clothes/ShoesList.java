@@ -264,7 +264,7 @@ public class ShoesList {
 
 		img = null;
 		try {
-			img = ImageIO.read(new File("res/blackheelL.png"));
+			img = ImageIO.read(new File("res/blackheelR.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -275,7 +275,7 @@ public class ShoesList {
 		
 		img = null;
 		try {
-			img = ImageIO.read(new File("res/blackheelR.png"));
+			img = ImageIO.read(new File("res/blackheelL.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -286,7 +286,7 @@ public class ShoesList {
 		
 		img = null;
 		try {
-			img = ImageIO.read(new File("res/blackheelL.png"));
+			img = ImageIO.read(new File("res/blackheelR.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -297,7 +297,7 @@ public class ShoesList {
 		
 		img = null;
 		try {
-			img = ImageIO.read(new File("res/blackheelR.png"));
+			img = ImageIO.read(new File("res/blackheelL.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
