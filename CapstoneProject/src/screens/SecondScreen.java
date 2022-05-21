@@ -42,7 +42,7 @@ public class SecondScreen extends Screen {
 	public void setup() {
 		//surface.background(255);
 		G4P.setInputFont("Times New Roman", G4P.PLAIN, 13); // New for G4P V4.3
-		G4P.setGlobalColorScheme(GCScheme.PURPLE_SCHEME);
+		G4P.setGlobalColorScheme(GCScheme.YELLOW_SCHEME);
 		//Some start text
 		colorAccessory = new GButton(surface, 50, 365, 100, 30, "Accessory Color");
 		colorTop = new GButton(surface, 50, 435, 100, 30, "Top Color");
