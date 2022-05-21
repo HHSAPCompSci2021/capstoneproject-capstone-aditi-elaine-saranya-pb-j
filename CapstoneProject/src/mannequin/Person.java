@@ -49,6 +49,10 @@ public class Person {
 		face = faceList.pickNextEntry();
 	}
 	
+	/**
+	 * Checks if clothing lists are empty
+	 * @return true if the list is empty
+	 */
 	
 	public boolean ifNotValid() {
 	
