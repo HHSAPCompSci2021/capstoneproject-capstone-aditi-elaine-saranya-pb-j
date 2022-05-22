@@ -94,12 +94,7 @@ public class Person {
 			marker.noTint();
 		shoesL.getImage().resize(630 ,630);
 		marker.image(shoesL.getImage(), 25, 420);
-		
-		
-		if(shoesR.getColor() != -1) {
-			marker.tint(shoesR.getColor());
-		}else
-			marker.noTint();
+
 		shoesR.getImage().resize(630,630);
 		marker.image(shoesR.getImage(), 190, 420);
 		

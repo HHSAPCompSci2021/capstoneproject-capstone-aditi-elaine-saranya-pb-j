@@ -150,8 +150,10 @@ public class SecondScreen extends Screen {
 		else if (button.getText().equals(colorShoes.getText())) {
 			person.getShoesLeft().setColor();
 		}
-		else if (button.getText().equals(colorAccessory.getText()))
-			person.getAccessory().setColor();
+		else if (button.getText().equals(colorAccessory.getText())) {
+			if (person.getAccessory () != null)
+				person.getAccessory().setColor();
+		}
 			
 		else if (button.getText().equals(menu.getText()))
 			return true;
