@@ -76,7 +76,7 @@ public class FirstScreen extends Screen {
 		String[] submitTxt=new String[]{"res/submitbutton.png"};
 
 		G4P.setInputFont("Times New Roman", G4P.PLAIN, 14); // New for G4P V4.3
-		G4P.setGlobalColorScheme(G4P.GOLD_SCHEME);
+		G4P.setGlobalColorScheme(G4P.GREEN_SCHEME);
 		  background.resize(800, 800);
 		  // Some start text
 		  listTemp = new GDropList(surface, 200, 300, 100, 100, 0);

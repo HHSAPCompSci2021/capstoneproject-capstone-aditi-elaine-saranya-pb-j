@@ -233,6 +233,19 @@ public class TopsList {
 		allList.add(top16);
 		
 		//18
+		
+		img = null;
+		try {
+			img = ImageIO.read(new File("res/whitesweater.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PImage whiteSweater2 = new PImage(img);
+		Top top18 = new Top("Cold", "Casual", "Neutral", whiteSweater2, 100.00, "https://www.everlane.com/products/womens-texture-cotton-crew-canvas?collection=womens-sweaters");
+		allList.add(top18);
+		
+		
 	}
 
 	/**
