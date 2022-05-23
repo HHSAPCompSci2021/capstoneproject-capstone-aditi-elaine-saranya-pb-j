@@ -371,7 +371,7 @@ public class ShoesList {
 
 	/**
 	 * Picks the next shoe based on the selected filters
-	 * 
+	 * @param side The side of the shoe to pick, right or left
 	 * @return The image of the shoe picked
 	 */
 	public Shoes pickNextEntry(String side) {

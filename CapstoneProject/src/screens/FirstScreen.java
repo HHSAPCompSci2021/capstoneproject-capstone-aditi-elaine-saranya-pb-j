@@ -136,7 +136,6 @@ public class FirstScreen extends Screen {
 	/**
 	 * Handles all the button events on the second screen and acts accordingly
 	 * @param button the button that was pressed 
-	 * @param event what has happened to the button
 	 * @return returns true if the submit button was clicked, false if not
 	 */
 	public boolean handleImageButtonEvents(GImageButton button) {

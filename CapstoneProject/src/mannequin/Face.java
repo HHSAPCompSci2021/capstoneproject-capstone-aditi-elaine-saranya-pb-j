@@ -17,11 +17,16 @@ public class Face {
 	
 	/**
 	 * Takes in user input to add a face
+	 * @param img The image of the face
 	 */
 	public Face(PImage img) {
 		image = img;
 	}
 	
+	/**
+	 * 
+	 * @return the image of the face
+	 */
 	public PImage getImage() {
 		return image;
 	}

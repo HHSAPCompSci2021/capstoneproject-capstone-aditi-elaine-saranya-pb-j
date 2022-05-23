@@ -28,6 +28,7 @@ public class Shoes extends Clothes {
 	 * @param f The formality of the accessory
 	 * @param g The gender of the person
 	 * @param p The price of the accessory
+	 * @param s The side of the shoe, right or left
 	 * @param l The link to the website to buy the outfit
 	 */
 	public Shoes(String w, String f, String g, PImage i, double p, String s, String l) {
