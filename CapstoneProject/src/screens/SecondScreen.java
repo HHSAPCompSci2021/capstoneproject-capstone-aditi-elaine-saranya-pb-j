@@ -120,6 +120,7 @@ public class SecondScreen extends Screen {
 	 * Handles all the button events on the second screen and acts accordingly
 	 * @param button the button that was pressed 
 	 * @param event what has happened to the button
+	 * @return Returns whether the button that is clicked is the menu button
 	 */
 	public boolean handleButtonEvents(GButton button, GEvent event) {
 		// Create the control window?
@@ -161,6 +162,10 @@ public class SecondScreen extends Screen {
 
 	}
 
+	/**
+	 * Checks if the mouse is pressed and acts accordingly
+	 *
+	 */
 	public void mousePressed() {
 		if (surface.mousePressed) {
 			if (surface.mouseX > 392 && surface.mouseX < 471 && surface.mouseY > 72 && surface.mouseY < 151) {
